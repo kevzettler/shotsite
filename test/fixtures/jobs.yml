@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 
+  order_id: 
+  browsers: MyString
+  urls: MyString
+  time: 2010-07-31 18:12:47
+
+two:
+  user_id: 
+  order_id: 
+  browsers: MyString
+  urls: MyString
+  time: 2010-07-31 18:12:47

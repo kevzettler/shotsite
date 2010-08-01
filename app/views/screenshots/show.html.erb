@@ -1,0 +1,28 @@
+<p>
+  <b>Batch:</b>
+  <%=h @screenshot.batch_id %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%=h @screenshot.job_id %>
+</p>
+
+<p>
+  <b>Browser:</b>
+  <%=h @screenshot.browser %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @screenshot.url %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @screenshot.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_screenshot_path(@screenshot) %> |
+<%= link_to 'Back', screenshots_path %>

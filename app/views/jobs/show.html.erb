@@ -1,0 +1,28 @@
+<p>
+  <b>User:</b>
+  <%=h @job.user_id %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @job.order_id %>
+</p>
+
+<p>
+  <b>Browsers:</b>
+  <%=h @job.browsers %>
+</p>
+
+<p>
+  <b>Urls:</b>
+  <%=h @job.urls %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @job.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

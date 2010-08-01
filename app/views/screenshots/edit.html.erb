@@ -1,0 +1,32 @@
+<h1>Editing screenshot</h1>
+
+<% form_for(@screenshot) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :batch_id %><br />
+    <%= f.text_field :batch_id %>
+  </p>
+  <p>
+    <%= f.label :job_id %><br />
+    <%= f.text_field :job_id %>
+  </p>
+  <p>
+    <%= f.label :browser %><br />
+    <%= f.text_field :browser %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @screenshot %> |
+<%= link_to 'Back', screenshots_path %>

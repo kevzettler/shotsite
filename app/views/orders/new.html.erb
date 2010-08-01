@@ -1,0 +1,23 @@
+<h1>New order</h1>
+
+<% form_for(@order) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :browsers %><br />
+    <%= f.text_field :browsers %>
+  </p>
+  <p>
+    <%= f.label :interval %><br />
+    <%= f.text_field :interval %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', orders_path %>
