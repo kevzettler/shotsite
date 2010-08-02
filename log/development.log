@@ -297,3 +297,2217 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-07-31 18:34:25) [G
 Rendering template within layouts/application
 Rendering application/index
 Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 11:41:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #65 of app/views/application/index.html.erb:
+62:         <div id="creds">
+63:           
+64:           <div id="login" class="cred">
+65:             <% form_for @user_session do |f| %>
+66:               <%= f.error_messages %>
+67:               <p>
+68:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:65
+
+Rendered rescues/_trace (96.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 11:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #65 of app/views/application/index.html.erb:
+62:         <div id="creds">
+63:           
+64:           <div id="login" class="cred">
+65:             <% form_for @user_session do |f| %>
+66:               <%= f.error_messages %>
+67:               <p>
+68:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:65
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-01 11:44:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NameError (uninitialized constant UserSessionController):
+  
+
+Rendered rescues/_trace (24.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-01 11:44:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+ActionView::MissingTemplate (Missing template user_sessions/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 11:49:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for @user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:04:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+ERROR: compiling _run_erb_app47views47application47index46html46erb RAISED compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...     ";  fields_for "..." task do |user_form|; @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47application47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"wrapper\">\n"
+@output_buffer.concat "  <div id=\"main\">\n"
+@output_buffer.concat "      <div id=\"header\">\n"
+@output_buffer.concat "          <a href=\"\">SeanShots</a>\n"
+@output_buffer.concat "          ";  if current_user ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Manage Account", edit_user_path(:current)).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Logout", logout_path).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Register", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Login", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"body\">\n"
+@output_buffer.concat "        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"steps\">\n"
+@output_buffer.concat "            <form id=\"step_form\">\n"
+@output_buffer.concat "              <div id=\"step1\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 1 -</strong> List your pages</p>\n"
+@output_buffer.concat "                <input type=\"text\">\n"
+@output_buffer.concat "                <a href=\"#\">Add Another</a>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step2\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 2 -</strong> Pick your browsers</p>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ff_check\" id=\"ff_check\" /><label for=\"ff_check\">FireFox</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"safari_check\" id=\"safari_check\" /><label for=\"safari_check\">Safari</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"chrome_check\" id=\"chrome_check\" /><label for=\"chrome_check\">Chrome</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie8_check\" id=\"ie8_check\" /><label for=\"ie8_check\">IE8</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie7_check\" id=\"ie7_check\" /><label for=\"ie7_check\">IE7</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie6_check\" id=\"ie6_check\" /><label for=\"ie6_check\">IE6</label>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step3\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 3 -</strong> Set an interval</p>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>Just Once</option>\n"
+@output_buffer.concat "                  <option>Once a minute</option>\n"
+@output_buffer.concat "                  <option>Once a hour</option>\n"
+@output_buffer.concat "                  <option>Once a day</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>For a Day</option>\n"
+@output_buffer.concat "                  <option>For a Week</option>\n"
+@output_buffer.concat "                  <option>For a Month</option>\n"
+@output_buffer.concat "                  <option>For a Year</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step4\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Your Total</strong></p>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "                  <li id=\"page_total\">1 - page</li>\n"
+@output_buffer.concat "                  <li id=\"broser_total\">1 - browsers</li>\n"
+@output_buffer.concat "                  <li id=\"shot_total\">1 - total shots</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"shot_price\">$0.02 shot price</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"total_price\">$0.04 Total price</li>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <button>Check Out</button>\n"
+@output_buffer.concat "            </form>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"creds\">\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"login\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_for @user_session do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "              "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"register\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_tag user_create_path, :method => :post do ; @output_buffer.concat "\n"
+@output_buffer.concat "              ";  fields_for "..." task do |user_form|; @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label:password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password_confirmation ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              ";  end; @output_buffer.concat "\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:112:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...     ";  fields_for "..." task do |user_form|; @output_buffe...
+                              ^) on line #85 of app/views/application/index.html.erb:
+82:           
+83:           <div id="register" class="cred">
+84:             <% form_tag user_create_path, :method => :post do %>
+85:               <% fields_for "..." task do |user_form|%>
+86:               <p>
+87:                 <%= user_form.label :email %><br />
+88:                 <%= user_form.text_field :email %>
+
+    app/views/application/index.html.erb:112:in `compile!'
+
+Rendered rescues/_trace (98.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:04:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+ERROR: compiling _run_erb_app47views47application47index46html46erb RAISED compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...     ";  fields_for "..." user do |user_form|; @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47application47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"wrapper\">\n"
+@output_buffer.concat "  <div id=\"main\">\n"
+@output_buffer.concat "      <div id=\"header\">\n"
+@output_buffer.concat "          <a href=\"\">SeanShots</a>\n"
+@output_buffer.concat "          ";  if current_user ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Manage Account", edit_user_path(:current)).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Logout", logout_path).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Register", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Login", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"body\">\n"
+@output_buffer.concat "        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"steps\">\n"
+@output_buffer.concat "            <form id=\"step_form\">\n"
+@output_buffer.concat "              <div id=\"step1\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 1 -</strong> List your pages</p>\n"
+@output_buffer.concat "                <input type=\"text\">\n"
+@output_buffer.concat "                <a href=\"#\">Add Another</a>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step2\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 2 -</strong> Pick your browsers</p>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ff_check\" id=\"ff_check\" /><label for=\"ff_check\">FireFox</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"safari_check\" id=\"safari_check\" /><label for=\"safari_check\">Safari</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"chrome_check\" id=\"chrome_check\" /><label for=\"chrome_check\">Chrome</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie8_check\" id=\"ie8_check\" /><label for=\"ie8_check\">IE8</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie7_check\" id=\"ie7_check\" /><label for=\"ie7_check\">IE7</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie6_check\" id=\"ie6_check\" /><label for=\"ie6_check\">IE6</label>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step3\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 3 -</strong> Set an interval</p>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>Just Once</option>\n"
+@output_buffer.concat "                  <option>Once a minute</option>\n"
+@output_buffer.concat "                  <option>Once a hour</option>\n"
+@output_buffer.concat "                  <option>Once a day</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>For a Day</option>\n"
+@output_buffer.concat "                  <option>For a Week</option>\n"
+@output_buffer.concat "                  <option>For a Month</option>\n"
+@output_buffer.concat "                  <option>For a Year</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step4\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Your Total</strong></p>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "                  <li id=\"page_total\">1 - page</li>\n"
+@output_buffer.concat "                  <li id=\"broser_total\">1 - browsers</li>\n"
+@output_buffer.concat "                  <li id=\"shot_total\">1 - total shots</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"shot_price\">$0.02 shot price</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"total_price\">$0.04 Total price</li>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <button>Check Out</button>\n"
+@output_buffer.concat "            </form>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"creds\">\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"login\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_for @user_session do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "              "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"register\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_tag user_create_path, :method => :post do ; @output_buffer.concat "\n"
+@output_buffer.concat "              ";  fields_for "..." user do |user_form|; @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label:password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password_confirmation ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              ";  end; @output_buffer.concat "\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:112:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...     ";  fields_for "..." user do |user_form|; @output_buffe...
+                              ^) on line #85 of app/views/application/index.html.erb:
+82:           
+83:           <div id="register" class="cred">
+84:             <% form_tag user_create_path, :method => :post do %>
+85:               <% fields_for "..." user do |user_form|%>
+86:               <p>
+87:                 <%= user_form.label :email %><br />
+88:                 <%= user_form.text_field :email %>
+
+    app/views/application/index.html.erb:112:in `compile!'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:07:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+ERROR: compiling _run_erb_app47views47application47index46html46erb RAISED compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...    ";  fields_for "user" user do |user_form|; @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47application47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"wrapper\">\n"
+@output_buffer.concat "  <div id=\"main\">\n"
+@output_buffer.concat "      <div id=\"header\">\n"
+@output_buffer.concat "          <a href=\"\">SeanShots</a>\n"
+@output_buffer.concat "          ";  if current_user ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Manage Account", edit_user_path(:current)).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Logout", logout_path).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Register", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Login", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"body\">\n"
+@output_buffer.concat "        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"steps\">\n"
+@output_buffer.concat "            <form id=\"step_form\">\n"
+@output_buffer.concat "              <div id=\"step1\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 1 -</strong> List your pages</p>\n"
+@output_buffer.concat "                <input type=\"text\">\n"
+@output_buffer.concat "                <a href=\"#\">Add Another</a>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step2\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 2 -</strong> Pick your browsers</p>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ff_check\" id=\"ff_check\" /><label for=\"ff_check\">FireFox</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"safari_check\" id=\"safari_check\" /><label for=\"safari_check\">Safari</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"chrome_check\" id=\"chrome_check\" /><label for=\"chrome_check\">Chrome</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie8_check\" id=\"ie8_check\" /><label for=\"ie8_check\">IE8</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie7_check\" id=\"ie7_check\" /><label for=\"ie7_check\">IE7</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie6_check\" id=\"ie6_check\" /><label for=\"ie6_check\">IE6</label>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step3\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 3 -</strong> Set an interval</p>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>Just Once</option>\n"
+@output_buffer.concat "                  <option>Once a minute</option>\n"
+@output_buffer.concat "                  <option>Once a hour</option>\n"
+@output_buffer.concat "                  <option>Once a day</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>For a Day</option>\n"
+@output_buffer.concat "                  <option>For a Week</option>\n"
+@output_buffer.concat "                  <option>For a Month</option>\n"
+@output_buffer.concat "                  <option>For a Year</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step4\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Your Total</strong></p>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "                  <li id=\"page_total\">1 - page</li>\n"
+@output_buffer.concat "                  <li id=\"broser_total\">1 - browsers</li>\n"
+@output_buffer.concat "                  <li id=\"shot_total\">1 - total shots</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"shot_price\">$0.02 shot price</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"total_price\">$0.04 Total price</li>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <button>Check Out</button>\n"
+@output_buffer.concat "            </form>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"creds\">\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"login\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_for @user_session do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "              "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"register\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_tag user_create_path, :method => :post do ; @output_buffer.concat "\n"
+@output_buffer.concat "              ";  fields_for "user" user do |user_form|; @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label:password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password_confirmation ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              ";  end; @output_buffer.concat "\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:112:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...    ";  fields_for "user" user do |user_form|; @output_buffe...
+                              ^) on line #85 of app/views/application/index.html.erb:
+82:           
+83:           <div id="register" class="cred">
+84:             <% form_tag user_create_path, :method => :post do %>
+85:               <% fields_for "user" user do |user_form|%>
+86:               <p>
+87:                 <%= user_form.label :email %><br />
+88:                 <%= user_form.text_field :email %>
+
+    app/views/application/index.html.erb:112:in `compile!'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:07:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+ERROR: compiling _run_erb_app47views47application47index46html46erb RAISED compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...    ";  fields_for "user" user do |user_form|; @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47application47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"wrapper\">\n"
+@output_buffer.concat "  <div id=\"main\">\n"
+@output_buffer.concat "      <div id=\"header\">\n"
+@output_buffer.concat "          <a href=\"\">SeanShots</a>\n"
+@output_buffer.concat "          ";  if current_user ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Manage Account", edit_user_path(:current)).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Logout", logout_path).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Register", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "            "; @output_buffer.concat(( link_to "Login", new_user_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"body\">\n"
+@output_buffer.concat "        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"steps\">\n"
+@output_buffer.concat "            <form id=\"step_form\">\n"
+@output_buffer.concat "              <div id=\"step1\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 1 -</strong> List your pages</p>\n"
+@output_buffer.concat "                <input type=\"text\">\n"
+@output_buffer.concat "                <a href=\"#\">Add Another</a>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step2\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 2 -</strong> Pick your browsers</p>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ff_check\" id=\"ff_check\" /><label for=\"ff_check\">FireFox</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"safari_check\" id=\"safari_check\" /><label for=\"safari_check\">Safari</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"chrome_check\" id=\"chrome_check\" /><label for=\"chrome_check\">Chrome</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie8_check\" id=\"ie8_check\" /><label for=\"ie8_check\">IE8</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie7_check\" id=\"ie7_check\" /><label for=\"ie7_check\">IE7</label>\n"
+@output_buffer.concat "                <input type=\"checkbox\" name=\"ie6_check\" id=\"ie6_check\" /><label for=\"ie6_check\">IE6</label>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step3\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Step 3 -</strong> Set an interval</p>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>Just Once</option>\n"
+@output_buffer.concat "                  <option>Once a minute</option>\n"
+@output_buffer.concat "                  <option>Once a hour</option>\n"
+@output_buffer.concat "                  <option>Once a day</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "                <select>\n"
+@output_buffer.concat "                  <option>For a Day</option>\n"
+@output_buffer.concat "                  <option>For a Week</option>\n"
+@output_buffer.concat "                  <option>For a Month</option>\n"
+@output_buffer.concat "                  <option>For a Year</option>\n"
+@output_buffer.concat "                </select>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <div id=\"step4\" class=\"step\">\n"
+@output_buffer.concat "                <p class=\"action_header\"><strong>Your Total</strong></p>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "                  <li id=\"page_total\">1 - page</li>\n"
+@output_buffer.concat "                  <li id=\"broser_total\">1 - browsers</li>\n"
+@output_buffer.concat "                  <li id=\"shot_total\">1 - total shots</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"shot_price\">$0.02 shot price</li>\n"
+@output_buffer.concat "                  <li><br /></li>\n"
+@output_buffer.concat "                  <li id=\"total_price\">$0.04 Total price</li>\n"
+@output_buffer.concat "                <ul>\n"
+@output_buffer.concat "              </div>\n"
+@output_buffer.concat "              \n"
+@output_buffer.concat "              <button>Check Out</button>\n"
+@output_buffer.concat "            </form>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        <div id=\"creds\">\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"login\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_for @user_session do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "              "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "          <div id=\"register\" class=\"cred\">\n"
+@output_buffer.concat "            ";  form_tag user_create_path, :method => :post do ; @output_buffer.concat "\n"
+@output_buffer.concat "              ";  fields_for "user" user do |user_form|; @output_buffer.concat "\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.label:password).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( user_form.password_field :password).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              <p>\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.label :password_confirmation ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "                "; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "              </p>\n"
+@output_buffer.concat "              ";  end; @output_buffer.concat "\n"
+@output_buffer.concat "            ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:112:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/application/index.html.erb:85: syntax error, unexpected tIDENTIFIER, expecting kEND
+...    ";  fields_for "user" user do |user_form|; @output_buffe...
+                              ^) on line #85 of app/views/application/index.html.erb:
+82:           
+83:           <div id="register" class="cred">
+84:             <% form_tag user_create_path, :method => :post do %>
+85:               <% fields_for "user" user do |user_form|%>
+86:               <p>
+87:                 <%= user_form.label :email %><br />
+88:                 <%= user_form.text_field :email %>
+
+    app/views/application/index.html.erb:112:in `compile!'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:08:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for @user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:08:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Expected /Users/kevzettler/Projects/Rails/shotsite/app/models/user_session.rb to define User_session) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for User_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:09:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `user_session' for #<ActionView::Base:0x23fded0>) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (96.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:09:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Expected /Users/kevzettler/Projects/Rails/shotsite/app/models/user_session.rb to define User_session) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for User_session.new do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:10:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x2372bdc>) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% form_for UserSession.new do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (100.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:17:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% remote_form_for @user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:17:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68:           
+69:           <div id="login" class="cred">
+70:             <% remote_form_for @user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:37:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 33ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-01 12:38:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #70 of app/views/application/index.html.erb:
+67:         <div id="creds">
+68: 
+69:           <div id="login" class="cred">
+70:             <% remote_form_for @user_session do |f| %>
+71:               <%= f.error_messages %>
+72:               <p>
+73:                 <%= f.label :email %><br />
+
+    app/views/application/index.html.erb:70
+
+Rendered rescues/_trace (100.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-02 11:16:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: orders: SELECT * FROM "orders" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: orders: SELECT * FROM "orders" ):
+  app/controllers/orders_controller.rb:5:in `index'
+
+Rendered rescues/_trace (220.4ms)
+Rendered rescues/_request_and_response (42.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-02 11:16:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: orders: SELECT * FROM "orders" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: orders: SELECT * FROM "orders" ):
+  app/controllers/orders_controller.rb:5:in `index'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+  [4;36;1mSQL (22.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "screenshots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "browser" varchar(255), "url" varchar(255), "time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100801011138')[0m
+Migrating to CreateOrders (20100801011213)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "browsers" varchar(255), "interval" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100801011213')[0m
+Migrating to CreateJobs (20100801011247)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "browsers" varchar(255), "urls" varchar(255), "time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100801011247')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:17:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 144ms (View: 142, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-02 11:18:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 31ms (View: 27, DB: 0) | 200 OK [http://localhost/orders]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-02 11:18:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #9 of app/views/users/index.html.erb:
+6:     <th>Password</th>
+7:   </tr>
+8: 
+9: <% @users.each do |user| %>
+10:   <tr>
+11:     <td><%=h user.email %></td>
+12:     <td><%=h user.password %></td>
+
+    app/views/users/index.html.erb:9
+
+Rendered rescues/_trace (101.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-02 11:18:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #9 of app/views/users/index.html.erb:
+6:     <th>Password</th>
+7:   </tr>
+8: 
+9: <% @users.each do |user| %>
+10:   <tr>
+11:     <td><%=h user.email %></td>
+12:     <td><%=h user.password %></td>
+
+    app/views/users/index.html.erb:9
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-02 11:21:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-02 11:21:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 92ms (View: 83, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-02 11:22:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 83ms (View: 9, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-02 11:24:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-02 11:24:51) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"4HMCVwBY3IUwMwzId8qD9BEagBf9y/scz2IrprocjgQ=", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'kevzettler@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5cbe72723bd7358ddeb2c75025231e2fa59e8a04d227a9c243e32d8b529cbc41cbe79eae51ef8232d194360bd222c04fc16325aebc0329cf548a7e5f70911d1e') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "crypted_password", "password_salt", "persistence_token", "email", "created_at") VALUES('2010-08-02 18:24:51', '6c26f7b6b018b272280384ee1591c412647a1f1eeb9dcfc82927d582d02ba84cbc94c50ce3d52b1d31e9939b516f885bb20b6803b5f636041d8ef47a5583c163', 'wEqK1jHJxkwJ0WXJQjB3', '5cbe72723bd7358ddeb2c75025231e2fa59e8a04d227a9c243e32d8b529cbc41cbe79eae51ef8232d194360bd222c04fc16325aebc0329cf548a7e5f70911d1e', 'kevzettler@gmail.com', '2010-08-02 18:24:51')[0m
+Redirected to http://localhost:3000/
+Completed in 236ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:24:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '5cbe72723bd7358ddeb2c75025231e2fa59e8a04d227a9c243e32d8b529cbc41cbe79eae51ef8232d194360bd222c04fc16325aebc0329cf548a7e5f70911d1e') LIMIT 1[0m
+Completed in 54ms (View: 52, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-02 11:25:00) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '5cbe72723bd7358ddeb2c75025231e2fa59e8a04d227a9c243e32d8b529cbc41cbe79eae51ef8232d194360bd222c04fc16325aebc0329cf548a7e5f70911d1e') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:25:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-02 11:25:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:25:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:25:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+ActionView::MissingTemplate (Missing template user_sessions/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:28:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:28:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:28:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x2595c98>) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for(@user_session) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:29:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x2317a70>) on line #3 of app/views/user_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for(@user_session) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (108.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:29:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #16 of app/views/user_sessions/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :password_confirmation %><br />
+16:     <%= f.password_field :password_confirmation %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Create' %>
+
+    app/views/user_sessions/new.html.erb:16
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:29:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #16 of app/views/user_sessions/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :password_confirmation %><br />
+16:     <%= f.password_field :password_confirmation %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Create' %>
+
+    app/views/user_sessions/new.html.erb:16
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:30:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-02 11:30:40) [POST]
+  Parameters: {"commit"=>"Create", "user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "authenticity_token"=>"4HMCVwBY3IUwMwzId8qD9BEagBf9y/scz2IrprocjgQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/user_sessions
+Completed in 153ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-02 11:30:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-02 11:32:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:32:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-02 11:32:15) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:32:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:32:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-02 11:32:23) [POST]
+  Parameters: {"commit"=>"Create", "user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "authenticity_token"=>"4HMCVwBY3IUwMwzId8qD9BEagBf9y/scz2IrprocjgQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/user_sessions
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-08-02 11:32:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:33:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-02 11:33:14) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:33:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-02 11:33:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-02 11:33:31) [POST]
+  Parameters: {"commit"=>"Create", "user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "authenticity_token"=>"4HMCVwBY3IUwMwzId8qD9BEagBf9y/scz2IrprocjgQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 85ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:33:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-02 11:33:36) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:33:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:44:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:45:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:46:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:46:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 89ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:47:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:48:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:48:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:50:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 11:50:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 12:48:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 12:49:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 12:49:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 12:49:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 12:50:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:27:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:28:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:28:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:29:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:29:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:29:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:32:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:32:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:33:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:35:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:57:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 22ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:57:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 13:58:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/img-firefox" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/img-firefox" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/img-firefox" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:01:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:06:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:06:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:06:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:06:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:07:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 91ms (View: 90, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:07:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:07:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:07:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:08:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:08:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:08:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:08:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:10:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 90ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:10:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:10:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:12:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:12:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:18:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:19:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:19:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:19:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:19:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:19:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:22:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:22:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:22:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 14:23:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

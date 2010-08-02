@@ -1,7 +1,69 @@
 /* screen view styles*/
 
-@import grid.sass
-@import text.sass
+@import reset.sass
+@import 960/grid.sass
+@import compass/utilities/general/clearfix.sass
+@import jquery-ui-1.8.2.custom.sass
 
-#wrap
-	+grid-container
+$background_color = #c9e2ff
+
+!ninesixty_columns = 16
+
+body, html
+  margin: 0px
+  padding: 0px
+  height: 100%
+
+body
+  font-size: 62.5%
+
+#wrapper
+  +clearfix
+  +grid-container
+  margin: 0 auto
+
+#footer 
+  +grid-container
+
+#header
+  background-color: $background_color
+  padding: 15px 0
+  border-bottom: 1px solid #000
+  a#logo
+    +alpha
+    +grid(4)
+    +grid_suffix(10)
+    font-size: 1.9em
+    text-shadow: 1px 1px 5px #000
+    color: #000
+    text-decoration: none !important
+    
+.action_header
+  font-size: 1.2em
+  font-weight: bold
+  padding-bottom: 10px
+  strong
+    font-size: 1.1em
+
+#steps
+  background-color: $background_color
+  padding: 15px 0
+  border-bottom: 1px solid #000
+  border-top: 1px solid #000
+#step1
+  +alpha
+  +grid(4)
+ 
+#step2
+  +grid(5)
+  #browser_buttons
+    label
+      
+  
+#step3
+  +grid(4)
+
+#step4
+  +omega
+  +grid(3)
+

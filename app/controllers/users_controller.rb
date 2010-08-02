@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # GET /users
-  # GET /users.xml
+  # GET /orders
+  # GET /orders.xml
   def index
     @users = User.all
 
@@ -8,18 +8,7 @@ class UsersController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @users }
     end
-  end
-
-  # GET /users/1
-  # GET /users/1.xml
-  def show
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
-    end
-  end
+  end	
 
   # GET /users/new
   # GET /users/new.xml
@@ -29,6 +18,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user }
+			format.json { render :json => @user }
     end
   end
 
@@ -44,11 +34,13 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        format.html { redirect_to(root_url, :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
+				format.json { render :json => @user, :status=> :created, :location => @user }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+				format.jason {render :json => @user.errors, :status => :unprocessable_entity }
       end
     end
   end

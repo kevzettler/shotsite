@@ -4,11 +4,17 @@
 	<meta charset=utf-8 />
 	<title>SeanShots <%= controller.action_name %></title>
 	<%= stylesheet_link_tag("screen") %>
-	<%= stylesheet_link_tag 'scaffold' %>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<%= stylesheet_link_tag('scaffold') %>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+	 $(document).ready(function(){
+	    $("#browser_buttons").buttonset();
+	 });
+	</script>
 </head>
 <body>
   

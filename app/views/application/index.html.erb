@@ -1,7 +1,14 @@
 <div id="wrapper">
   <div id="main">
       <div id="header">
-          <a href="">SeanShots</a>
+          <a href="" id="logo">SeanShots</a>
+          <% if current_user %>
+            <%= link_to "Manage Account", edit_user_path(:current)%>
+            <%= link_to "Logout", logout_path%>
+          <% else %>
+            <%= link_to "Register", new_user_path %>
+            <%= link_to "Login", login_path %>
+          <% end %>
       </div>
       <div id="body">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -10,34 +17,40 @@
             <form id="step_form">
               <div id="step1" class="step">
                 <p class="action_header"><strong>Step 1 -</strong> List your pages</p>
-                <input type="text">
-                <a href="#">Add Another</a>
+                <input type="text" />
+                <br /><a href="#">Add Another</a>
               </div>
               
               <div id="step2" class="step">
                 <p class="action_header"><strong>Step 2 -</strong> Pick your browsers</p>
-                <input type="checkbox" name="ff_check" id="ff_check" /><label for="ff_check">FireFox</label>
-                <input type="checkbox" name="safari_check" id="safari_check" /><label for="safari_check">Safari</label>
-                <input type="checkbox" name="chrome_check" id="chrome_check" /><label for="chrome_check">Chrome</label>
-                <input type="checkbox" name="ie8_check" id="ie8_check" /><label for="ie8_check">IE8</label>
-                <input type="checkbox" name="ie7_check" id="ie7_check" /><label for="ie7_check">IE7</label>
-                <input type="checkbox" name="ie6_check" id="ie6_check" /><label for="ie6_check">IE6</label>
+                <div id="browser_buttons">
+                  <input type="checkbox" name="ff_check" id="ff_check" /><label for="ff_check"><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
+                  <input type="checkbox" name="safari_check" id="safari_check" /><label for="safari_check"><%= image_tag("img-safari.png", :alt => "Safari", :size => "60x60")%></label>
+                  <input type="checkbox" name="chrome_check" id="chrome_check" /><label for="chrome_check"><%= image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")%></label>
+                  <input type="checkbox" name="ie8_check" id="ie8_check" /><label for="ie8_check"><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
+                  <input type="checkbox" name="ie7_check" id="ie7_check" /><label for="ie7_check"><%= image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")%></label>
+                  <input type="checkbox" name="ie6_check" id="ie6_check" /><label for="ie6_check"><%= image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")%></label>
+                </div>
               </div>
               
               <div id="step3" class="step">
                 <p class="action_header"><strong>Step 3 -</strong> Set an interval</p>
-                <select>
-                  <option>Just Once</option>
-                  <option>Once a minute</option>
-                  <option>Once a hour</option>
-                  <option>Once a day</option>
-                </select>
-                <select>
-                  <option>For a Day</option>
-                  <option>For a Week</option>
-                  <option>For a Month</option>
-                  <option>For a Year</option>
-                </select>
+                <p>
+                  <select name="short_time">
+                    <option value="1">Just Once</option>
+                    <option value="1">Once a day</option>
+                    <option value="24">Once a hour</option>
+                    <option value="1440">Once a minute</option>
+                  </select>
+                </p>
+                <p>
+                  <select name="long_time">
+                    <option value="1">For a Day</option>
+                    <option value="7">For a Week</option>
+                    <option value="30">For a Month</option>
+                    <option value="365">For a Year</option>
+                  </select>
+                </p>
               </div>
               
               <div id="step4" class="step">
@@ -58,15 +71,36 @@
         </div>
         
         <div id="creds">
-          
+
           <div id="login" class="cred">
-            <form id="login_form" action="/user/" method="post">
+            <p class="action_header"><strong>Login</strong></p>
+            <form >
+              <p>
+                <label for="login_email">Email</label>
+                <input type="text" id="login_email" name="login_email" />
+              </p>
+              <p>
+                <label for="login_password">Password</label>
+                <input type="text" id="login_password" name="login_password" />
+              </p>
             </form>
           </div>
           
           <div id="register" class="cred">
-            <from id="register_form" action="/user/new" method="post">
-            
+            <p class="action_header"><strong>Login</strong></p>
+            <form>
+              <p>
+                <label for="reigster_email">Email</label>
+                <input type="text" id="register_email" name="register_email" />
+              </p>
+              <p>
+                <label for="register_password">Password</label>
+                <input type="password" id="register_email" name="register_email" />
+              </p>
+              <p>
+                <label for="register_confirm">Re-type</label>
+                <input type="password" id="register_confirm" name="register_confirm" />
+              </p>
             </form>
           </div>
           
