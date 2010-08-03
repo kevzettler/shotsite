@@ -2170,7 +2170,7 @@ body {
 }
 
 /* line 49, ../../sass/screen.sass */
-#steps {
+#steps, #creds {
   overflow: hidden;
   display: inline-block;
   background-color: #c9e2ff;
@@ -2179,11 +2179,32 @@ body {
   border-top: 1px solid black;
 }
 /* line 8, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-#steps {
+#steps, #creds {
+  display: block;
+}
+/* line 55, ../../sass/screen.sass */
+#steps button#checkout_btn, #creds button#checkout_btn {
+  float: right;
+  margin-right: 50px;
+}
+
+/* line 59, ../../sass/screen.sass */
+#creds {
+  background-color: #d8ffc9;
+  display: none;
+}
+
+/* line 63, ../../sass/screen.sass */
+#step_form {
+  overflow: hidden;
+  display: inline-block;
+}
+/* line 8, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#step_form {
   display: block;
 }
 
-/* line 55, ../../sass/screen.sass */
+/* line 66, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2192,8 +2213,12 @@ body {
   margin-right: 10px;
   width: 220px;
 }
+/* line 69, ../../sass/screen.sass */
+#step1 input {
+  width: 209px;
+}
 
-/* line 59, ../../sass/screen.sass */
+/* line 72, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2201,7 +2226,7 @@ body {
   margin-right: 10px;
   width: 280px;
 }
-/* line 61, ../../sass/screen.sass */
+/* line 74, ../../sass/screen.sass */
 #step2 .ui-buttonset .ui-button {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2209,12 +2234,22 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-/* line 65, ../../sass/screen.sass */
+/* line 78, ../../sass/screen.sass */
 #step2 .ui-button-text-only .ui-button-text {
   padding: 0.5em 0.7em !important;
 }
+/* line 81, ../../sass/screen.sass */
+#step2 label span.free_tag {
+  color: #0ff756;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-left: -5px;
+  margin-top: -9px;
+  position: absolute;
+  text-shadow: 1px 1px 2px black;
+}
 
-/* line 68, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2223,7 +2258,7 @@ body {
   width: 220px;
 }
 
-/* line 71, ../../sass/screen.sass */
+/* line 93, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
@@ -2231,4 +2266,33 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   width: 160px;
+}
+
+/* line 97, ../../sass/screen.sass */
+#login {
+  margin-left: 0;
+  padding-left: 60px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+
+/* line 102, ../../sass/screen.sass */
+#register {
+  padding-left: 60px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 280px;
+  padding-right: 120px;
+}
+
+/* line 108, ../../sass/screen.sass */
+#login label, #register label {
+  display: block;
+  width: 100px;
+  margin-bottom: 5px;
 }

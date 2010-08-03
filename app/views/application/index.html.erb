@@ -24,10 +24,10 @@
               <div id="step2" class="step">
                 <p class="action_header"><strong>Step 2 -</strong> Pick your browsers</p>
                 <div id="browser_buttons">
-                  <input type="checkbox" name="ff_check" id="ff_check" /><label for="ff_check"><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
+                  <input type="checkbox" name="ff_check" id="ff_check" class="free"/><label for="ff_check"><span class="free_tag">Free</span><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
                   <input type="checkbox" name="safari_check" id="safari_check" /><label for="safari_check"><%= image_tag("img-safari.png", :alt => "Safari", :size => "60x60")%></label>
                   <input type="checkbox" name="chrome_check" id="chrome_check" /><label for="chrome_check"><%= image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")%></label>
-                  <input type="checkbox" name="ie8_check" id="ie8_check" /><label for="ie8_check"><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
+                  <input type="checkbox" name="ie8_check" id="ie8_check" class="free" /><label for="ie8_check"><span class="free_tag">Free</span><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
                   <input type="checkbox" name="ie7_check" id="ie7_check" /><label for="ie7_check"><%= image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")%></label>
                   <input type="checkbox" name="ie6_check" id="ie6_check" /><label for="ie6_check"><%= image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")%></label>
                 </div>
@@ -65,9 +65,8 @@
                   <li id="total_price">$0.04 Total price</li>
                 <ul>
               </div>
-              
-              <button>Check Out</button>
             </form>
+            <button id="checkout_btn">Check Out</button>
         </div>
         
         <div id="creds">
@@ -87,7 +86,7 @@
           </div>
           
           <div id="register" class="cred">
-            <p class="action_header"><strong>Login</strong></p>
+            <p class="action_header"><strong>Register</strong></p>
             <form>
               <p>
                 <label for="reigster_email">Email</label>

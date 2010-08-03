@@ -46,15 +46,28 @@ body
   strong
     font-size: 1.1em
 
-#steps
+#steps, #creds
   +clearfix
   background-color: $background_color
   padding: 15px 0
   border-bottom: 1px solid #000
   border-top: 1px solid #000
+  button#checkout_btn
+    float: right
+    margin-right: 50px
+
+#creds
+  background-color: #d8ffc9
+  display: none
+
+#step_form
+  +clearfix
+
 #step1
   +alpha
   +grid(4)
+  input
+    width: 209px
  
 #step2
   +grid(5)
@@ -64,6 +77,15 @@ body
     margin-bottom: 5px
   .ui-button-text-only .ui-button-text
     padding: 0.5em 0.7em !important
+  label
+    span.free_tag
+      color: #0FF756
+      font-size: 1.3em
+      font-weight: bold
+      margin-left: -5px
+      margin-top: -9px
+      position: absolute
+      text-shadow: 1px 1px 2px #000000
 
 #step3
   +grid(4)
@@ -71,4 +93,19 @@ body
 #step4
   +omega
   +grid(3)
+  
+#login
+  +alpha
+  +grid_prefix(1)
+  +grid(4)
+  
+#register
+  +grid_prefix(1)
+  +grid(5)
+  +grid_suffix(2)
 
+#login, #register
+  label
+    display: block
+    width: 100px
+    margin-bottom: 5px

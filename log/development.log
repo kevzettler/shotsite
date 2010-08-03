@@ -2657,3 +2657,570 @@ ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inse
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:31:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:31:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:31:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:31:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:31:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:33:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:33:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:33:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:34:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:34:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:34:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:35:07) [GET]
+  Parameters: {"action"=>"index", "short_time"=>"1", "long_time"=>"1", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/?short_time=1&long_time=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:35:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 21:35:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-02 23:13:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 07:02:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 60ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 07:02:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 07:02:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:06:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:07:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:07:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:07:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:08:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:08:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:08:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:09:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 84ms (View: 82, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:09:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:10:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:11:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 95ms (View: 91, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:11:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:11:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:14:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:14:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:14:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:16:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:18:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:18:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:21:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 84ms (View: 82, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:25:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:25:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:25:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:26:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:26:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:27:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:27:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:27:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:27:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:28:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:28:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:29:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:29:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:29:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 89ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:29:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:30:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_85_dfeffc_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:30:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_75_d0e5f5_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-03 08:30:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
