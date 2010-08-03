@@ -4,6 +4,7 @@
 @import 960/grid.sass
 @import compass/utilities/general/clearfix.sass
 @import jquery-ui-1.8.2.custom.sass
+@import border-radius.sass
 
 $background_color = #c9e2ff
 
@@ -46,6 +47,7 @@ body
     font-size: 1.1em
 
 #steps
+  +clearfix
   background-color: $background_color
   padding: 15px 0
   border-bottom: 1px solid #000
@@ -56,10 +58,13 @@ body
  
 #step2
   +grid(5)
-  #browser_buttons
-    label
-      
-  
+  .ui-buttonset .ui-button   
+    +border-radius(10px)
+    margin-right: 5px
+    margin-bottom: 5px
+  .ui-button-text-only .ui-button-text
+    padding: 0.5em 0.7em !important
+
 #step3
   +grid(4)
 

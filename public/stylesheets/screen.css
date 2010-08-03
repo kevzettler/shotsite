@@ -2104,19 +2104,19 @@ button.ui-button::-moz-focus-inner {
   height: 100%;
 }
 
-/* line 12, ../../sass/screen.sass */
+/* line 13, ../../sass/screen.sass */
 body, html {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
 
-/* line 17, ../../sass/screen.sass */
+/* line 18, ../../sass/screen.sass */
 body {
   font-size: 62.5%;
 }
 
-/* line 20, ../../sass/screen.sass */
+/* line 21, ../../sass/screen.sass */
 #wrapper {
   overflow: hidden;
   display: inline-block;
@@ -2130,20 +2130,20 @@ body {
   display: block;
 }
 
-/* line 25, ../../sass/screen.sass */
+/* line 26, ../../sass/screen.sass */
 #footer {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
 
-/* line 28, ../../sass/screen.sass */
+/* line 29, ../../sass/screen.sass */
 #header {
   background-color: #c9e2ff;
   padding: 15px 0;
   border-bottom: 1px solid black;
 }
-/* line 32, ../../sass/screen.sass */
+/* line 33, ../../sass/screen.sass */
 #header a#logo {
   margin-left: 0;
   display: inline;
@@ -2158,26 +2158,32 @@ body {
   text-decoration: none !important;
 }
 
-/* line 41, ../../sass/screen.sass */
+/* line 42, ../../sass/screen.sass */
 .action_header {
   font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 45, ../../sass/screen.sass */
+/* line 46, ../../sass/screen.sass */
 .action_header strong {
   font-size: 1.1em;
 }
 
-/* line 48, ../../sass/screen.sass */
+/* line 49, ../../sass/screen.sass */
 #steps {
+  overflow: hidden;
+  display: inline-block;
   background-color: #c9e2ff;
   padding: 15px 0;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
+/* line 8, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#steps {
+  display: block;
+}
 
-/* line 53, ../../sass/screen.sass */
+/* line 55, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2187,7 +2193,7 @@ body {
   width: 220px;
 }
 
-/* line 57, ../../sass/screen.sass */
+/* line 59, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2195,8 +2201,20 @@ body {
   margin-right: 10px;
   width: 280px;
 }
+/* line 61, ../../sass/screen.sass */
+#step2 .ui-buttonset .ui-button {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+/* line 65, ../../sass/screen.sass */
+#step2 .ui-button-text-only .ui-button-text {
+  padding: 0.5em 0.7em !important;
+}
 
-/* line 63, ../../sass/screen.sass */
+/* line 68, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2205,7 +2223,7 @@ body {
   width: 220px;
 }
 
-/* line 66, ../../sass/screen.sass */
+/* line 71, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
