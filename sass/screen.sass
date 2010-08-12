@@ -27,13 +27,16 @@ body
   +grid-container
 
 #header
+  +clearfix
   background-color: $background_color
   padding: 15px 0
   border-bottom: 1px solid #000
-  a#logo
+  div#logo_container
     +alpha
     +grid(4)
-    +grid_suffix(10)
+  div#account_links
+    float: right !important
+  a#logo
     font-size: 1.9em
     text-shadow: 1px 1px 5px #000
     color: #000
@@ -45,6 +48,12 @@ body
   padding-bottom: 10px
   strong
     font-size: 1.1em
+
+.error
+  color: red
+  
+.flash_message
+  display: none
 
 #steps, #creds
   +clearfix
@@ -68,6 +77,10 @@ body
   +grid(4)
   input
     width: 209px
+    margin-bottom: 5px
+  a
+    float: right
+    padding-right: 5px
  
 #step2
   +grid(5)

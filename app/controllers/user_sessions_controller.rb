@@ -5,11 +5,15 @@ class UserSessionsController < ApplicationController
 	
 	def create
 		@user_session = UserSession.new(params[:user_session])
-		if @user_session.save
-			flash[:notice] = "Successfully created user session."
-			redirect_to root_url
-		else
-			render :action => 'new'
+		respond_to do |format|
+			if @user_session.save
+				flash[:notice] = "Successfully created user session."
+				format.html {redirect_to root_url}
+				format.json {render :json => @user_session, :status=> :created, :location => @user}
+			else
+				format.html {render :action => 'new'}
+				format.json {render :json => {:sucess => false}, status=> :failed}
+			end
 		end
 	end
 	

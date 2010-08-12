@@ -1,14 +1,19 @@
 <div id="wrapper">
   <div id="main">
+      <span style="color: green"><%= notice %></span>
       <div id="header">
-          <a href="" id="logo">SeanShots</a>
-          <% if current_user %>
-            <%= link_to "Manage Account", edit_user_path(:current)%>
-            <%= link_to "Logout", logout_path%>
-          <% else %>
-            <%= link_to "Register", new_user_path %>
-            <%= link_to "Login", login_path %>
-          <% end %>
+          <div id="logo_container">
+            <a href="" id="logo">SeanShots</a>
+          </div>
+          <div id="account_links">
+            <% if current_user %>
+              <%= link_to "Manage Account", edit_user_path(:current)%>
+              <%= link_to "Logout", logout_path%>
+            <% else %>
+              <%= link_to "Register", new_user_path %>
+              <%= link_to "Login", login_path %>
+            <% end %>
+          </div>
       </div>
       <div id="body">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -17,8 +22,11 @@
             <form id="step_form">
               <div id="step1" class="step">
                 <p class="action_header"><strong>Step 1 -</strong> List your pages</p>
-                <input type="text" />
-                <br /><a href="#">Add Another</a>
+                <p class="flash_message error">Please enter a valid URL</p>
+                <div id="input_steps">
+                  <input type="text" />
+                </div>
+                <a href="#">Add Another</a>
               </div>
               
               <div id="step2" class="step">
@@ -36,7 +44,7 @@
               <div id="step3" class="step">
                 <p class="action_header"><strong>Step 3 -</strong> Set an interval</p>
                 <p>
-                  <select name="short_time">
+                  <select name="short_time" id="short_time">
                     <option value="1">Just Once</option>
                     <option value="1">Once a day</option>
                     <option value="24">Once a hour</option>
@@ -44,7 +52,7 @@
                   </select>
                 </p>
                 <p>
-                  <select name="long_time">
+                  <select name="long_time" id="long_time">
                     <option value="1">For a Day</option>
                     <option value="7">For a Week</option>
                     <option value="30">For a Month</option>
@@ -56,13 +64,13 @@
               <div id="step4" class="step">
                 <p class="action_header"><strong>Your Total</strong></p>
                 <ul>
-                  <li id="page_total">1 - page</li>
-                  <li id="broser_total">1 - browsers</li>
-                  <li id="shot_total">1 - total shots</li>
+                  <li><span id="page_total">0</span> - <span id="page_suffix">pages</span></li>
+                  <li ><span id="browsers_total">0</span> - <span id="browsers_suffix">browsers</span></li>
+                  <li ><span id="shot_total">0</span> - <span id="shot_suffix">shots</span></li>
                   <li><br /></li>
-                  <li id="shot_price">$0.02 shot price</li>
+                  <li><span id="shot_price">$0.02</span> shot price</li>
                   <li><br /></li>
-                  <li id="total_price">$0.04 Total price</li>
+                  <li><span id="total_price">$0.00</span> Total price</li>
                 <ul>
               </div>
             </form>
