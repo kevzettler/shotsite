@@ -5,6 +5,7 @@
 @import compass/utilities/general/clearfix.sass
 @import jquery-ui-1.8.2.custom.sass
 @import border-radius.sass
+@import facebox.sass
 
 $background_color = #c9e2ff
 
@@ -12,6 +13,10 @@ $background_color = #c9e2ff
 
 select, button
   cursor: pointer !important
+
+#facebox
+  div.content
+    +clearfix
 
 body, html
   margin: 0px
@@ -70,7 +75,7 @@ body
 
 #creds
   background-color: #d8ffc9
-  display: none
+  /*display: none
 
 #step_form
   +clearfix
@@ -121,6 +126,15 @@ body
   +grid_suffix(2)
 
 #login, #register
+  p
+    padding: 3px 0
+    width: 170px
+    button
+      float: right
+      margin-top: 5px
+      margin-right: -6px
+    input
+      width: 170px
   label
     display: block
     width: 100px

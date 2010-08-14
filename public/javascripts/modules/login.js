@@ -1,12 +1,20 @@
-//Login Module
+/*
+* Login
+*
+* Submits login form
+*/
 (function($){
   $.core.modules.login = function(){
     
-    console.log('omg login private');
+    function loginSubmit(){
+      
+    }
     
     return $.extend(Object.create($.core.module), {
-      hide: function(){
-        $(this.element).fadeOut('slow');
+      render: function(){
+        $(this.element).find('button').button();
+        
+        $(this.element).find('form').submit($.proxy(loginSubmit, this));
       },
 
     });

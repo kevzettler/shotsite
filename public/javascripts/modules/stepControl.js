@@ -7,6 +7,18 @@
 (function($){
   $.core.modules.stepControl = function(){
     
+    function changeOrder(event){
+      var $this = $(this.element) 
+      ,$button = $(event.target)
+      , $form = $this.find('form')
+      ;
+      
+      $form.enable();
+      $button.find("span").text('Check Out');
+      $button.unbind('click');
+      $button.click($.proxy(checkout, this));
+    }
+    
     /*
     * Rough draft check out
     */
@@ -14,6 +26,7 @@
       var $this = $(this.element) 
       ,$button = $(event.target)
       , $form = $this.find('form')
+      ;
       /*
       *total = $(document).trigger("calculateTotal.step4");
       * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
@@ -29,6 +42,9 @@
       if(total > 0){
         $form.disable();
         $button.find("span").text('Change Order?');
+        $(document).trigger('show.credControl');
+        $button.unbind('click');
+        $button.click($.proxy(changeOrder, this));
       }
       
     }
