@@ -97,7 +97,7 @@
                 </div> \
                 <div class="footer"> \
                   <a href="#" class="close"> \
-                    <img src="/facebox/closelabel.gif" title="close" class="close_image" /> \
+                    <img src="/images/facebox-images/closelabel.gif" title="close" class="close_image" /> \
                   </a> \
                 </div> \
               </td> \
@@ -251,7 +251,7 @@
     if (href.match(/#/)) {
       var url    = window.location.href.split('#')[0]
       var target = href.replace(url,'')
-      $.facebox.reveal($(target).clone().show(), klass)
+      $.facebox.reveal($(target).clone(true).show(), klass)
 
     // image
     } else if (href.match($.facebox.settings.imageTypesRegexp)) {

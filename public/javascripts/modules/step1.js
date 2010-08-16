@@ -1,4 +1,8 @@
-//Step 1 module
+/*
+*Step 1 module
+*
+* handles page additions
+*/
 (function($){
   $.core.modules.step1 = function(){
     
@@ -83,7 +87,7 @@
     return $.extend(Object.create($.core.module), {
       render : function(){
         var that = this,
-        $modDom = $(this.element)
+        $modDom = $(this.element);
         
         //Assign click event for adding new fields
         $modDom.find('a').click($.proxy(addInput, this));

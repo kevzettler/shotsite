@@ -81,14 +81,14 @@
 
           <div id="login" class="cred">
             <p class="action_header"><strong>Login</strong></p>
-            <form >
+            <form action="/user_sessions" method="post">
               <p>
-                <label for="login_email">Email</label>
-                <input type="text" id="login_email" name="login_email" />
+                <label for="user_session_email">Email</label>
+                <input type="text" size="30" name="user_session[email]" id="user_session_email">
               </p>
               <p>
-                <label for="login_password">Password</label>
-                <input type="text" id="login_password" name="login_password" />
+                <label for="user_session_password">Password</label>
+                <input type="password" size="30" name="user_session[password]" id="user_session_password">
               </p>
               <p>
                 <button>Submit</button>

@@ -176,7 +176,7 @@ blockquote, q {
 /* line 101, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-widget-content {
   border: 1px solid #a6c9e2;
-  background: #fcfdfd url(images/ui-bg_inset-hard_100_fcfdfd_1x100.png) 50% bottom repeat-x;
+  background: #fcfdfd url(/images/jqueryUI-images/ui-bg_inset-hard_100_fcfdfd_1x100.png) 50% bottom repeat-x;
   color: #222222;
 }
 /* line 105, ../../sass/_jquery-ui-1.8.2.custom.sass */
@@ -187,7 +187,7 @@ blockquote, q {
 /* line 108, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-widget-header {
   border: 1px solid #4297d7;
-  background: #5c9ccc url(images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x;
+  background: #5c9ccc url(/images/jqueryUI-images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x;
   color: white;
   font-weight: bold;
 }
@@ -201,7 +201,7 @@ blockquote, q {
 /* line 119, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #c5dbec;
-  background: #dfeffc url(images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+  background: #dfeffc url(/images/jqueryUI-images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
   font-weight: bold;
   color: #2e6e9e;
 }
@@ -220,7 +220,7 @@ blockquote, q {
 /* line 132, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
   border: 1px solid #79b7e7;
-  background: #d0e5f5 url(images/ui-bg_glass_75_d0e5f5_1x400.png) 50% 50% repeat-x;
+  background: #d0e5f5 url(/images/jqueryUI-images/ui-bg_glass_75_d0e5f5_1x400.png) 50% 50% repeat-x;
   font-weight: bold;
   color: #1d5987;
 }
@@ -239,7 +239,7 @@ blockquote, q {
 /* line 145, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   border: 1px solid #79b7e7;
-  background: #f5f8f9 url(images/ui-bg_inset-hard_100_f5f8f9_1x100.png) 50% 50% repeat-x;
+  background: #f5f8f9 url(/images/jqueryUI-images/ui-bg_inset-hard_100_f5f8f9_1x100.png) 50% 50% repeat-x;
   font-weight: bold;
   color: #e17009;
 }
@@ -265,7 +265,7 @@ blockquote, q {
 /* line 164, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #fad42e;
-  background: #fbec88 url(images/ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x;
+  background: #fbec88 url(/images/jqueryUI-images/ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x;
   color: #363636;
 }
 
@@ -277,7 +277,7 @@ blockquote, q {
 /* line 172, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   border: 1px solid #cd0a0a;
-  background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+  background: #fef1ec url(/images/jqueryUI-images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
   color: #cd0a0a;
 }
 
@@ -312,42 +312,42 @@ blockquote, q {
 .ui-icon {
   width: 16px;
   height: 16px;
-  background-image: url(images/ui-icons_469bdd_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_469bdd_256x240.png);
 }
 
 /* line 203, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-widget-content .ui-icon {
-  background-image: url(images/ui-icons_469bdd_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_469bdd_256x240.png);
 }
 
 /* line 206, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-widget-header .ui-icon {
-  background-image: url(images/ui-icons_d8e7f3_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_d8e7f3_256x240.png);
 }
 
 /* line 209, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-default .ui-icon {
-  background-image: url(images/ui-icons_6da8d5_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_6da8d5_256x240.png);
 }
 
 /* line 212, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
-  background-image: url(images/ui-icons_217bc0_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_217bc0_256x240.png);
 }
 
 /* line 215, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-active .ui-icon {
-  background-image: url(images/ui-icons_f9bd01_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_f9bd01_256x240.png);
 }
 
 /* line 218, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-highlight .ui-icon {
-  background-image: url(images/ui-icons_2e83ff_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_2e83ff_256x240.png);
 }
 
 /* line 221, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background-image: url(images/ui-icons_cd0a0a_256x240.png);
+  background-image: url(/images/jqueryUI-images/ui-icons_cd0a0a_256x240.png);
 }
 
 /* positioning */
@@ -1298,7 +1298,7 @@ blockquote, q {
 /* Overlays */
 /* line 811, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-widget-overlay {
-  background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+  background: #aaaaaa url(/images/jqueryUI-images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
   opacity: 0.3;
   filter: Alpha(Opacity=30);
 }
@@ -1307,7 +1307,7 @@ blockquote, q {
 .ui-widget-shadow {
   margin: -8px 0 0 -8px;
   padding: 8px;
-  background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+  background: #aaaaaa url(/images/jqueryUI-images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
   opacity: 0.3;
   filter: Alpha(Opacity=30);
   -moz-border-radius: 8px;
@@ -1482,7 +1482,7 @@ blockquote, q {
 
 /* line 954, ../../sass/_jquery-ui-1.8.2.custom.sass */
 .ui-autocomplete-loading {
-  background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  background: white url("/images/jqueryUI-images/ui-anim_basic_16x16.gif") right center no-repeat;
 }
 
 /* workarounds */
@@ -2326,7 +2326,7 @@ body {
 /* line 76, ../../sass/screen.sass */
 #creds {
   background-color: #d8ffc9;
-  /*display: none */
+  display: none;
 }
 
 /* line 80, ../../sass/screen.sass */

@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="/javascripts/jCore.js"></script>
 	
 	<script type="text/javascript" src="/javascripts/modules/login.js"></script>
+  <script type="text/javascript" src="/javascripts/modules/register.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step1.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step2.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step3.js"></script>
@@ -29,11 +30,12 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
 	    $("#login").login();
+	    $("#register").register();
 	    $('#step1').step1();
 	    $('#step2').step2();
 	    $('#step3').step3();

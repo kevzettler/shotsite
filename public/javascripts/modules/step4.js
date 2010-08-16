@@ -21,6 +21,8 @@
       
       price = parseFloat(price.substr(1, price.length), 10);
       
+      /*clarify the shot amount, not multiplying by the interval. */
+      
       var total = ((browsers * shots) * pages) * price;
       
       return total;      
