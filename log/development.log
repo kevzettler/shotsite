@@ -13658,3 +13658,124 @@ Processing UsersController#new (for 127.0.0.1 at 2010-08-16 10:27:52) [GET]
 Rendering template within layouts/application
 Rendering users/new
 Completed in 34ms (View: 26, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-16 10:57:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 10:58:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 27ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-16 10:59:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"fakeemail@fake.com"}, "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'fakeemail@fake.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("updated_at", "crypted_password", "password_salt", "persistence_token", "email", "created_at") VALUES('2010-08-16 17:59:35', 'bdb98e56e78a416d8b5c55526ac6c83cccd04692ebabc640ea16a47766013c22abb536c0bd24b6ba0da07b8710d758fd54d74357bd7cfb3501476a1081010858', 'g1FO8k4VWdRuvpIhwsU1', '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011', 'fakeemail@fake.com', '2010-08-16 17:59:35')[0m
+Completed in 70ms (View: 18, DB: 1) | 201 Created [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-16 11:00:19) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"fakeemail@fake.com"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'fakeemail@fake.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c8e309c67c810bd14b6ed36fccb4cabc964a7cbd9c9f5902ca757c95160a01fa28616c13d248e186d17f1e769312cda404b889d177a6e750573c213f375dd64a') LIMIT 1[0m
+
+NameError (uninitialized constant Mime::JASON):
+  app/controllers/users_controller.rb:42:in `create'
+  app/controllers/users_controller.rb:34:in `create'
+
+Rendered rescues/_trace (100.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-08-16 11:10:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:12:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:13:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:13:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+Completed in 85ms (View: 83, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:17:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-16 11:17:48) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '677e8bf29d449849932d5dd8a2f02d53ff2c854a68c53909033713d270f387c03bd4ef034a8573ce073f25fcaf882881551ab526bc3197c781305b090933c011') LIMIT 1[0m
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-16 11:18:03) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd672cc48c33c26144ef76c34556da61db202a958a66da44683bb49757637c073945e333962ac1e6cf7dc36bc42ccf4b2a58cec4e5771803db4a45d6f70641c0b') LIMIT 1[0m
+
+NameError (uninitialized constant Mime::JASON):
+  app/controllers/users_controller.rb:47:in `create'
+  app/controllers/users_controller.rb:34:in `create'
+
+Rendered rescues/_trace (129.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:20:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:20:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-16 11:20:48) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4b8ef29fa2d282d4fbfba7dd3cb9667e910ad021651b49d30106fb553230ab88627892f86497e999bf80011770c42b2fa02a35d4feff51e06a456a49096da829') LIMIT 1[0m
+Completed in 13ms (View: 3, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-16 11:21:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]

@@ -98,18 +98,18 @@
           
           <div id="register" class="cred">
             <p class="action_header"><strong>Register</strong></p>
-            <form>
+            <form method="post" action="/users">
               <p>
-                <label for="reigster_email">Email</label>
-                <input type="text" id="register_email" name="register_email" />
+                <label for="user[email]">Email</label>
+                <input type="text" id="user[email]" name="user[email]" />
               </p>
               <p>
-                <label for="register_password">Password</label>
-                <input type="password" id="register_email" name="register_email" />
+                <label for="user[password]">Password</label>
+                <input type="password" id="user[password]" name="user[password]" />
               </p>
               <p>
-                <label for="register_confirm">Re-type</label>
-                <input type="password" id="register_confirm" name="register_confirm" />
+                <label for="user[password_confirmation]">Re-type</label>
+                <input type="password" id="user[password_confirmation]" name="user[password_confirmation]" />
               </p>
               <p>
                 <button>Submit</button>

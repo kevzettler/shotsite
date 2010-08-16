@@ -12,7 +12,7 @@ class UserSessionsController < ApplicationController
 				format.json {render :json => @user_session, :status=> :created, :location => @user}
 			else
 				format.html {render :action => 'new'}
-				format.json {render :json => @user_session}
+				format.json {render :json => @user_session.errors, :status => :unprocessable_entity}
 			end
 		end
 	end
