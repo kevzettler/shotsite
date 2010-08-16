@@ -17,13 +17,14 @@
     }
     
     function logoutClick(event){
-      var $link = $(event.target);
+      var $link = $(event.target)
+      , that = this
       $.ajax({
         url : $link.attr('href'),
         type : "post",
         dataType : 'json',
         success : function(){
-          loggedOut.call(this);
+          loggedOut.call(that);
         }
       });
       return false;
@@ -64,8 +65,6 @@
       , $regLink = $this.find('a:first')
       ;
       
-      console.log("loggedOut();");
-      
       //fade it out
       $this.fadeOut('fast', function(){
         
@@ -91,7 +90,7 @@
         , $registerLink = $this.find('a:first')
         ;
         
-        //attach the login link depending on user login status using text a check, bad? LOL wot?
+        //attach the login link depending on user login status using a text check, bad? LOL wot?
         if($loginLink.text() == "Login"){
          $loginLink.click($.proxy(loginClick, this)); 
         }else{

@@ -2274,8 +2274,9 @@ body {
 /* line 45, ../../sass/screen.sass */
 #header div#account_links {
   float: right !important;
+  margin-right: 10px;
 }
-/* line 47, ../../sass/screen.sass */
+/* line 48, ../../sass/screen.sass */
 #header a#logo {
   font-size: 1.9em;
   text-shadow: 1px 1px 5px black;
@@ -2283,28 +2284,28 @@ body {
   text-decoration: none !important;
 }
 
-/* line 53, ../../sass/screen.sass */
+/* line 54, ../../sass/screen.sass */
 .action_header {
   font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 57, ../../sass/screen.sass */
+/* line 58, ../../sass/screen.sass */
 .action_header strong {
   font-size: 1.1em;
 }
 
-/* line 60, ../../sass/screen.sass */
+/* line 61, ../../sass/screen.sass */
 .error {
   color: red;
 }
 
-/* line 63, ../../sass/screen.sass */
+/* line 64, ../../sass/screen.sass */
 .flash_message {
   display: none;
 }
 
-/* line 66, ../../sass/screen.sass */
+/* line 67, ../../sass/screen.sass */
 #steps, #creds {
   overflow: hidden;
   display: inline-block;
@@ -2317,19 +2318,19 @@ body {
 #steps, #creds {
   display: block;
 }
-/* line 72, ../../sass/screen.sass */
+/* line 73, ../../sass/screen.sass */
 #steps button#checkout_btn, #creds button#checkout_btn {
   float: right;
   margin-right: 50px;
 }
 
-/* line 76, ../../sass/screen.sass */
+/* line 77, ../../sass/screen.sass */
 #creds {
   background-color: #d8ffc9;
   display: none;
 }
 
-/* line 80, ../../sass/screen.sass */
+/* line 81, ../../sass/screen.sass */
 #step_form {
   overflow: hidden;
   display: inline-block;
@@ -2339,7 +2340,7 @@ body {
   display: block;
 }
 
-/* line 83, ../../sass/screen.sass */
+/* line 84, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2348,18 +2349,18 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 86, ../../sass/screen.sass */
+/* line 87, ../../sass/screen.sass */
 #step1 input {
   width: 209px;
   margin-bottom: 5px;
 }
-/* line 89, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 #step1 a {
   float: right;
   padding-right: 5px;
 }
 
-/* line 93, ../../sass/screen.sass */
+/* line 94, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2367,7 +2368,7 @@ body {
   margin-right: 10px;
   width: 280px;
 }
-/* line 95, ../../sass/screen.sass */
+/* line 96, ../../sass/screen.sass */
 #step2 .ui-buttonset .ui-button {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2375,11 +2376,11 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-/* line 99, ../../sass/screen.sass */
+/* line 100, ../../sass/screen.sass */
 #step2 .ui-button-text-only .ui-button-text {
   padding: 0.5em 0.7em !important;
 }
-/* line 102, ../../sass/screen.sass */
+/* line 103, ../../sass/screen.sass */
 #step2 label span.free_tag {
   color: #0ff756;
   font-size: 1.3em;
@@ -2390,7 +2391,7 @@ body {
   text-shadow: 1px 1px 2px black;
 }
 
-/* line 111, ../../sass/screen.sass */
+/* line 112, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2399,7 +2400,7 @@ body {
   width: 220px;
 }
 
-/* line 114, ../../sass/screen.sass */
+/* line 115, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
@@ -2409,7 +2410,7 @@ body {
   width: 160px;
 }
 
-/* line 118, ../../sass/screen.sass */
+/* line 119, ../../sass/screen.sass */
 #login {
   margin-left: 0;
   padding-left: 60px;
@@ -2420,7 +2421,7 @@ body {
   width: 220px;
 }
 
-/* line 123, ../../sass/screen.sass */
+/* line 124, ../../sass/screen.sass */
 #register {
   padding-left: 60px;
   display: inline;
@@ -2431,22 +2432,22 @@ body {
   padding-right: 120px;
 }
 
-/* line 129, ../../sass/screen.sass */
+/* line 130, ../../sass/screen.sass */
 #login p, #register p {
   padding: 3px 0;
   width: 170px;
 }
-/* line 132, ../../sass/screen.sass */
+/* line 133, ../../sass/screen.sass */
 #login p button, #register p button {
   float: right;
   margin-top: 5px;
   margin-right: -6px;
 }
-/* line 136, ../../sass/screen.sass */
+/* line 137, ../../sass/screen.sass */
 #login p input, #register p input {
   width: 170px;
 }
-/* line 138, ../../sass/screen.sass */
+/* line 139, ../../sass/screen.sass */
 #login label, #register label {
   display: block;
   width: 100px;
