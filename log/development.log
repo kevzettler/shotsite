@@ -14148,3 +14148,86 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-08-17 08:08:47) [G
 Rendering template within layouts/application
 Rendering application/index
 Completed in 74ms (View: 72, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mALTER TABLE "users" ADD "shots" int[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100817153415')[0m
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "browsers" varchar(255), "interval" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "orders"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interval" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_orders"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "interval" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDROP TABLE "orders"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_orders"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100817153652')[0m
+Migrating to AddPriceShotsToOrder (20100817153805)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "orders" ADD "price" float[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "orders" ADD "shots" int[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100817153805')[0m
+Migrating to AddBatchIntervalToJob (20100817160825)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "jobs" ADD "batch" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "jobs" ADD "interval" int[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100817160825')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+Migrating to AddPriceShotsToOrder (20100817153805)
+Migrating to AddBatchIntervalToJob (20100817160825)
+Migrating to RemoveBatchIdFromOrder (20100817161202)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TEMPORARY TABLE "altered_orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "price" float, "shots" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "orders"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "price" float, "shots" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_orders"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100817161202')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m

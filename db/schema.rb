@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100801011247) do
+ActiveRecord::Schema.define(:version => 20100817161202) do
 
   create_table "jobs", :force => true do |t|
     t.string   "browsers"
@@ -17,13 +17,15 @@ ActiveRecord::Schema.define(:version => 20100801011247) do
     t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "batch"
+    t.integer  "interval"
   end
 
   create_table "orders", :force => true do |t|
-    t.string   "browsers"
-    t.string   "interval"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "price"
+    t.integer  "shots"
   end
 
   create_table "screenshots", :force => true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20100801011247) do
     t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shots"
   end
 
 end
