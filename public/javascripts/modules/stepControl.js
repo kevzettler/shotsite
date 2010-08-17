@@ -36,7 +36,6 @@
       * calling step4s dom elements directly, not lossely coupled but getting the job done
       */
       var total = $this.find("#total_price").text();
-      total = parseFloat(total.substring(1, total.length));
       
       //Random conditional for now not sure on error handling for empty or free orders yet
       if(total > 0){

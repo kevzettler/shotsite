@@ -27,7 +27,7 @@
           dataType : "json",
           success : function(json){
               $(document).trigger("close.facebox");
-              $(document).tirgger('loggedIn.accountManager');
+              $(document).trigger('loggedIn.accountManager');
           }
       });
       return false;
@@ -40,8 +40,8 @@
         
         $form.submit($.proxy(registerSubmit, this));
         
-        $(document).bind("fadeOut.register", $.proxy(function(){ $this.fadeOut().show(); }));
-        $(document).bind("fadeIn.register", $.proxy(function(){ $this.fadeIn().hide(); }));
+        $(document).bind("fadeOut.register", $.proxy(function(){ $this.fadeOut().hide(); }));
+        $(document).bind("fadeIn.register", $.proxy(function(){ $this.fadeIn().show(); }));
       }
     
     });

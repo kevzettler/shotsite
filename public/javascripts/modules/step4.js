@@ -23,7 +23,7 @@
       
       /*clarify the shot amount, not multiplying by the interval. */
       
-      var total = ((browsers * shots) * pages) * price;
+      var total = ((browsers * shots) * pages);
       
       return total;      
     }
@@ -32,9 +32,9 @@
       var $this = $(this.element)
       ,total = calculateTotal.call(this);
       if(!isNaN(total) && total > 0){
-        $this.find("#total_price").text("$"+total.toFixed(2));
+        $this.find("#total_price").text(total);
       }else{
-        $this.find("#total_price").text('$0.00');
+        $this.find("#total_price").text('0');
       }
     }
     

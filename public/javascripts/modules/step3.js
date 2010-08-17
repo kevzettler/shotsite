@@ -15,9 +15,9 @@
     function getShotCount(){
       var $this = $(this.element);
       var shorts = $this.find('#short_time'),
-      longs = $this.find('#long_time');
+      longs = 30 //$this.find('#long_time');
       
-      return shorts.val() * longs.val();    
+      return shorts.val() * longs;    
     }
     
     return $.extend(Object.create($.core.module), {            

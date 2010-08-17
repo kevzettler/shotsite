@@ -3,7 +3,7 @@
       <span style="color: green"><%= notice %></span>
       <div id="header">
           <div id="logo_container">
-            <a href="" id="logo">ShotsShotsShots</a>
+            <a href="" id="logo">3Shots.com</a>
           </div>
           <div id="account_links">
             <% if current_user %>
@@ -32,10 +32,10 @@
               <div id="step2" class="step">
                 <p class="action_header"><strong>Step 2 -</strong> Pick your browsers</p>
                 <div id="browser_buttons">
-                  <input type="checkbox" name="ff_check" id="ff_check" class="free"/><label for="ff_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
+                  <input type="checkbox" name="ff_check" id="ff_check"/><label for="ff_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
                   <input type="checkbox" name="safari_check" id="safari_check" /><label for="safari_check"><%= image_tag("img-safari.png", :alt => "Safari", :size => "60x60")%></label>
                   <input type="checkbox" name="chrome_check" id="chrome_check" /><label for="chrome_check"><%= image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")%></label>
-                  <input type="checkbox" name="ie8_check" id="ie8_check" class="free" /><label for="ie8_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
+                  <input type="checkbox" name="ie8_check" id="ie8_check"/><label for="ie8_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
                   <input type="checkbox" name="ie7_check" id="ie7_check" /><label for="ie7_check"><%= image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")%></label>
                   <input type="checkbox" name="ie6_check" id="ie6_check" /><label for="ie6_check"><%= image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")%></label>
                 </div>
@@ -45,19 +45,22 @@
                 <p class="action_header"><strong>Step 3 -</strong> Set an interval</p>
                 <p>
                   <select name="short_time" id="short_time">
-                    <option value="1">Just Once</option>
-                    <option value="1">Once a day</option>
-                    <option value="24">Once a hour</option>
-                    <option value="1440">Once a minute</option>
+                    <!--<option value="1">Just Once</option>-->
+                    <option value="1">Every day</option>
+                    <option value="24">Every hour</option>
+                    <option value="1440">Every minute</option>
                   </select>
                 </p>
                 <p>
+                  For a Month
+                  <!--
                   <select name="long_time" id="long_time">
                     <option value="1">For a Day</option>
                     <option value="7">For a Week</option>
                     <option value="30">For a Month</option>
                     <option value="365">For a Year</option>
                   </select>
+                  -->
                 </p>
               </div>
               
@@ -66,11 +69,11 @@
                 <ul>
                   <li><span id="page_total">0</span> - <span id="page_suffix">pages</span></li>
                   <li ><span id="browsers_total">0</span> - <span id="browsers_suffix">browsers</span></li>
-                  <li ><span id="shot_total">0</span> - <span id="shot_suffix">shots</span></li>
+                  <li ><span id="shot_total">30</span> - <span id="shot_suffix">shots per month</span></li>
                   <li><br /></li>
-                  <li><span id="shot_price">$0.02</span> shot price</li>
+                  <li><span id="total_price">0</span> Total shots</li>
                   <li><br /></li>
-                  <li><span id="total_price">$0.00</span> Total price</li>
+                  <li>$5.00 = 1000 shots</li>
                 <ul>
               </div>
             </form>
@@ -95,7 +98,7 @@
               </p>
             </form>
           </div>
-          
+                    
           <div id="register" class="cred">
             <p class="action_header"><strong>Register</strong></p>
             <form method="post" action="/users">

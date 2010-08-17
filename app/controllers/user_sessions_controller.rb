@@ -26,7 +26,7 @@ class UserSessionsController < ApplicationController
 				format.json {render :json => @user_session}
 			else
 				format.html {redirect_to root_url}
-				format.json {render :json => @user_session}
+				format.json {render :json => @user_session, :status => :unprocessable_entity}
 			end
 		end
 	end

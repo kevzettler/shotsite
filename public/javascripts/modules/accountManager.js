@@ -18,13 +18,15 @@
     
     function logoutClick(event){
       var $link = $(event.target)
-      , that = this
+      , objScope = this
+      ;
+            
       $.ajax({
         url : $link.attr('href'),
         type : "post",
         dataType : 'json',
         success : function(){
-          loggedOut.call(that);
+          loggedOut.call(objScope);
         }
       });
       return false;
@@ -37,6 +39,7 @@
       var $this = $(this.element)
       , $loginLink = $this.find('a:last')
       , $regLink = $this.find('a:first')
+      , objScope = this
       ;
       
       $(document).trigger('close.facebox');
@@ -46,7 +49,7 @@
         $loginLink.text('Logout')
           .attr('href', "/logout")
           .unbind('click')
-          .bind('click', $.proxy(logoutClick, this));
+          .bind('click', $.proxy(logoutClick, objScope));
         
         $regLink.text('Manage Account').unbind('click');
         
@@ -63,8 +66,9 @@
       var $this = $(this.element)
       , $loginLink = $this.find('a:last')
       , $regLink = $this.find('a:first')
+      , objScope = this
       ;
-      
+            
       //fade it out
       $this.fadeOut('fast', function(){
         
@@ -72,9 +76,9 @@
         $loginLink.text('Login')
           .attr('href', '/login')
           .unbind('click')
-          .bind('click', $.proxy(loginClick, this));
+          .bind('click', $.proxy(loginClick, objScope));
         
-        $regLink.text('Register').bind('click', $.proxy(registerClick, this));
+        $regLink.text('Register').bind('click', $.proxy(registerClick, objScope));
                 
         //fade it in
         $this.fadeIn('fast');
