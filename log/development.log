@@ -14231,3 +14231,38 @@ Migrating to RemoveBatchIdFromOrder (20100817161202)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+Migrating to AddPriceShotsToOrder (20100817153805)
+Migrating to AddBatchIntervalToJob (20100817160825)
+Migrating to RemoveBatchIdFromOrder (20100817161202)
+Migrating to AddPaymentinfoToOrder (20100817170015)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "orders" ADD "first_name" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "orders" ADD "last_name" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "orders" ADD "card_type" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "orders" ADD "card_expires_on" date[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "orders" ADD "ip_address" varchar(255)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100817170015')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m

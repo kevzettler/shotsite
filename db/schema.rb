@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100817161202) do
+ActiveRecord::Schema.define(:version => 20100817170015) do
 
   create_table "jobs", :force => true do |t|
     t.string   "browsers"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(:version => 20100817161202) do
     t.datetime "updated_at"
     t.float    "price"
     t.integer  "shots"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "card_type"
+    t.date     "card_expires_on"
+    t.string   "ip_address"
   end
 
   create_table "screenshots", :force => true do |t|
