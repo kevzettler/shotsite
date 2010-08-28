@@ -2,14 +2,18 @@
 
 @import reset.sass
 @import 960/grid.sass
-@import compass/utilities/general/clearfix.sass
+@import compass/utilities/general/clearfix
 @import jquery-ui-1.8.2.custom.sass
 @import border-radius.sass
 @import facebox.sass
 
-$background_color = #c9e2ff
+$background_color: #c9e2ff
 
-!ninesixty_columns = 16
+$ninesixty_columns: 16
+
+a
+  &:hover
+    background: transparent !important
 
 select, button
   cursor: pointer !important
