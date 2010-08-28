@@ -14373,3 +14373,647 @@ Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-28 12:41:39)
   Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 20ms (View: 3, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 13:13:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 13:13:33) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 13:13:35) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 13:13:36) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 13ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 13:13:41) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing ApplicationController#express (for 127.0.0.1 at 2010-08-28 13:14:41) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+
+SyntaxError (/Users/kevzettler/Projects/Rails/shotsite/app/controllers/orders_controller.rb:22: syntax error, unexpected tASSOC, expecting kEND
+			:ip => request.remote_ip,
+			      ^
+/Users/kevzettler/Projects/Rails/shotsite/app/controllers/orders_controller.rb:23: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+			:return_url => new_order_url,
+			              ^
+/Users/kevzettler/Projects/Rails/shotsite/app/controllers/orders_controller.rb:24: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+			:cancel_return_url => products_url
+			                     ^):
+  
+
+Rendered rescues/_trace (25.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-28 13:15:14) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+
+NameError (undefined local variable or method `products_url' for #<OrdersController:0x222f324>):
+  app/controllers/orders_controller.rb:24:in `express'
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-28 13:15:45) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7CS25302A49274849
+Completed in 777ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 13:22:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 434ms (View: 432, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:22:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:23:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:23:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:24:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 81ms (View: 79, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:25:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:25:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:31:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (Missing template shared/_menu.erb in view path app/views) on line #52 of app/views/layouts/application.html.erb:
+49: <body>
+50:   <div id="wrapper">
+51:     <div id="main">
+52:     <%= render :partial => "shared/menu" %>
+53:     <%= yield %>
+54:     <%= render :partial => "shared/footer" %>
+55:     </div>
+
+    app/views/layouts/application.html.erb:52
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (106.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:31:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.0ms)
+Rendered shared/_footer (0.4ms)
+Completed in 29ms (View: 26, DB: 1) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:45:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 23ms (View: 20, DB: 1) | 200 OK [http://localhost/orders/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-28 13:45:58) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 90ms (View: 72, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:46:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (10.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:46:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (9.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:46:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (9.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:47:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (10.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 13:48:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (83.9ms)
+Rendered shared/_footer (0.1ms)
+Completed in 91ms (View: 89, DB: 0) | 200 OK [http://localhost/orders/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:15:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/orders/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:15:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:15:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/orders/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:15:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 14:15:57) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 19ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:16:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:17:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `orders' for #<User:0x2446e8c>):
+  app/controllers/orders_controller.rb:6:in `index'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:17:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `Orders' for #<User:0x21a9e54>):
+  app/controllers/orders_controller.rb:6:in `index'
+
+Rendered rescues/_trace (106.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:17:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `Orders' for #<User:0x2552b64>):
+  app/controllers/orders_controller.rb:6:in `index'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:27:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `Orders' for #<User:0x2299170>):
+  app/controllers/orders_controller.rb:6:in `index'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:27:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `Orders' for #<User:0x2665ce0>):
+  app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:28:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+NameError (uninitialized constant OrdersController::Orders):
+  app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:28:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/orders_controller.rb:9:in `index'
+
+Rendered rescues/_trace (111.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:33:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/orders_controller.rb:9:in `index'
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:33:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-08-28 14:34:05) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 20ms (View: 2, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-28 14:34:12) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 16ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:35:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/orders_controller.rb:10:in `index'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:36:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 19ms (View: 2, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:36:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 19ms (View: 2, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:37:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 20ms (View: 2, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:38:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (1.5ms)
+Rendered shared/_footer (6.8ms)
+Completed in 55ms (View: 27, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:40:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (1.5ms)
+Rendered shared/_footer (0.3ms)
+Completed in 48ms (View: 21, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:41:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: orders.user_id: SELECT * FROM "orders" WHERE ("orders".user_id = 1) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: orders.user_id: SELECT * FROM "orders" WHERE ("orders".user_id = 1) ):
+  app/controllers/orders_controller.rb:8:in `write'
+  app/controllers/orders_controller.rb:8:in `print'
+  app/controllers/orders_controller.rb:8:in `index'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+Migrating to AddPriceShotsToOrder (20100817153805)
+Migrating to AddBatchIntervalToJob (20100817160825)
+Migrating to RemoveBatchIdFromOrder (20100817161202)
+Migrating to AddPaymentinfoToOrder (20100817170015)
+Migrating to CreateOrderTransactions (20100818002917)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "order_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "action" varchar(255), "amount" integer, "sucess" boolean, "authroization" varchar(255), "message" varchar(255), "params" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100818002917')[0m
+Migrating to AddUserIdToOrder (20100828214326)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "orders" ADD "user_id" int[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100828214326')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("order_transactions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-28 14:47:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (1.5ms)
+Rendered shared/_footer (0.4ms)
+Completed in 49ms (View: 21, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-28 14:47:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x24fcbb0>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (109.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: SQL logic error or missing database: SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Delete all (1.8ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (3)) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Delete all (1.6ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (2)) [0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 15:11:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (42.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 71ms (View: 69, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 15:11:54) [GET]
+  Parameters: {"action"=>"index", "short_time"=>"1", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (14.8ms)
+Rendered shared/_footer (0.1ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/?short_time=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 15:11:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (16.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+Migrating to AddPriceShotsToOrder (20100817153805)
+Migrating to AddBatchIntervalToJob (20100817160825)
+Migrating to RemoveBatchIdFromOrder (20100817161202)
+Migrating to AddPaymentinfoToOrder (20100817170015)
+Migrating to CreateOrderTransactions (20100818002917)
+Migrating to AddUserIdToOrder (20100828214326)
+Migrating to AddExpressTokenToOrders (20100828222357)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "orders" ADD "express_token" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "orders" ADD "express_payer_id" varchar(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100828222357')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("order_transactions")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m

@@ -1,6 +1,23 @@
 class OrdersController < ApplicationController
+	# GET /screenshots
+  # GET /screenshots.xml
+  def index
+		if current_user
+	    @orders = current_user.orders
+			print "lol user\n" 
+			print current_user.orders
+
+	    respond_to do |format|
+	      format.html # index.html.erb
+	      format.xml  { render :xml => @orders }
+	    end
+		else
+			redirect_to root_url
+		end
+  end
+	
 	def new
-			@order = Order.new
+			@order = Order.new(:express_token => params[:token])
 	end
 	
 	def create
@@ -18,10 +35,10 @@ class OrdersController < ApplicationController
 	end
 	
 	def express
-		response = EXPRESS_GATEWAY.setup_purchase(current_cart.build_order.price_in_cents,
+		response = EXPRESS_GATEWAY.setup_purchase(99.88,
 			:ip => request.remote_ip,
 			:return_url => new_order_url,
-			:cancel_return_url => products_url
+			:cancel_return_url => root_url
 		)
 		redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
 	end

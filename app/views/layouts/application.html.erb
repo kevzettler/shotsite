@@ -47,8 +47,12 @@
 
 </head>
 <body>
-    
-  <%= yield %>
-  
+  <div id="wrapper">
+    <div id="main">
+    <%= render :partial => "shared/header" %>
+    <%= yield %>
+    <%= render :partial => "shared/footer" %>
+    </div>
+  </div>
 </body>
 </html>

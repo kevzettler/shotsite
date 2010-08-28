@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100817170015) do
+ActiveRecord::Schema.define(:version => 20100828222357) do
 
   create_table "jobs", :force => true do |t|
     t.string   "browsers"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20100817170015) do
     t.datetime "updated_at"
     t.string   "batch"
     t.integer  "interval"
+  end
+
+  create_table "order_transactions", :force => true do |t|
+    t.integer  "order_id"
+    t.string   "action"
+    t.integer  "amount"
+    t.boolean  "sucess"
+    t.string   "authroization"
+    t.string   "message"
+    t.text     "params"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "orders", :force => true do |t|
@@ -31,6 +43,9 @@ ActiveRecord::Schema.define(:version => 20100817170015) do
     t.string   "card_type"
     t.date     "card_expires_on"
     t.string   "ip_address"
+    t.integer  "user_id"
+    t.string   "express_token"
+    t.string   "express_payer_id"
   end
 
   create_table "screenshots", :force => true do |t|
