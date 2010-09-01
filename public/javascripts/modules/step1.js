@@ -24,10 +24,10 @@
       , $lastInput = $(this.element).find('input[type="text"]:last');
       if(!$lastInput.val().match(urlRegex)){
         $lastInput.addClass('error');
-        $this.find('.flash_message').show();
+        this.displayError("Please enter a valid URL");
       }else{
         $lastInput.removeClass('error');
-        $this.find('.flash_message').hide();
+        this.clearErrors();
         $this.find('div#input_steps').append('<input type="text" />');
         
         //update the page count
@@ -78,13 +78,15 @@
         }
       });
       if(errors){
-        $this.find('.flash_message').show();
+        //$this.find('.flash_message').show();
+        $this.displayError("Please enter a valid URL");
       }else{
-        $this.find('.flash_message').hide();
+        //$this.find('.flash_message').hide();
+        $this.clearErrors();
       }
     }
     
-    return $.extend(Object.create($.core.module), {
+    return $.extend(Object.create($.core.modules.broForm()), {
       render : function(){
         var that = this,
         $modDom = $(this.element);

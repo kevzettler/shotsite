@@ -22,7 +22,7 @@
       return $(this.element).find('input:checked:not(.free)').length;
     }
     
-    return $.extend(Object.create($.core.module), {            
+    return $.extend(Object.create($.core.modules.broForm()), {            
       render : function(){
         //render the buttons using jquery UI buttonset
         $("#browser_buttons").buttonset();

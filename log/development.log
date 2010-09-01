@@ -15017,3 +15017,549 @@ Migrating to AddExpressTokenToOrders (20100828222357)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 12:35:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (123.0ms)
+Rendered shared/_footer (0.8ms)
+Completed in 232ms (View: 230, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-31 12:36:20) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"epicwin@epicwin.com"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'epicwin@epicwin.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '914d821d0ffd0fde8d684d17b683cb0c050ae4588b04e849a5360cd3e44c9fbaf7ad69b601e463e2558bcdc289d7b261fcbe740c988569e181c094d3939e1c39') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "crypted_password", "password_salt", "persistence_token", "shots", "email", "created_at") VALUES('2010-08-31 19:36:20', '0a5948de5456df38a23881c6f545209015a3886dea1ddb3e81c05668d9cf47826eee0f6f04938db856b84a8d1cf57bb03b58e71b709883b24754e7f5d4eb9afe', '9pkTEU_b_AIWtg7-DV8r', '914d821d0ffd0fde8d684d17b683cb0c050ae4588b04e849a5360cd3e44c9fbaf7ad69b601e463e2558bcdc289d7b261fcbe740c988569e181c094d3939e1c39', NULL, 'epicwin@epicwin.com', '2010-08-31 19:36:20')[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'epicwin@epicwin.com') LIMIT 1[0m
+Completed in 225ms (View: 6, DB: 1) | 201 Created [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 12:36:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (5.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 43ms (View: 34, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:52:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (36.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 54ms (View: 52, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:53:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (13.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 88ms (View: 86, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:53:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.8ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:54:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:54:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (73.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 78ms (View: 77, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:57:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 13:57:48) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-8UL66262SU0468142
+Completed in 703ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:58:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 13:58:30) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-0LY285813R027631S
+Completed in 542ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:59:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:59:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 13:59:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 13:59:56) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7YK33812SD2355459
+Completed in 600ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:00:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:02:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:02:46) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-93Y15231VT588933Y
+Completed in 642ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:02:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:03:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:03:55) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9PR2166702914212H
+Completed in 531ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:04:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:04:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:04:44) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3DE96695EP7340432
+Completed in 549ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:04:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (10.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:05:02) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4VB69424GC523823A
+Completed in 559ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:05:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:05:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (9.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-31 14:11:41) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 18ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-31 14:11:48) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 17ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:12:07) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6VE71755LA645993D
+Completed in 540ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:12:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:14:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 25ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-31 14:15:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (0.1ms)
+Completed in 87ms (View: 33, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 14:15:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2010-08-31 14:15:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"orders"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering orders/index
+Rendered shared/_header (0.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 91ms (View: 3, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:15:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:16:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 25ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 14:17:15) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6F362118HD4601348
+Completed in 484ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 14:24:15) [GET]
+  Parameters: {"token"=>"EC-6F362118HD4601348", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (29.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100801001846)
+Migrating to CreateScreenshots (20100801011138)
+Migrating to CreateOrders (20100801011213)
+Migrating to CreateJobs (20100801011247)
+Migrating to AddShotsToUser (20100817153415)
+Migrating to RemoveBrowsersIntervalFromOrder (20100817153652)
+Migrating to AddPriceShotsToOrder (20100817153805)
+Migrating to AddBatchIntervalToJob (20100817160825)
+Migrating to RemoveBatchIdFromOrder (20100817161202)
+Migrating to AddPaymentinfoToOrder (20100817170015)
+Migrating to CreateOrderTransactions (20100818002917)
+Migrating to AddUserIdToOrder (20100828214326)
+Migrating to AddExpressTokenToOrders (20100828222357)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("order_transactions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 14:25:47) [GET]
+  Parameters: {"token"=>"EC-6F362118HD4601348", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:07:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (1.4ms)
+Rendered shared/_footer (0.3ms)
+Completed in 47ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:08:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:21:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:22:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 86ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:22:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:23:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:24:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:25:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:35:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:40:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:47:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 20:47:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 21:05:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 21:06:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 76ms (View: 75, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 21:06:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 21:07:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]

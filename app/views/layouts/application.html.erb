@@ -16,6 +16,7 @@
 	
 	<script type="text/javascript" src="/javascripts/modules/login.js"></script>
   <script type="text/javascript" src="/javascripts/modules/register.js"></script>
+	<script type="text/javascript" src="/javascripts/modules/broForm.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step1.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step2.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/step3.js"></script>
@@ -23,14 +24,16 @@
 	<script type="text/javascript" src="/javascripts/modules/stepControl.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/credControl.js"></script>
 	<script type="text/javascript" src="/javascripts/modules/accountManager.js"></script>
+	<script type="text/javascript" src="/javascripts/modules/payment.js"></script>
 
 	<script type="text/javascript" src="/javascripts/jquery.disable.js"></script>
 	<script type="text/javascript" src="/javascripts/facebox.js"></script>
+
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
@@ -42,6 +45,7 @@
 	    $('#step4').step4();
 	    $("#steps").stepControl();
 	    $("#creds").credControl();
+	    $("#payment").payment();
 	 });
 	</script>
 

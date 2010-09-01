@@ -126,6 +126,7 @@
           render: function(){
             $(this.element).addClass(this.options.className);
           }
+
         };
       
       })(),

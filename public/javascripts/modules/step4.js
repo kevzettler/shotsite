@@ -21,8 +21,7 @@
       
       price = parseFloat(price.substr(1, price.length), 10);
       
-      /*clarify the shot amount, not multiplying by the interval. */
-      
+      /*note clarify the shot amount, not multiplying by the interval. */
       var total = ((browsers * shots) * pages);
       
       return total;      
@@ -38,7 +37,7 @@
       }
     }
     
-    return $.extend(Object.create($.core.module), {
+    return $.extend(Object.create($.core.modules.broForm()), {
       render : function(){
         $(document).bind('updateFieldCount.step4', $.proxy(updateFieldCount, this));
         $(document).bind('calculateTotal.step4', $.proxy(calculateTotal, this));     

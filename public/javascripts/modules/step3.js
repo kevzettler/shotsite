@@ -20,7 +20,7 @@
       return shorts.val() * longs;    
     }
     
-    return $.extend(Object.create($.core.module), {            
+    return $.extend(Object.create($.core.modules.broForm()), {            
       render : function(){      
         $(this.element).find('select').change($.proxy(changeSelect, this));
       }
