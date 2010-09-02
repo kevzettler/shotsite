@@ -9,12 +9,12 @@
     
     function changeOrder(event){
       var $this = $(this.element) 
-      ,$button = $(event.target)
+      ,$button = $this.find('button#checkout_btn')
       , $form = $this.find('form')
       ;
       
       $form.enable();
-      $button.find("span").text('Check Out');
+      $button.find("span.ui-button-text").text('Check Out');
       $button.unbind('click');
       $button.click($.proxy(checkout, this));
     }
@@ -24,7 +24,7 @@
     */
     function checkout(event){
       var $this = $(this.element) 
-      ,$button = $(event.target)
+      ,$button = $this.find("button#checkout_btn")
       , $form = $this.find('form')
       ;
       /*
@@ -40,7 +40,8 @@
       //Random conditional for now not sure on error handling for empty or free orders yet
       if(total > 0){
         $form.disable();
-        $button.find("span").text('Change Order?');
+        console.log(total, $button);
+        $button.find("span.ui-button-text").text('Change Order?');
         $(document).trigger('show.credControl');
         $button.unbind('click');
         $button.click($.proxy(changeOrder, this));

@@ -15563,3 +15563,350 @@ Rendering application/index
 Rendered shared/_header (0.3ms)
 Rendered shared/_footer (0.0ms)
 Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 21:12:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.4ms)
+Completed in 75ms (View: 73, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-08-31 21:14:19) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 297ms (View: 24, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-08-31 21:14:27) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-703711328D4786243
+Completed in 737ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:15:39) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:16:55) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (99.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:17:19) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (29.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:17:22) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (29.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:17:56) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:20:in `new'
+  app/controllers/orders_controller.rb:20:in `new'
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:19:30) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:22:in `new'
+  app/controllers/orders_controller.rb:22:in `new'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:19:32) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:22:in `new'
+  app/controllers/orders_controller.rb:22:in `new'
+
+Rendered rescues/_trace (27.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:19:33) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:22:in `new'
+  app/controllers/orders_controller.rb:22:in `new'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:19:42) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: express_token):
+  app/controllers/orders_controller.rb:22:in `new'
+  app/controllers/orders_controller.rb:22:in `new'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:20:07) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x21ea0bc>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (112.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:21:51) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+NoMethodError (Attempt to call private method):
+  app/controllers/orders_controller.rb:21:in `new'
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:23:01) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x2244210>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (118.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:24:30) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x250bb10>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:25:19) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x21bc180>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (113.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:25:36) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: something):
+  app/controllers/orders_controller.rb:21:in `new'
+  app/controllers/orders_controller.rb:21:in `new'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:26:41) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x222e0dc>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-08-31 21:26:54) [GET]
+  Parameters: {"token"=>"EC-703711328D4786243", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x23d5f84>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 16:50:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (23.6ms)
+Rendered shared/_footer (12.3ms)
+Completed in 221ms (View: 219, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 16:56:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:04:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:05:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:06:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:09:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:11:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]

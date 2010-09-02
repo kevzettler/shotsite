@@ -2,8 +2,9 @@ class Order < ActiveRecord::Base
 	belongs_to :user
 	has_many :transactions, :class_name => "OrderTransaction"
 	
+	attr_reader :express_token
 	attr_accessor :card_number, :card_verification
-	
+
 	validate_on_create :validate_card
 	
 	def purchase
@@ -16,7 +17,16 @@ class Order < ActiveRecord::Base
 	def price_in_cents
 		(cart.total_price*100).round
 	end
-	
+
+	def express_token=(token)
+		self[:express_token] = token
+		if new_record? && !token.blank?
+			details = EXPRESS_GATEWAY.details_for(token)
+			self.express_payer_id = details.payer_id
+			self.first_name = details.params["first_name"]
+			self.last_name = details.params["last_name"]
+		end
+	end
 	private
 	
 	def process_purchase
@@ -50,20 +60,10 @@ class Order < ActiveRecord::Base
 	end
 	
 	def validate_card
-		if express_token.blank? && !credit_card.valid?
+		if express_token.blank? and !credit_card.valid?
 			credit_card.errors.full_messages.each do |message|
 				errors.add_to_base message
 			end
-		end
-	end
-	
-	def express_token=(token)
-		self[:express_token] = token
-		if new_record? && !token.blank?
-			details = EXPRESS_GATEWAY.details_for(token)
-			self.express_payer_id = details.payer_id
-			self.first_name = details.params["first_name"]
-			self.last_name = details.params["last_name"]
 		end
 	end
 	
