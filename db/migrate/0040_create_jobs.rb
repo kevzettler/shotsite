@@ -1,12 +1,13 @@
 class CreateJobs < ActiveRecord::Migration
   def self.up
     create_table :jobs do |t|
-      t.int :user_id
-      t.int :order_id
+      t.references :user
+      t.references :order
+      t.integer :interval
       t.string :browsers
       t.string :urls
-      t.datetime :time
 
+      t.datetime :time
       t.timestamps
     end
   end

@@ -1,14 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  batch_id: 
   job_id: 
   browser: MyString
   url: MyString
   time: 2010-07-31 18:11:38
 
 two:
-  batch_id: 
   job_id: 
   browser: MyString
   url: MyString

@@ -2,10 +2,6 @@
 
 one:
   user_id: 
-  browsers: MyString
-  interval: MyString
 
 two:
   user_id: 
-  browsers: MyString
-  interval: MyString
