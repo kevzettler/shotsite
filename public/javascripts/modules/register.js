@@ -12,6 +12,7 @@
       var $form = $(event.target)
       , $inputs = $form.find('input')
       , params = {}
+      , objScope = this
       ;
       
       $inputs.each(function(){
@@ -28,12 +29,21 @@
           success : function(json){
               $(document).trigger("close.facebox");
               $(document).trigger('loggedIn.accountManager');
+              objScope.clearErrors();
+          },
+          error :function(xhr, txt, er){
+            objScope.clearErrors();
+            var errObj = JSON.parse(xhr.responseText);
+            console.log(errObj);
+            for(var i=0; i<errObj.length; i++){
+              objScope.displayError(errObj[i][0]+" "+errObj[i][1]);
+            }
           }
       });
       return false;
     }
     
-    return $.extend(Object.create($.core.module), {            
+    return $.extend(Object.create($.core.modules.broForm(true)), {            
       render : function(){
         var $this = $(this.element)
         , $form = $this.find('form');

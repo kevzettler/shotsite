@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 	belongs_to :user
 	has_many :transactions, :class_name => "OrderTransaction"
 	
-	attr_reader :express_token
+	#attr_reader :express_token
 	attr_accessor :card_number, :card_verification
 
 	validate_on_create :validate_card
@@ -19,12 +19,16 @@ class Order < ActiveRecord::Base
 	end
 
 	def express_token=(token)
+		if token.blank? and !self[:express_token].blank? 
+			self[:express_token]
+		elsif !token.blank? and self[:express_token].blank?
 		self[:express_token] = token
-		if new_record? && !token.blank?
-			details = EXPRESS_GATEWAY.details_for(token)
-			self.express_payer_id = details.payer_id
-			self.first_name = details.params["first_name"]
-			self.last_name = details.params["last_name"]
+			if new_record? && !token.blank?
+				details = EXPRESS_GATEWAY.details_for(token)
+				self.express_payer_id = details.payer_id
+				self.first_name = details.params["first_name"]
+				self.last_name = details.params["last_name"]
+			end
 		end
 	end
 	private

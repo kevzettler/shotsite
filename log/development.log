@@ -15910,3 +15910,859 @@ Rendering application/index
 Rendered shared/_header (0.3ms)
 Rendered shared/_footer (0.0ms)
 Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:12:39) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 158ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:12:44) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 44ms (View: 29, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-01 17:14:28) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 16ms (View: 2, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:14:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:14:52) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:15:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:15:21) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 78ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:15:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:15:43) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-01 17:15:46) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:15:51) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:16:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:16:27) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 18ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:18:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:18:21) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:18:23) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:18:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:18:58) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:19:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:20:06) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:21:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:21:54) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:22:08) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:26:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:27:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:27:21) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 17ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:27:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:28:03) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:31:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:31:15) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 83ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:32:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:32:09) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:33:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:33:32) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:33:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:33:49) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:35:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:35:15) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:35:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 80ms (View: 79, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:35:40) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:44:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:45:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:45:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:45:47) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:46:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:46:23) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 14ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:46:32) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 81ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 17:46:40) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 17ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-01 17:46:54) [POST]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 17ms (View: 2, DB: 0) | 200 OK [http://localhost/logout]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 17:47:07) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"hopijpoih"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'hopijpoih') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ea9d1c2b2c01c1ae73d4423aa7740b045a4bf46a3a9167cb09628e4560dc4ae1c03ff5082983579145b9c69131e749f79d13f765b080b5e5f8cce511c814bff8') LIMIT 1[0m
+Completed in 16ms (View: 3, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:48:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 17:48:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"hpoihpioh"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'hpoihpioh') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0ff7527c0be66d067cae39502898984a93f06b4546c7313c937504e8e4b81e7e36a563b6ce718f4820c9d0b226055c5b8acbd2ba394e9949e20e5d4523d3654d') LIMIT 1[0m
+Completed in 16ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 17:49:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 84ms (View: 82, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 17:50:07) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"hpoihpoih"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'hpoihpoih') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a84ca319424ed93f0ccf79693ef0cc4464129a5c31fc5259080a36d4b9fd5f91001b320e1b36ffbd5f9e5cd5aaf0de9cdb0336fb1d08e1c9b486990b1ec529ed') LIMIT 1[0m
+Completed in 16ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 17:50:13) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"hpoihpoih"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'hpoihpoih') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66852dbd196e6190bb92aa8b3cf2f354d32d808e7c004f8d3a9a769ffc7553c0fc202ada940890a24631d04838b97fc705b6a20c84b18f60c5bd7249bd9ebf55') LIMIT 1[0m
+Completed in 17ms (View: 2, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 19:16:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 19:16:36) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 13ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 19:16:39) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 13ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 19:18:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 19:19:00) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Completed in 11ms (View: 1, DB: 0) | 422 Unprocessable Entity [http://localhost/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 19:19:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 19:19:53) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f603cc8a1e2ebfaf64b7b8bc1f5d685c7fb512952ad187ced298afae7af80ad29608b853720bb237afd0463a2c54a5dfda271796080e62092ab6450a0ccc34b7') LIMIT 1[0m
+Completed in 17ms (View: 3, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 19:21:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 19:22:16) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9338936f3e2c5f8304b75b621c8b65a972223b22577006983bbefa61ddf6d2530d88e160a7e4d882534449fe1473cf877a8cabc8b96ec3ec69be816db11b1232') LIMIT 1[0m
+Completed in 16ms (View: 3, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-01 19:23:04) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e774e081e403ad6041459b58cac883978ab88c037d62ac70246c3f005311a68cde2a559761a35192c9b11f2c87bb5b5fee5a003cd8b9fb39bfa83726360e0982') LIMIT 1[0m
+Completed in 17ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-01 19:31:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-01 19:31:35) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 104ms (View: 2, DB: 0) | 201 Created [http://localhost/user_sessions]
+
+
+Processing OrdersController#express (for 127.0.0.1 at 2010-09-01 19:31:49) [GET]
+  Parameters: {"action"=>"express", "controller"=>"orders"}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5YL9581778353881A
+Completed in 670ms (DB: 0) | 302 Found [http://localhost/orders/new/express]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:34:48) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `browsers' for #<Order:0x2458844>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :browsers %><br />
+12:     <%= f.text_field :browsers %>
+13:   </p>
+14:   <p>
+15:     <%= f.label :interval %><br />
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" [0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:39:40) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `interval' for #<Order:0x2668ae4>) on line #12 of app/views/orders/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :interval %><br />
+12:     <%= f.text_field :interval %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/orders/new.html.erb:12
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (53.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:44:17) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+ERROR: compiling _run_erb_app47views47orders47new46html46erb RAISED compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/orders/new.html.erb:69: syntax error, unexpected kENSURE, expecting kEND
+/Users/kevzettler/Projects/Rails/shotsite/app/views/orders/new.html.erb:71: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47orders47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  if !@order.express_token.blank? ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+h= @order.first_name ; @output_buffer.concat " "; @output_buffer.concat((h @order.last_nam ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<h1>Place a new order</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"steps\">\n"
+@output_buffer.concat "    <form id=\"step_form\">\n"
+@output_buffer.concat "      <div id=\"step1\" class=\"step\">\n"
+@output_buffer.concat "        <p class=\"action_header\"><strong>Step 1 -</strong> List your pages</p>\n"
+@output_buffer.concat "        <div id=\"input_steps\">\n"
+@output_buffer.concat "          <input type=\"text\" />\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        <a href=\"#\">Add Another</a>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      \n"
+@output_buffer.concat "      <div id=\"step2\" class=\"step\">\n"
+@output_buffer.concat "        <p class=\"action_header\"><strong>Step 2 -</strong> Pick your browsers</p>\n"
+@output_buffer.concat "        <div id=\"browser_buttons\">\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"ff_check\" id=\"ff_check\"/><label for=\"ff_check\"><!--<span class=\"free_tag\">Free</span>-->"; @output_buffer.concat(( image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"safari_check\" id=\"safari_check\" /><label for=\"safari_check\">"; @output_buffer.concat(( image_tag("img-safari.png", :alt => "Safari", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"chrome_check\" id=\"chrome_check\" /><label for=\"chrome_check\">"; @output_buffer.concat(( image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"ie8_check\" id=\"ie8_check\"/><label for=\"ie8_check\"><!--<span class=\"free_tag\">Free</span>-->"; @output_buffer.concat(( image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"ie7_check\" id=\"ie7_check\" /><label for=\"ie7_check\">"; @output_buffer.concat(( image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "          <input type=\"checkbox\" name=\"ie6_check\" id=\"ie6_check\" /><label for=\"ie6_check\">"; @output_buffer.concat(( image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")).to_s); @output_buffer.concat "</label>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      \n"
+@output_buffer.concat "      <div id=\"step3\" class=\"step\">\n"
+@output_buffer.concat "        <p class=\"action_header\"><strong>Step 3 -</strong> Set an interval</p>\n"
+@output_buffer.concat "        <p>\n"
+@output_buffer.concat "          <select name=\"short_time\" id=\"short_time\">\n"
+@output_buffer.concat "            <!--<option value=\"1\">Just Once</option>-->\n"
+@output_buffer.concat "            <option value=\"1\">Every day</option>\n"
+@output_buffer.concat "            <option value=\"24\">Every hour</option>\n"
+@output_buffer.concat "            <option value=\"1440\">Every minute</option>\n"
+@output_buffer.concat "          </select>\n"
+@output_buffer.concat "        </p>\n"
+@output_buffer.concat "        <p>\n"
+@output_buffer.concat "          For a Month\n"
+@output_buffer.concat "          <!--\n"
+@output_buffer.concat "          <select name=\"long_time\" id=\"long_time\">\n"
+@output_buffer.concat "            <option value=\"1\">For a Day</option>\n"
+@output_buffer.concat "            <option value=\"7\">For a Week</option>\n"
+@output_buffer.concat "            <option value=\"30\">For a Month</option>\n"
+@output_buffer.concat "            <option value=\"365\">For a Year</option>\n"
+@output_buffer.concat "          </select>\n"
+@output_buffer.concat "          -->\n"
+@output_buffer.concat "        </p>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      \n"
+@output_buffer.concat "      <div id=\"step4\" class=\"step\">\n"
+@output_buffer.concat "        <p class=\"action_header\"><strong>Your Total</strong></p>\n"
+@output_buffer.concat "        <ul>\n"
+@output_buffer.concat "          <li><span id=\"page_total\">0</span> - <span id=\"page_suffix\">pages</span></li>\n"
+@output_buffer.concat "          <li ><span id=\"browsers_total\">0</span> - <span id=\"browsers_suffix\">browsers</span></li>\n"
+@output_buffer.concat "          <li ><span id=\"shot_total\">30</span> - <span id=\"shot_suffix\">shots per month</span></li>\n"
+@output_buffer.concat "          <li><br /></li>\n"
+@output_buffer.concat "          <li><span id=\"total_price\">0</span> Total shots</li>\n"
+@output_buffer.concat "          <li><br /></li>\n"
+@output_buffer.concat "          <li>$5.00 = 1000 shots</li>\n"
+@output_buffer.concat "        <ul>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "    </form>\n"
+@output_buffer.concat "    <button id=\"checkout_btn\">Check Out</button>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Back', orders_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kevzettler/Projects/Rails/shotsite/app/views/orders/new.html.erb:71:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kevzettler/Projects/Rails/shotsite/app/views/orders/new.html.erb:69: syntax error, unexpected kENSURE, expecting kEND
+/Users/kevzettler/Projects/Rails/shotsite/app/views/orders/new.html.erb:71: syntax error, unexpected $end, expecting kEND) on line #69 of app/views/orders/new.html.erb:
+66: 
+67: 
+68: <%= link_to 'Back', orders_path %>
+
+    app/views/orders/new.html.erb:71:in `compile!'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:44:42) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 707ms (View: 22, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:45:09) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.8ms)
+Rendered shared/_footer (0.1ms)
+Completed in 1240ms (View: 17, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:45:42) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (12.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 1166ms (View: 22, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:45:58) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 788ms (View: 22, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:46:24) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+
+ActionView::TemplateError (undefined method `last_nam' for #<Order:0x2474b98>) on line #3 of app/views/orders/new.html.erb:
+1: <% if @order.express_token.blank? %>
+2: <h1>Order Confirmation</h1>
+3: <%h= @order.first_name %> <%=h @order.last_nam %>
+4: <% end %>
+5: <h1>Place a new order</h1>
+6: 
+
+    app/views/orders/new.html.erb:3
+
+Rendered rescues/_trace (107.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:46:35) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (13.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 720ms (View: 22, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:47:50) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (17.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 723ms (View: 27, DB: 1) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:49:01) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (21.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 769ms (View: 24, DB: 1) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:50:43) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (7.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (23.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 727ms (View: 20, DB: 7) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:56:34) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (15.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 1425ms (View: 21, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 19:57:12) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (20.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 732ms (View: 30, DB: 1) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-09-01 20:06:59) [GET]
+  Parameters: {"token"=>"EC-5YL9581778353881A", "action"=>"new", "PayerID"=>"USUJPDFQ5W3CQ", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (12.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 725ms (View: 21, DB: 0) | 200 OK [http://localhost/orders/new?token=EC-5YL9581778353881A&PayerID=USUJPDFQ5W3CQ]

@@ -12,6 +12,7 @@
       , buttonDefault = $button.find('span').text()
       , $inputs = $form.find('input')
       , params = {}
+      , objScope = this
       ;
       
       //build our params object from the from inputs name : value
@@ -31,15 +32,19 @@
           if(user_session.errors.length === 0){
             $(document).trigger("loggedIn.accountManager");
           }
+          objScope.clearErrors();
         },
-        error : function(json){
+        error : function(xhr, txt, er){
           $button.find('span').text(buttonDefault);
+          console.log(xhr,txt,er);
+          objScope.clearErrors();
+          objScope.displayError("Email and password did not match");
         }
       });
       return false;
     }
     
-    return $.extend(Object.create($.core.module), {
+    return $.extend(Object.create($.core.modules.broForm(true)), {
       render: function(){
         var $this = $(this.element);
         

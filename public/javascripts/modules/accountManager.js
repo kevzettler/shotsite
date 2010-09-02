@@ -6,6 +6,10 @@
 (function($){
   $.core.modules.accountManager = function(){
     
+    function faceboxFocus(){
+      $("#facebox input:first").focus();
+    }
+    
     function loginClick(event){
       $.facebox({div:'#login'});
       return false;
@@ -107,6 +111,11 @@
         //bind public events
         $(document).bind('loggedIn.accountManager', $.proxy(loggedIn, this));      
         $(document).bind('loggedOut.accountManager', $.proxy(loggedOut, this));
+        
+        //focus on the facebox
+        $(document).bind('reveal.facebox', function(){
+          $('#facebox input:first').focus();
+        });
       }
     
     });

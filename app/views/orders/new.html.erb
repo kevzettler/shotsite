@@ -2,19 +2,21 @@
 
 <% form_for(@order) do |f| %>
   <%= f.error_messages %>
-
+  <% if @order.express_token.blank? %>
   <p>
     <%= f.label :user_id %><br />
     <%= f.text_field :user_id %>
   </p>
   <p>
-    <%= f.label :browsers %><br />
-    <%= f.text_field :browsers %>
-  </p>
-  <p>
     <%= f.label :interval %><br />
     <%= f.text_field :interval %>
   </p>
+  <% else %>
+    <h1>Order Confirmation</h1>
+    <p>Name: <%=h @order.first_name%> <%=h @order.last_name%></p>
+    <p>Price: $0.00</p>
+    <%= f.hidden_field :express_token %>
+  <% end %>
   <p>
     <%= f.submit 'Create' %>
   </p>

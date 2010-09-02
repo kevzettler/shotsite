@@ -5,16 +5,27 @@
 */
 
 (function($){
-  $.core.modules.broForm = function(){
+  $.core.modules.broForm = function(modal){
     
-    return $.extend(Object.create($.core.module), {            
+      /*
+      *if were using the form in a modal. we have to make sure we are targeting the correct dom elements
+      *facebox will clone them and we will be targeting the originals
+      */
+      function findRealForm(){
+        var realForm = $(this.element);
+        if(modal && $('#facebox').find('#'+this.element.id).length > 0){
+          realForm = $('#facebox').find('#'+this.element.id);
+        }
+        return realForm;
+      };
+    
+    return $.extend(Object.create($.core.module), {                  
       displayError: function(message){
-        console.log("rendering error");
-        $(this.element).find("p.action_header").after('<p class="error">'+message+'</p>');
+        findRealForm.call(this).find("p.action_header").after('<p class="error">'+message+'</p>');
       },
       
       clearErrors: function(){
-        $(this.element).find('p.error').remove();
+        findRealForm.call(this).find('p.error').remove();
       }
     });
   }
