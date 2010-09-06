@@ -2,7 +2,7 @@ class CreateOrders < ActiveRecord::Migration
   def self.up
     create_table :orders do |t|
       t.references :user
-      t.float      :price
+      t.integer    :cents_per_shot 
       t.integer    :shots
       
       t.string :first_name

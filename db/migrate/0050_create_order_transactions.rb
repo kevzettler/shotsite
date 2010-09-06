@@ -5,7 +5,7 @@ class CreateOrderTransactions < ActiveRecord::Migration
       t.string :action
       t.integer :amount
       t.boolean :sucess
-      t.string :authroization
+      t.string :authorization
       t.string :message
       t.text :params
 
