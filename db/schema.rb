@@ -59,9 +59,10 @@ ActiveRecord::Schema.define(:version => 60) do
 
   create_table "screenshots", :force => true do |t|
     t.integer  "batch_id"
-    t.integer  "job_id"
-    t.string   "browser"
+    t.string   "browser_name"
+    t.string   "browser_version"
     t.string   "url"
+    t.string   "screenshot_path"
     t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"

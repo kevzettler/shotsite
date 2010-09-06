@@ -86,7 +86,6 @@
     
     function getInterval(){
       var $this = $(this.element);
-      console.log('lol', $this.find('#short_time').val(), $this, this);
       return $this.find('#short_time').val();
     }
     
@@ -98,7 +97,6 @@
         dataType: 'json',
         data : {job : jobData},
         success : function(data){
-          console.log(data);
           if(typeof callback == 'function'){
             callback();
           }
