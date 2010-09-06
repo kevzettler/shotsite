@@ -89,6 +89,7 @@
       });
       $(document).trigger('fadeIn.login');
       $(document).trigger('fadeIn.register');
+      
     }
     
     return $.extend(Object.create($.core.module), {            

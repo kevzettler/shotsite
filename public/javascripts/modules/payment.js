@@ -8,16 +8,25 @@
 (function($){
   $.core.modules.payment = function(){
     
+    function updateShotCount(count){
+      $(this.element).find("#total_price").text(count);
+    }
+    
+    
     return $.extend(Object.create($.core.module), {            
       render : function(){
-        var $this = $(this.element);
-        $this.find('a').click(function(){
-          console.log($('#login:visible #register:visible').length);
-          if($('#login:visible, #register:visible').length >= 1){
-            this.displayError('Please login or register to checkout');
-          }else{
-            return true;
-          }
+        var $this = $(this.element),
+        $select = $this.find('select'),
+        $price = $this.find('#price cite');
+        
+        $(document).bind('updateShotCount.payment', $.proxy(updateShotCount, this));
+        
+        $select.change(function(){
+          var $this = $(this),
+          $options = $this.find('option'),
+          $selected = $this.find('option:selected'),
+          price = parseInt(($options.index($selected.get(0)) + 1), 10) * 5.00;
+          $price.text(price.toFixed(2));
         });
       }
     

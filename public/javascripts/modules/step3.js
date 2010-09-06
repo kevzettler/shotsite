@@ -15,9 +15,9 @@
     function getShotCount(){
       var $this = $(this.element);
       var shorts = $this.find('#short_time'),
-      longs = 30 //$this.find('#long_time');
-      
-      return shorts.val() * longs;    
+      longs = 30 //$this.find('#long_time');      
+      shotCount = shorts.find("option:selected").attr('rel') * longs;
+      return shotCount;
     }
     
     return $.extend(Object.create($.core.modules.broForm()), {            
