@@ -48,6 +48,13 @@ class Snapshotter
       @browser.wait_for_page_to_load
       ss = Base64.decode64(@browser.capture_screenshot_to_string)
       File.open(filename(url), 'w') { |f| f.write(ss) }
+      ss = Screenshot.new
+      ss.url = url
+      ss.browser_name = @browser_name
+      ss.browser_version = @browser_version
+      ss.screenshot_path = "screenshots/#{@folder}/#{Digest::SHA1.hexdigest(url)}_#{@browser_name}-#{@browser_version}.png"
+      ss.batch_id = $batch_id
+      ss.save
     rescue
       $log_file.puts "Error snapshotting browser: #{@browser} url: #{url}"
     end
@@ -71,7 +78,7 @@ class Snapshotter
       $log_file.puts "Making folder: #{@folder}"
       Dir.mkdir "public/screenshots/#{@folder}"
     rescue
-      $log_file.puts "ERROR Making folde"
+      $log_file.puts "ERROR Making folded"
     end
   end
 end

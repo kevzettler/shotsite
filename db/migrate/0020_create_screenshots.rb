@@ -2,9 +2,10 @@ class CreateScreenshots < ActiveRecord::Migration
   def self.up
     create_table :screenshots do |t|
       t.references :batch
-      t.references :job
-      t.string :browser
+      t.string :browser_name
+      t.string :browser_version
       t.string :url
+      t.string :screenshot_path
       t.datetime :time
 
       t.timestamps

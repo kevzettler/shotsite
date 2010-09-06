@@ -1,6 +1,6 @@
 class Batch < ActiveRecord::Base
   belongs_to :job
-	has_many :screenshots
+  has_many :screenshots
 
   def initialize(options = nil)
     super

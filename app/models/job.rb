@@ -2,14 +2,17 @@ class Job < ActiveRecord::Base
   belongs_to :user
 
   has_many :batches
+  has_many :screenshots, :through => :batches
 
   named_scope :pending, lambda {{:conditions => ["next_run < ?", Time.now]}}
 
   attr_accessor :last_run
+
   validates_presence_of :user
 
   def initialize(attributes = nil)
     super
+    self.interval = 60
     self.next_run ||= (Time.now + self.interval.minutes)
   end
 
