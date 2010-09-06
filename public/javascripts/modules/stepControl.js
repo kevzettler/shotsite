@@ -7,6 +7,8 @@
 (function($){
   $.core.modules.stepControl = function(){
     
+    var jobData;
+    
     function changeOrder(event){
       var $this = $(this.element) 
       ,$button = $this.find('button#checkout_btn')
@@ -26,7 +28,10 @@
       var $this = $(this.element) 
       ,$button = $this.find("button#checkout_btn")
       , $form = $this.find('form')
+      , objScope = this
       ;
+      
+      console.log('obj scope', objScope);
       /*
       *total = $(document).trigger("calculateTotal.step4");
       * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
@@ -36,6 +41,13 @@
       * calling step4s dom elements directly, not lossely coupled but getting the job done
       */
       var total = $this.find("#total_price").text();
+      
+      //update job data
+      jobData = {
+        urls: getUrls.call(objScope),
+        browsers: getBrowsers.call(objScope),
+        interval: getInterval.call(objScope)
+      };
       
       //Random conditional for now not sure on error handling for empty or free orders yet
       if(total > 0){
@@ -48,6 +60,57 @@
       
     }
     
+    function getUrls(){
+      var $this = $(this.element),
+      urls = [],
+      $url_inputs = $this.find('#input_steps input');
+      $url_inputs.each(function(){
+        urls.push($(this).val());
+      });
+      return urls;
+    }
+    
+    function getBrowsers(){
+      var $this = $(this.element),
+      $browser_inputs = $this.find('#browser_buttons input'),
+      browsers = [];
+      
+      $browser_inputs.each(function(){
+        var chunks = $(this).val().split(':');
+        var wot = {};
+        wot[chunks[0]] = chunks[1];
+        browsers.push(wot);
+      });
+      return browsers;
+    }
+    
+    function getInterval(){
+      var $this = $(this.element);
+      console.log('lol', $this.find('#short_time').val(), $this, this);
+      return $this.find('#short_time').val();
+    }
+    
+    function createJob(callback){
+      
+      $.ajax({
+        url : '/jobs/create',
+        type : 'post',
+        dataType: 'json',
+        data : { wot : jobData ,
+          'lol' : 'you guise'
+          },
+        success : function(data){
+          console.log(data);
+          if(typeof callback == 'function'){
+            callback();
+          }
+        },
+        error : function(xhr, text, er){
+          console.log(xhr, text, er);
+        }
+      });
+    }
+    
     
     return $.extend(Object.create($.core.module), {
       render : function(){
@@ -56,6 +119,8 @@
         $this.find('button')
           .button() //make the button a button
           .click($.proxy(checkout, this)); 
+          
+        $(document).bind('createJob.stepControl', $.proxy(createJob, this));
       }      
     });
   };

@@ -14,12 +14,12 @@
         <div id="step2" class="step">
           <p class="action_header"><strong>Step 2 -</strong> Pick your browsers</p>
           <div id="browser_buttons">
-            <input type="checkbox" name="ff_check" id="ff_check"/><label for="ff_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
-            <input type="checkbox" name="safari_check" id="safari_check" /><label for="safari_check"><%= image_tag("img-safari.png", :alt => "Safari", :size => "60x60")%></label>
-            <input type="checkbox" name="chrome_check" id="chrome_check" /><label for="chrome_check"><%= image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")%></label>
-            <input type="checkbox" name="ie8_check" id="ie8_check"/><label for="ie8_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
-            <input type="checkbox" name="ie7_check" id="ie7_check" /><label for="ie7_check"><%= image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")%></label>
-            <input type="checkbox" name="ie6_check" id="ie6_check" /><label for="ie6_check"><%= image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")%></label>
+            <input type="checkbox" name="firefox_check" value="firefox:3" id="firefox_check"/><label for="firefox_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-firefox.png", :alt => "Fire Fox", :size => "60x60")%></label>
+            <input type="checkbox" name="safari_check" value="safari:5" id="safari_check" /><label for="safari_check"><%= image_tag("img-safari.png", :alt => "Safari", :size => "60x60")%></label>
+            <input type="checkbox" name="chrome_check" value="chrome:0" id="chrome_check" /><label for="chrome_check"><%= image_tag("img-chrome.png", :alt => "Chrome", :size => "60x60")%></label>
+            <input type="checkbox" name="iexplorer8_check" value="iexplorer:8" id="iexplorer8_check"/><label for="iexplorer8_check"><!--<span class="free_tag">Free</span>--><%= image_tag("img-ie8.png", :alt => "IE8", :size => "60x60")%></label>
+            <input type="checkbox" name="iexplorer7_check" value="iexplorer:7" id="iexplorer7_check" /><label for="iexplorer7_check"><%= image_tag("img-ie7.png", :alt => "IE7", :size => "60x60")%></label>
+            <input type="checkbox" name="iexplorer6_check" value="iexplorer:6" id="iexplorer6_check" /><label for="iexplorer6_check"><%= image_tag("img-ie6.png", :alt => "IE6", :size => "60x60")%></label>
           </div>
         </div>
         
@@ -66,8 +66,8 @@
   </div>
   
   <div id="creds">
-    <% if current_user.nil? %>
-    <div id="login" class="cred">
+    
+    <div id="login" class="cred <%unless current_user.nil? %>gone<% end %>">
       <p class="action_header"><strong>Login</strong></p>
       <form action="/user_sessions" method="post">
         <p>
@@ -83,10 +83,9 @@
         </p>
       </form>
     </div>
-    <% end %>
     
-    <% if current_user.nil? %>
-    <div id="register" class="cred">
+    
+    <div id="register" class="cred <%unless current_user.nil? %>gone<% end %>">
       <p class="action_header"><strong>Register</strong></p>
       <form method="post" action="/users">
         <p>
@@ -106,8 +105,7 @@
         </p>
       </form>
     </div>
-    <% end %>
-
+    
     <div id="payment" class="cred">
       <p><label for="shotSelect">How many shots?</label></p>
       <select name="shotSelect" id="shotSelect">
@@ -120,9 +118,26 @@
     </div>
     
     <div id="details" class="cred">
-      <p><label for=""></label><input type="" /></p>
-      <p><label for=""></label><input type="" /></p>
-      <p><label for=""></label><input type="" /></p>
+      <form>
+        <p>
+          <label>Credit Card Number</label>
+          <input type="text" />
+        </p>
+        <p>
+          <label>Credit Card Type</label>
+          <select name="" id="">
+            <option value="">MasterCard</option>
+            <option value="">Visa</option>
+            <option value="">Amex</option>
+            <option value="">Discover</option>
+          </select>
+        </p>
+        <p>
+          <label for="">CVV2 <a href="">whats this?</a></label>
+          <input type="" />
+        </p>
+          <input type="submit" value="checkout">      
+      </form>
       <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
     </div>
     
