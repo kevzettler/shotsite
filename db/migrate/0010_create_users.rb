@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :crypted_password
       t.string  :password_salt
       t.string  :persistence_token
-      t.integer :shots
+      t.integer :shots, :default => 10
 
       t.timestamps
     end
