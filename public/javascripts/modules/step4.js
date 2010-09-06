@@ -21,8 +21,10 @@
       
       price = parseFloat(price.substr(1, price.length), 10);
       
-      /*note clarify the shot amount, not multiplying by the interval. */
       var total = ((browsers * shots) * pages);
+      
+      //not loose coupled tried to make a updateTotal.payment method but .trigger was passing wrong parameter
+      $("#payment #total_price").text(total);
       
       return total;      
     }
