@@ -18402,3 +18402,298 @@ Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:10:22) [POST]
   Parameters: {"action"=>"create", "controller"=>"jobs", "wot"=>{"browsers"=>{"0"=>{"firefox"=>"3"}, "1"=>{"safari"=>"5"}, "2"=>{"chrome"=>"0"}, "3"=>{"iexplorer"=>"8"}, "4"=>{"iexplorer"=>"7"}, "5"=>{"iexplorer"=>"6"}}, "urls"=>["www.google.com"], "interval"=>"60"}, "lol"=>"you guise"}
   [4;35;1mJob Create (0.4ms)[0m   [0mINSERT INTO "jobs" ("browsers", "order_id", "updated_at", "time", "urls", "user_id", "interval", "created_at") VALUES(NULL, NULL, '2010-09-06 04:10:22', NULL, NULL, NULL, NULL, '2010-09-06 04:10:22')[0m
 Completed in 11ms (View: 2, DB: 0) | 201 Created [http://localhost/jobs/create]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:12:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.1ms)
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:13:12) [POST]
+  Parameters: {"browsers"=>{"0"=>{"firefox"=>"3"}, "1"=>{"safari"=>"5"}, "2"=>{"chrome"=>"0"}, "3"=>{"iexplorer"=>"8"}, "4"=>{"iexplorer"=>"7"}, "5"=>{"iexplorer"=>"6"}}, "action"=>"create", "urls"=>["www.google.com"], "controller"=>"jobs", "interval"=>"60"}
+  [4;36;1mJob Create (0.4ms)[0m   [0;1mINSERT INTO "jobs" ("browsers", "order_id", "updated_at", "time", "urls", "user_id", "interval", "created_at") VALUES(NULL, NULL, '2010-09-06 04:13:12', NULL, NULL, NULL, NULL, '2010-09-06 04:13:12')[0m
+Completed in 12ms (View: 2, DB: 0) | 201 Created [http://localhost/jobs/create]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:14:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.0ms)
+Completed in 81ms (View: 79, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:15:13) [POST]
+  Parameters: {"browsers"=>"[{\"firefox\":\"3\"},{\"safari\":\"5\"},{\"chrome\":\"0\"},{\"iexplorer\":\"8\"},{\"iexplorer\":\"7\"},{\"iexplorer\":\"6\"}]", "action"=>"create", "urls"=>"[\"www.google.com\",\"http://lol.com\"]", "controller"=>"jobs", "interval"=>"60"}
+  [4;35;1mJob Create (0.4ms)[0m   [0mINSERT INTO "jobs" ("browsers", "order_id", "updated_at", "time", "urls", "user_id", "interval", "created_at") VALUES(NULL, NULL, '2010-09-06 04:15:13', NULL, NULL, NULL, NULL, '2010-09-06 04:15:13')[0m
+Completed in 12ms (View: 2, DB: 0) | 201 Created [http://localhost/jobs/create]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:16:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:17:08) [POST]
+  Parameters: {"browsers"=>"[{\"name\":\"firefox\",\"version\":\"3\"},{\"name\":\"safari\",\"version\":\"5\"},{\"name\":\"chrome\",\"version\":\"0\"},{\"name\":\"iexplorer\",\"version\":\"8\"},{\"name\":\"iexplorer\",\"version\":\"7\"},{\"name\":\"iexplorer\",\"version\":\"6\"}]", "action"=>"create", "urls"=>"[\"www.google.com\",\"http://wtf.com\"]", "controller"=>"jobs", "interval"=>"60"}
+
+NoMethodError (undefined method `next_run' for #<Job:0x2225464>):
+  app/models/job.rb:13:in `initialize'
+  app/controllers/jobs_controller.rb:43:in `new'
+  app/controllers/jobs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (10)
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "shots" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('10')[0m
+Migrating to CreateScreenshots (20)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "screenshots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "job_id" integer, "browser" varchar(255), "url" varchar(255), "time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to CreateOrders (30)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "price" float, "shots" integer, "first_name" varchar(255), "last_name" varchar(255), "card_type" varchar(255), "card_expires_on" date, "ip_address" varchar(255), "express_token" varchar(255), "express_payer_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('30')[0m
+Migrating to CreateJobs (40)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "order_id" integer, "interval" integer, "browsers" varchar(255), "urls" varchar(255), "time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('40')[0m
+Migrating to CreateOrderTransactions (50)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "order_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "action" varchar(255), "amount" integer, "sucess" boolean, "authroization" varchar(255), "message" varchar(255), "params" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('50')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("order_transactions")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("screenshots")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:17:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.0ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-05 21:18:02) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'kevzettler@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0d5c7ed32d47f23ec07f9aea7a141dd5226411799297fac37b2d9ba298ea626141eb0e041f508d771f08f64fb67f142aeab6afa9875967883232c26fb064ef4c') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "crypted_password", "password_salt", "persistence_token", "shots", "email", "created_at") VALUES('2010-09-06 04:18:02', '47155ef79ee5faf0ab86f309117050b24a287da0735f4c9fe21266fd62d40d643686325d3ef01ea413f74190fb36998933d6a9f0b8f179fde5b30c4c2ec029e8', '23LY0Xy73B8Fex902CE', '0d5c7ed32d47f23ec07f9aea7a141dd5226411799297fac37b2d9ba298ea626141eb0e041f508d771f08f64fb67f142aeab6afa9875967883232c26fb064ef4c', NULL, 'kevzettler@gmail.com', '2010-09-06 04:18:02')[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 175ms (View: 5, DB: 1) | 201 Created [http://localhost/users]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:18:25) [POST]
+  Parameters: {"browsers"=>"[{\"name\":\"firefox\",\"version\":\"3\"},{\"name\":\"safari\",\"version\":\"5\"},{\"name\":\"chrome\",\"version\":\"0\"},{\"name\":\"iexplorer\",\"version\":\"8\"},{\"name\":\"iexplorer\",\"version\":\"7\"},{\"name\":\"iexplorer\",\"version\":\"6\"}]", "action"=>"create", "urls"=>"[\"http://wing.com\",\"www.google.com\"]", "controller"=>"jobs", "interval"=>"60"}
+
+NoMethodError (undefined method `next_run' for #<Job:0x230e18c>):
+  app/models/job.rb:13:in `initialize'
+  app/controllers/jobs_controller.rb:43:in `new'
+  app/controllers/jobs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (90.6ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (10)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "shots" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('10')[0m
+Migrating to CreateScreenshots (20)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "screenshots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "job_id" integer, "browser" varchar(255), "url" varchar(255), "time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to CreateOrders (30)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "price" float, "shots" integer, "first_name" varchar(255), "last_name" varchar(255), "card_type" varchar(255), "card_expires_on" date, "ip_address" varchar(255), "express_token" varchar(255), "express_payer_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('30')[0m
+Migrating to CreateJobs (40)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "interval" integer, "browsers" varchar(255), "urls" varchar(255), "status" varchar(255), "last_run" datetime, "next_run" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('40')[0m
+Migrating to CreateOrderTransactions (50)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "order_transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "action" varchar(255), "amount" integer, "sucess" boolean, "authroization" varchar(255), "message" varchar(255), "params" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('50')[0m
+Migrating to CreateBatches (60)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "batches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job_id" integer, "status" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('60')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("batches")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("order_transactions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("screenshots")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:21:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_header (1.3ms)
+Rendered shared/_footer (0.3ms)
+Completed in 105ms (View: 103, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-05 21:22:02) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"kevzettler@gmail.com"}, "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'kevzettler@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e3abdf184877b6062751adf7c09ede9ee3f277c44a4bcbc6fd18805540d3061a9b3e57640474cf18962f8f7606c3f327e4c65c97b867cdecf625b13f63d559be') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "crypted_password", "password_salt", "persistence_token", "shots", "email", "created_at") VALUES('2010-09-06 04:22:02', '090a2a4ba8cc4aa579c9149cb394cec1ae6fcbd698398d722fc9e284bc618fee32cd5c884b2ef7e9e2cffcd2b4354a92bb2ba6bd7566f0ea97ff0113d01af13b', '7ullxUo9ynGl94HNghN6', 'e3abdf184877b6062751adf7c09ede9ee3f277c44a4bcbc6fd18805540d3061a9b3e57640474cf18962f8f7606c3f327e4c65c97b867cdecf625b13f63d559be', NULL, 'kevzettler@gmail.com', '2010-09-06 04:22:02')[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'kevzettler@gmail.com') LIMIT 1[0m
+Completed in 174ms (View: 5, DB: 2) | 201 Created [http://localhost/users]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:22:19) [POST]
+  Parameters: {"browsers"=>"[{\"name\":\"firefox\",\"version\":\"3\"},{\"name\":\"safari\",\"version\":\"5\"},{\"name\":\"chrome\",\"version\":\"0\"},{\"name\":\"iexplorer\",\"version\":\"8\"},{\"name\":\"iexplorer\",\"version\":\"7\"},{\"name\":\"iexplorer\",\"version\":\"6\"}]", "action"=>"create", "urls"=>"[\"www.google.com\"]", "controller"=>"jobs", "interval"=>"60"}
+
+NoMethodError (undefined method `minutes' for nil:NilClass):
+  app/models/job.rb:13:in `initialize'
+  app/controllers/jobs_controller.rb:43:in `new'
+  app/controllers/jobs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:25:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:25:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:26:01) [POST]
+  Parameters: {"action"=>"create", "controller"=>"jobs", "job"=>{"browsers"=>"[{\"name\":\"firefox\",\"version\":\"3\"},{\"name\":\"safari\",\"version\":\"5\"},{\"name\":\"chrome\",\"version\":\"0\"},{\"name\":\"iexplorer\",\"version\":\"8\"},{\"name\":\"iexplorer\",\"version\":\"7\"},{\"name\":\"iexplorer\",\"version\":\"6\"}]", "urls"=>"[\"www.google.com\"]", "interval"=>"60"}}
+Completed in 12ms (View: 4, DB: 0) | 422 Unprocessable Entity [http://localhost/jobs/create]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:31:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-09-05 21:31:36) [POST]
+  Parameters: {"action"=>"create", "controller"=>"jobs", "job"=>{"browsers"=>"[{\"name\":\"firefox\",\"version\":\"3\"},{\"name\":\"safari\",\"version\":\"5\"},{\"name\":\"chrome\",\"version\":\"0\"},{\"name\":\"iexplorer\",\"version\":\"8\"},{\"name\":\"iexplorer\",\"version\":\"7\"},{\"name\":\"iexplorer\",\"version\":\"6\"}]", "urls"=>"[\"www.google.com\"]", "interval"=>"60"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mJob Create (0.3ms)[0m   [0mINSERT INTO "jobs" ("browsers", "status", "updated_at", "last_run", "urls", "user_id", "interval", "next_run", "created_at") VALUES('[{"name":"firefox","version":"3"},{"name":"safari","version":"5"},{"name":"chrome","version":"0"},{"name":"iexplorer","version":"8"},{"name":"iexplorer","version":"7"},{"name":"iexplorer","version":"6"}]', NULL, '2010-09-06 04:31:36', NULL, '["www.google.com"]', 1, 60, '2010-09-06 05:31:36', '2010-09-06 04:31:36')[0m
+Completed in 35ms (View: 2, DB: 1) | 201 Created [http://localhost/jobs/create]
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" [0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:34:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 28ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:43:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 21:43:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;36;1mScreenshot Load (0.6ms)[0m   [0;1mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/screenshots
+Rendering screenshots/index
+Completed in 50ms (View: 14, DB: 1) | 200 OK [http://localhost/screenshots]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-05 21:44:00) [GET]
+
+ActionController::RoutingError (No route matches "/shots" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

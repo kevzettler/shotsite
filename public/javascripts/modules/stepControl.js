@@ -31,7 +31,6 @@
       , objScope = this
       ;
       
-      console.log('obj scope', objScope);
       /*
       *total = $(document).trigger("calculateTotal.step4");
       * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
@@ -44,8 +43,8 @@
       
       //update job data
       jobData = {
-        urls: getUrls.call(objScope),
-        browsers: getBrowsers.call(objScope),
+        urls: JSON.stringify(getUrls.call(objScope)),
+        browsers: JSON.stringify(getBrowsers.call(objScope)),
         interval: getInterval.call(objScope)
       };
       
@@ -77,9 +76,10 @@
       
       $browser_inputs.each(function(){
         var chunks = $(this).val().split(':');
-        var wot = {};
-        wot[chunks[0]] = chunks[1];
-        browsers.push(wot);
+        browsers.push({
+          name : chunks[0],
+          version : chunks[1]
+        });
       });
       return browsers;
     }
@@ -96,9 +96,7 @@
         url : '/jobs/create',
         type : 'post',
         dataType: 'json',
-        data : { wot : jobData ,
-          'lol' : 'you guise'
-          },
+        data : {job : jobData},
         success : function(data){
           console.log(data);
           if(typeof callback == 'function'){

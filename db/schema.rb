@@ -18,11 +18,8 @@ ActiveRecord::Schema.define(:version => 60) do
     t.datetime "updated_at"
   end
 
-ActiveRecord::Schema.define(:version => 50) do
-
   create_table "jobs", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "order_id"
     t.integer  "interval"
     t.string   "browsers"
     t.string   "urls"
@@ -79,3 +76,5 @@ ActiveRecord::Schema.define(:version => 50) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+end
