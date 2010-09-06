@@ -5,7 +5,4 @@ class User < ActiveRecord::Base
 
   validates_presence_of :shots
 
-	def initialize(options = null)
-		self.shots = 0
-	end
 end

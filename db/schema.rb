@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 60) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.integer  "shots"
+    t.integer  "shots",             :default => 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
