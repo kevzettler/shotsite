@@ -21,7 +21,15 @@
     
     return $.extend(Object.create($.core.module), {                  
       displayError: function(message){
-        findRealForm.call(this).find("p.action_header").after('<p class="error">'+message+'</p>');
+        var $realForm = findRealForm.call(this);
+        $actionHeader =  $realForm.find("p.action_header");
+        
+        if($actionHeader.length > 0){
+          $actionHeader.after('<p class="error">'+message+'</p>');
+        }else{
+          $realForm.prepend('<p class="error">'+message+'</p>');
+        }
+        
       },
       
       clearErrors: function(){

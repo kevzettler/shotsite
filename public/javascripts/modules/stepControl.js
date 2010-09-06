@@ -40,8 +40,7 @@
       //Random conditional for now not sure on error handling for empty or free orders yet
       if(total > 0){
         $form.disable();
-        console.log(total, $button);
-        $button.find("span.ui-button-text").text('Change Order?');
+        $button.find("span.ui-button-text").text('Edit Job?');
         $(document).trigger('show.credControl');
         $button.unbind('click');
         $button.click($.proxy(changeOrder, this));

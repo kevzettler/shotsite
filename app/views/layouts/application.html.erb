@@ -25,6 +25,7 @@
 	<script src="/javascripts/modules/credControl.js"></script>
 	<script src="/javascripts/modules/accountManager.js"></script>
 	<script src="/javascripts/modules/payment.js"></script>
+	<script src="/javascripts/modules/details.js"></script>
           
   <script src="/javascripts/vendor/json2.js"></script>
 	<script src="/javascripts/vendor/jquery.disable.js"></script>
@@ -34,7 +35,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
@@ -46,6 +47,7 @@
 	    $('#step4').step4();
 	    $("#steps").stepControl();
 	    $("#creds").credControl();
+	    $("#details").details();
 	    $("#payment").payment();
 	 });
 	</script>

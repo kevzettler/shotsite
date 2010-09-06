@@ -50,8 +50,10 @@
         
         $form.submit($.proxy(registerSubmit, this));
         
-        $(document).bind("fadeOut.register", $.proxy(function(){ $this.fadeOut().hide(); }));
-        $(document).bind("fadeIn.register", $.proxy(function(){ $this.fadeIn().show(); }));
+        $this.find('button').button();
+        
+        $(document).bind("fadeOut.register", $.proxy(function(){ $this.find('*').fadeOut(); }));
+        $(document).bind("fadeIn.register", $.proxy(function(){ $this.find('*').fadeIn(); }));
       }
     
     });

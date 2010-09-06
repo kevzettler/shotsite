@@ -55,8 +55,8 @@
         $this.find('form').submit($.proxy(loginSubmit, this));
         
         //bind public events
-        $(document).bind('fadeOut.login', function(){ $this.fadeOut('fast').hide();});
-        $(document).bind('fadeIn.login', function(){ $this.fadeIn('fast').show();});
+        $(document).bind('fadeOut.login', function(){ $this.find('*').fadeOut();});
+        $(document).bind('fadeIn.login', function(){ $this.find('*').fadeIn();});
       },
 
     });

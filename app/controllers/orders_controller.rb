@@ -17,6 +17,7 @@ class OrdersController < ApplicationController
   end
 	
 	def new
+			print 'lol new'
 			@order = Order.new({:express_token => params[:token]})
 	end
 	
@@ -35,7 +36,8 @@ class OrdersController < ApplicationController
 	end
 	
 	def express
-		response = EXPRESS_GATEWAY.setup_purchase(99.88,
+		print "lol express"
+		response = EXPRESS_GATEWAY.setup_purchase(0.99,
 			:ip => request.remote_ip,
 			:return_url => new_order_url,
 			:cancel_return_url => root_url

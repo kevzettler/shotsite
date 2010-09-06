@@ -27,10 +27,14 @@
           <p class="action_header"><strong>Step 3 -</strong> Set an interval</p>
           <p>
             <select name="short_time" id="short_time">
-              <!--<option value="1">Just Once</option>-->
+              <!--
               <option value="1">Every day</option>
               <option value="24">Every hour</option>
               <option value="1440">Every minute</option>
+              -->
+              <option value="1440" rel="1">Every day</option>
+              <option value="60" rel="24">Every hour</option>
+              <option value="1" rel="1440">Every minute</option>
             </select>
           </p>
           <p>
@@ -55,7 +59,6 @@
             <li><br /></li>
             <li><span id="total_price">0</span> Total shots</li>
             <li><br /></li>
-            <li>$5.00 = 1000 shots</li>
           <ul>
         </div>
       </form>
@@ -106,6 +109,20 @@
     <% end %>
 
     <div id="payment" class="cred">
+      <p><label for="shotSelect">How many shots?</label></p>
+      <select name="shotSelect" id="shotSelect">
+        <option>1000</option>
+        <option>2000</option>
+        <option>3000</option>
+      </select>
+      <span id="price">$<cite>5.00</cite></span>
+      <p>Your selected Job is for <span id="total_price">0</span> shots </p>
+    </div>
+    
+    <div id="details" class="cred">
+      <p><label for=""></label><input type="" /></p>
+      <p><label for=""></label><input type="" /></p>
+      <p><label for=""></label><input type="" /></p>
       <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
     </div>
     

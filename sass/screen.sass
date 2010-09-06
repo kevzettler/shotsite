@@ -1,4 +1,4 @@
-/* screen view styles*/
+x/* screen view styles*/
 
 @import reset.sass
 @import 960/grid.sass
@@ -80,7 +80,6 @@ body
 
 #creds
   background-color: #d8ffc9
-  display: none
 
 #step_form
   +clearfix
@@ -122,13 +121,17 @@ body
   
 #login
   +alpha
-  +grid_prefix(1)
   +grid(4)
   
 #register
-  +grid_prefix(1)
-  +grid(5)
-  +grid_suffix(2)
+  +grid(4)
+
+#payment
+  +grid(4)
+ 
+#details
+  +omega
+  +grid(3)
 
 #login, #register
   p
