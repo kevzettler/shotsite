@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-			format.json { render :json => @user }
+      format.json { render :json => @user }
     end
   end
 
@@ -35,16 +35,16 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to(root_url, :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
-				format.json { 
-						@user_session = UserSession.new(params[:user]) 
-						if @user_session.save
-							render :json => @user, :status=> :created, :location => @user 
-						end
-				}
+        format.json { 
+          @user_session = UserSession.new(params[:user]) 
+          if @user_session.save
+            render :json => @user, :status=> :created, :location => @user 
+          end
+        }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-				format.json {render :json => @user.errors, :status => :unprocessable_entity }
+        format.json {render :json => @user.errors, :status => :unprocessable_entity }
       end
     end
   end

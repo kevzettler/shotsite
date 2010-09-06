@@ -1,5 +1,4 @@
 class Order < ActiveRecord::Base
-	belongs_to :user
 	has_many :transactions, :class_name => "OrderTransaction"
 	
 	#attr_reader :express_token
