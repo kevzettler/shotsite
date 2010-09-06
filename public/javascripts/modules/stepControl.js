@@ -64,14 +64,18 @@
       urls = [],
       $url_inputs = $this.find('#input_steps input');
       $url_inputs.each(function(){
-        urls.push($(this).val());
+        var url = $(this).val();
+        if(url.substr(0,7) != 'http://'){
+          url = 'http://' + url;
+        }
+        urls.push(url);
       });
       return urls;
     }
     
     function getBrowsers(){
       var $this = $(this.element),
-      $browser_inputs = $this.find('#browser_buttons input'),
+      $browser_inputs = $this.find('#browser_buttons input:checked'),
       browsers = [];
       
       $browser_inputs.each(function(){
