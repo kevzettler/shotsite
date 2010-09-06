@@ -4,8 +4,6 @@ class OrdersController < ApplicationController
   def index
 		if current_user
 	    @orders = current_user.orders
-			print "lol user\n" 
-			print current_user.orders
 
 	    respond_to do |format|
 	      format.html # index.html.erb

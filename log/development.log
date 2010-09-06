@@ -18697,3 +18697,63 @@ ActionController::RoutingError (No route matches "/shots" with {:method=>:get}):
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 21:47:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/screenshots
+Rendering screenshots/index
+Completed in 69ms (View: 64, DB: 1) | 200 OK [http://localhost/shots]
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 21:48:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/screenshots
+Rendering screenshots/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/shots]
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 21:50:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/application
+Rendering screenshots/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (368.9ms)
+Rendered shared/_footer (0.4ms)
+Completed in 390ms (View: 385, DB: 1) | 200 OK [http://localhost/shots]
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 22:16:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/application
+Rendering screenshots/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (15.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://localhost/shots]
+
+
+Processing ScreenshotsController#index (for 127.0.0.1 at 2010-09-05 22:22:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"screenshots"}
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" [0m
+Rendering template within layouts/application
+Rendering screenshots/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered shared/_header (18.0ms)
+Rendered shared/_footer (0.1ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/shots]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

@@ -3,7 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 	map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.resources :jobs
   map.resources :orders, :new => { :express => :get }
-  map.resources :screenshots
+  map.resources :screenshots 
+	map.resources :shots, :controller => "screenshots"
   map.resources :users
 	map.resources :user_sessions
 	map.root :controller => "application"
