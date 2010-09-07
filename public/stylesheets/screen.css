@@ -2201,20 +2201,50 @@ button.ui-button::-moz-focus-inner {
   height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
 }
 
-/* line 2, ../../sass/_jobs.sass */
+/* line 3, ../../sass/_jobs.sass */
+ul.job_list a.job_link:hover {
+  color: black !important;
+  background: #cccccc !important;
+}
+/* line 7, ../../sass/_jobs.sass */
+ul.job_list a.batch_link:hover {
+  color: black !important;
+  background: #cccccc !important;
+}
+/* line 10, ../../sass/_jobs.sass */
 ul.job_list ul.batch_list {
   padding-left: 20px;
 }
-/* line 4, ../../sass/_jobs.sass */
-ul.job_list ul.batch_list p {
-  padding-left: 10px;
+/* line 12, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li {
+  overflow: hidden;
+  *zoom: 1;
+  clear: right;
+  display: block;
 }
-/* line 6, ../../sass/_jobs.sass */
-ul.job_list ul.batch_list p a {
-  text-decoration: none;
+/* line 16, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li a {
+  background: white;
+  padding: 5px 0;
+}
+/* line 19, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li a:hover {
+  color: black !important;
+}
+/* line 21, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li a:hover * {
+  background: #cccccc !important;
+}
+/* line 23, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li img, ul.job_list ul.batch_list ul.shot_list li span {
+  float: left;
+}
+/* line 25, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list ul.shot_list li span {
   display: block;
   height: 30px;
   line-height: 30px;
+  padding-left: 10px;
 }
 
 /* line 17, ../../sass/screen.sass */

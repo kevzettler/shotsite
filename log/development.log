@@ -2386,3 +2386,1266 @@ Rendering jobs/index
 Rendered shared/_header (0.7ms)
 Rendered shared/_footer (0.1ms)
 Completed in 61ms (View: 39, DB: 4) | 200 OK [http://localhost/jobs]
+
+
+Processing ScreenshotsController#1_3 to png (for 127.0.0.1 at 2010-09-06 20:57:23) [GET]
+  Parameters: {"format"=>"png", "action"=>"1_3", "id"=>"4465191748c456ce1f7e55e0c596629d0b743809_iexplore-6", "controller"=>"screenshots"}
+
+ActionController::UnknownAction (No action responded to 1_3. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 20:57:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 27, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 20:58:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 20:58:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ScreenshotsController#1_2 to png (for 127.0.0.1 at 2010-09-06 20:59:41) [GET]
+  Parameters: {"format"=>"png", "action"=>"1_2", "id"=>"4465191748c456ce1f7e55e0c596629d0b743809_iexplore-6", "controller"=>"screenshots"}
+
+ActionController::UnknownAction (No action responded to 1_2. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 20:59:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.6ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 106ms (View: 30, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 20:59:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:00:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.6ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.7ms)
+Rendered shared/_footer (0.1ms)
+Completed in 48ms (View: 29, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:01:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 48ms (View: 28, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:02:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 102ms (View: 27, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:06:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 48ms (View: 28, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:06:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:08:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 46ms (View: 26, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:08:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 103ms (View: 84, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:08:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:08:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:10:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 47ms (View: 28, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:11:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 105ms (View: 86, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:11:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 47ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:12:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 49ms (View: 30, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:12:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:13:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 102ms (View: 82, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:14:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:14:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 46ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:15:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 103ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:16:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 103ms (View: 83, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ScreenshotsController#1_2 to png (for 127.0.0.1 at 2010-09-06 21:16:24) [GET]
+  Parameters: {"format"=>"png", "action"=>"1_2", "id"=>"4465191748c456ce1f7e55e0c596629d0b743809_iexplore-7", "controller"=>"screenshots"}
+
+ActionController::UnknownAction (No action responded to 1_2. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:28:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 51ms (View: 32, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:28:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-06 21:28:52) [GET]
+
+ActionController::RoutingError (No route matches "/job/1" with {:method=>:get}):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:28:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 46ms (View: 26, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:29:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 46ms (View: 26, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:29:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:32:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 103ms (View: 84, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:33:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:36:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-06 21:36:33) [GET]
+
+ActionController::RoutingError (No route matches "/job/1" with {:method=>:get}):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:36:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 116ms (View: 93, DB: 5) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:36:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:38:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.4ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:40:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-06 21:41:01) [GET]
+
+ActionController::RoutingError (No route matches "/job/2" with {:method=>:get}):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:41:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.3ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 45ms (View: 26, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:42:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 103ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-06 21:44:37) [GET]
+
+ActionController::RoutingError (No route matches "/job/6" with {:method=>:get}):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:44:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.4ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 47ms (View: 26, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:46:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 44ms (View: 25, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:46:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 104ms (View: 27, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:46:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:48:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 43ms (View: 24, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:48:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mBatch Load (0.3ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.1ms)
+Completed in 104ms (View: 85, DB: 3) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:49:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mBatch Load (0.2ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mScreenshot Load (0.1ms)[0m   [0;1mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mBatch Load (0.1ms)[0m   [0;1mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 51ms (View: 31, DB: 4) | 200 OK [http://localhost/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-09-06 21:50:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;35;1mBatch Load (0.2ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 8) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;35;1mBatch Load (0.1ms)[0m   [0mSELECT * FROM "batches" WHERE ("batches".job_id = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+  [4;35;1mScreenshot Load (0.1ms)[0m   [0mSELECT * FROM "screenshots" WHERE ("screenshots".batch_id = 8) [0m
+Rendered shared/_header (0.5ms)
+Rendered shared/_footer (0.0ms)
+Completed in 54ms (View: 33, DB: 4) | 200 OK [http://localhost/jobs]
+
+
+Processing ScreenshotsController#1_3 to png (for 127.0.0.1 at 2010-09-06 21:50:47) [GET]
+  Parameters: {"format"=>"png", "action"=>"1_3", "id"=>"4465191748c456ce1f7e55e0c596629d0b743809_iexplore-7", "controller"=>"screenshots"}
+
+ActionController::UnknownAction (No action responded to 1_3. Actions: create, destroy, edit, index, new, show, and update):
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/kevzettler/.rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
