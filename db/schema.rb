@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 60) do
     t.string   "action"
     t.integer  "amount"
     t.boolean  "sucess"
-    t.string   "authorization"
+    t.string   "authroization"
     t.string   "message"
     t.text     "params"
     t.datetime "created_at"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 60) do
 
   create_table "orders", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "cents_per_shot"
+    t.float    "price"
     t.integer  "shots"
     t.string   "first_name"
     t.string   "last_name"
