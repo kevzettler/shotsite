@@ -4,7 +4,19 @@
 <% @jobs.each do |job| %>
   <li>
     <%=job.id%>
-    <%=%>
+    <%=job.status%>
+    <%=job.last_run%>
+    <ul>
+      <% job.batches.each do |batch|%>
+        <li>
+        <%= batch.id %>
+        <%= batch.status %>
+          <% batch.screenshots.each do |screenshot|%>
+          <a href="<%=h screenshot.screenshot_path %>" target="_blank"><%=screenshot.browser_name%> <%=screenshot.browser_version%></a>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </li>
 <% end %>
 </ul>
