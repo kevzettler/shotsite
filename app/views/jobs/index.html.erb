@@ -1,18 +1,16 @@
 <h1>Listing jobs</h1>
 
-<ul>
+<ul class="job_list">
 <% @jobs.each do |job| %>
   <li>
-    <%=job.id%>
-    <%=job.status%>
-    <%=job.last_run%>
-    <ul>
-      <% job.batches.each do |batch|%>
+    <a href="/job/<%=job.id%>">Job <%=job.id%><%=job.status%><%=job.last_run%></a>
+    <ul class="batch_list">
+      <% job.batches.each do |batch| %>
         <li>
-        <%= batch.id %>
-        <%= batch.status %>
+          Batch <%= batch.id %>
+          <%= batch.status %>
           <% batch.screenshots.each do |screenshot|%>
-          <a href="<%=h screenshot.screenshot_path %>" target="_blank"><%=screenshot.browser_name%> <%=screenshot.browser_version%></a>
+          <p><a href="<%=h screenshot.screenshot_path %>" target="_blank"><%= image_tag(screenshot.icon, :alt => screenshot.pretty_name, :size => "30x30")%> <%= screenshot.url %></a></p>
           <% end %>
         </li>
       <% end %>

@@ -28,14 +28,21 @@ class Screenshot < ActiveRecord::Base
 		ret
 	end
 	
-	def icon_image
+	def icon
 		icons = {
 			"chrome" => "img-firefox.png",
 			"safari" => "img-safari.png",
 			"googlechrome" => "img-chrome.png",
-			"iexplore" => "img-ie8.png",
-			"iexplore" => "img-ie7.png", 
-			"iexplore" => "img-ie6.png"
+			"iexplore8" => "img-ie8.png",
+			"iexplore7" => "img-ie7.png", 
+			"iexplore6" => "img-ie6.png"
 		}
+		
+		if(self.browser_name == 'iexplore')
+			ret = icons[self.browser_name+self.browser_version]
+		else	
+			ret = icons[self.browser_name]
+		end
+		
 	end
 end

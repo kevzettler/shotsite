@@ -2201,35 +2201,51 @@ button.ui-button::-moz-focus-inner {
   height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
 }
 
-/* line 15, ../../sass/screen.sass */
+/* line 2, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list {
+  padding-left: 20px;
+}
+/* line 4, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list p {
+  padding-left: 10px;
+}
+/* line 6, ../../sass/_jobs.sass */
+ul.job_list ul.batch_list p a {
+  text-decoration: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 17, ../../sass/screen.sass */
 a:hover {
   background: transparent !important;
 }
 
-/* line 18, ../../sass/screen.sass */
+/* line 20, ../../sass/screen.sass */
 select, button {
   cursor: pointer !important;
 }
 
-/* line 22, ../../sass/screen.sass */
+/* line 24, ../../sass/screen.sass */
 #facebox div.content {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 25, ../../sass/screen.sass */
+/* line 27, ../../sass/screen.sass */
 body, html {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
 
-/* line 30, ../../sass/screen.sass */
+/* line 32, ../../sass/screen.sass */
 body {
   font-size: 62.5%;
 }
 
-/* line 33, ../../sass/screen.sass */
+/* line 35, ../../sass/screen.sass */
 #wrapper {
   overflow: hidden;
   *zoom: 1;
@@ -2239,14 +2255,14 @@ body {
   margin: 0 auto;
 }
 
-/* line 38, ../../sass/screen.sass */
+/* line 40, ../../sass/screen.sass */
 #footer {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
 
-/* line 41, ../../sass/screen.sass */
+/* line 43, ../../sass/screen.sass */
 #header {
   overflow: hidden;
   *zoom: 1;
@@ -2254,7 +2270,7 @@ body {
   padding: 15px 0;
   border-bottom: 1px solid black;
 }
-/* line 46, ../../sass/screen.sass */
+/* line 48, ../../sass/screen.sass */
 #header div#logo_container {
   margin-left: 0;
   display: inline;
@@ -2263,12 +2279,12 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 49, ../../sass/screen.sass */
+/* line 51, ../../sass/screen.sass */
 #header div#account_links {
   float: right !important;
   margin-right: 10px;
 }
-/* line 52, ../../sass/screen.sass */
+/* line 54, ../../sass/screen.sass */
 #header a#logo {
   font-size: 1.9em;
   text-shadow: 1px 1px 5px black;
@@ -2276,28 +2292,28 @@ body {
   text-decoration: none !important;
 }
 
-/* line 58, ../../sass/screen.sass */
+/* line 60, ../../sass/screen.sass */
 .action_header {
   font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 62, ../../sass/screen.sass */
+/* line 64, ../../sass/screen.sass */
 .action_header strong {
   font-size: 1.1em;
 }
 
-/* line 65, ../../sass/screen.sass */
+/* line 67, ../../sass/screen.sass */
 .error {
   color: red;
 }
 
-/* line 68, ../../sass/screen.sass */
+/* line 70, ../../sass/screen.sass */
 .flash_message {
   display: none;
 }
 
-/* line 71, ../../sass/screen.sass */
+/* line 73, ../../sass/screen.sass */
 #steps, #creds {
   overflow: hidden;
   *zoom: 1;
@@ -2306,30 +2322,30 @@ body {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
-/* line 77, ../../sass/screen.sass */
+/* line 79, ../../sass/screen.sass */
 #steps button#checkout_btn, #creds button#checkout_btn {
   float: right;
   margin-right: 50px;
 }
 
-/* line 81, ../../sass/screen.sass */
+/* line 83, ../../sass/screen.sass */
 #creds {
   background-color: #d8ffc9;
 }
 
-/* line 84, ../../sass/screen.sass */
+/* line 86, ../../sass/screen.sass */
 #creds .gone {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 88, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 #step_form {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 91, ../../sass/screen.sass */
+/* line 93, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2338,18 +2354,18 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 94, ../../sass/screen.sass */
+/* line 96, ../../sass/screen.sass */
 #step1 input {
   width: 209px;
   margin-bottom: 5px;
 }
-/* line 97, ../../sass/screen.sass */
+/* line 99, ../../sass/screen.sass */
 #step1 a {
   float: right;
   padding-right: 5px;
 }
 
-/* line 101, ../../sass/screen.sass */
+/* line 103, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2357,7 +2373,7 @@ body {
   margin-right: 10px;
   width: 280px;
 }
-/* line 103, ../../sass/screen.sass */
+/* line 105, ../../sass/screen.sass */
 #step2 .ui-buttonset .ui-button {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2365,11 +2381,11 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-/* line 107, ../../sass/screen.sass */
+/* line 109, ../../sass/screen.sass */
 #step2 .ui-button-text-only .ui-button-text {
   padding: 0.5em 0.7em !important;
 }
-/* line 110, ../../sass/screen.sass */
+/* line 112, ../../sass/screen.sass */
 #step2 label span.free_tag {
   color: #0ff756;
   font-size: 1.3em;
@@ -2380,7 +2396,7 @@ body {
   text-shadow: 1px 1px 2px black;
 }
 
-/* line 119, ../../sass/screen.sass */
+/* line 121, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2389,7 +2405,7 @@ body {
   width: 220px;
 }
 
-/* line 122, ../../sass/screen.sass */
+/* line 124, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
@@ -2399,7 +2415,7 @@ body {
   width: 160px;
 }
 
-/* line 126, ../../sass/screen.sass */
+/* line 128, ../../sass/screen.sass */
 #login {
   margin-left: 0;
   display: inline;
@@ -2409,7 +2425,7 @@ body {
   width: 220px;
 }
 
-/* line 130, ../../sass/screen.sass */
+/* line 132, ../../sass/screen.sass */
 #register {
   display: inline;
   float: left;
@@ -2418,7 +2434,7 @@ body {
   width: 220px;
 }
 
-/* line 133, ../../sass/screen.sass */
+/* line 135, ../../sass/screen.sass */
 #payment {
   display: inline;
   float: left;
@@ -2427,7 +2443,7 @@ body {
   width: 220px;
 }
 
-/* line 136, ../../sass/screen.sass */
+/* line 138, ../../sass/screen.sass */
 #details {
   margin-right: 0;
   display: inline;
@@ -2437,22 +2453,22 @@ body {
   width: 160px;
 }
 
-/* line 141, ../../sass/screen.sass */
+/* line 143, ../../sass/screen.sass */
 #login p, #register p {
   padding: 3px 0;
   width: 170px;
 }
-/* line 144, ../../sass/screen.sass */
+/* line 146, ../../sass/screen.sass */
 #login p button, #register p button {
   float: right;
   margin-top: 5px;
   margin-right: -6px;
 }
-/* line 148, ../../sass/screen.sass */
+/* line 150, ../../sass/screen.sass */
 #login p input, #register p input {
   width: 170px;
 }
-/* line 150, ../../sass/screen.sass */
+/* line 152, ../../sass/screen.sass */
 #login label, #register label {
   display: block;
   width: 100px;
