@@ -6,8 +6,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :orders, :new => { :express => :get }
   map.resources :screenshots 
   map.resources :shots, :controller => "batches"
-  map.resources :users
-  map.resources :user_sessions
 
   map.resources :users do |users|
     users.resources :screenshots
