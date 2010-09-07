@@ -1,27 +1,13 @@
 <h1>Listing jobs</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Order</th>
-    <th>Browsers</th>
-    <th>Urls</th>
-    <th>Time</th>
-  </tr>
-
+<ul>
 <% @jobs.each do |job| %>
-  <tr>
-    <td><%=h job.user_id %></td>
-    <td><%=h job.order_id %></td>
-    <td><%=h job.browsers %></td>
-    <td><%=h job.urls %></td>
-    <td><%=h job.time %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <li>
+    <%=job.id%>
+    <%=%>
+  </li>
 <% end %>
-</table>
+</ul>
 
 <br />
 

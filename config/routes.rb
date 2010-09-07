@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :jobs
   map.resources :orders, :new => { :express => :get }
   map.resources :screenshots 
-	map.resources :shots, :controller => "screenshots"
+	map.resources :shots, :controller => "batches"
   map.resources :users
 	map.resources :user_sessions
 	map.root :controller => "application"

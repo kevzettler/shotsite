@@ -1,0 +1,22 @@
+<h1>Your Batches!</h1>
+
+<table>
+  <tr>
+    <td>Job ID</td>
+    <td>Status</td>
+    <td>Screenshots</td>
+  </tr>
+<% @batches.each do |batch| %>
+  <tr>
+    <td><%= batch.job_id %> - <%= batch.id %></td>
+    <td><%= batch.status %></td>
+    <td>
+      <% batch.screenshots.each do |screenshot|%>
+      <a href="<%=h screenshot.screenshot_path %>" target="_blank"><%=screenshot.browser_name%> <%=screenshot.browser_version%></a>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -80,6 +80,7 @@
       
       $browser_inputs.each(function(){
         var chunks = $(this).val().split(':');
+        console.log('omg browser chunks', chunks);
         browsers.push({
           name : chunks[0],
           version : chunks[1]

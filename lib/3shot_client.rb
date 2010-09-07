@@ -75,10 +75,10 @@ class Snapshotter
 
   def prep_folder
     begin
-      $log_file.puts "Making folder: #{@folder}"
+      $log_file.puts "Making folder: public/screenshots/#{@folder}"
       Dir.mkdir "public/screenshots/#{@folder}"
     rescue
-      $log_file.puts "ERROR Making folded"
+      $log_file.puts "ERROR Making folder"
     end
   end
 end
