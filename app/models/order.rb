@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
+  belongs_to :user
+
   has_many :transactions, :class_name => "OrderTransaction"
   
   attr_reader :express_token
@@ -44,12 +46,12 @@ class Order < ActiveRecord::Base
     {
       :ip => ip_address,
       :billing_address => {
-        :name => "kev",
-        :address1 => "bro",
-        :city => "new York",
-        :state => "ny",
-        :country => "us",
-        :zip => "94043"
+        :name => "#{self.first_name} #{self.last_name}",
+        :address1 => self.address1,
+        :city => self.city,
+        :state => self.state,
+        :country => self.country,
+        :zip => self.zip
       }
     }
   end
@@ -71,7 +73,7 @@ class Order < ActiveRecord::Base
   end
   
   def credit_card
-    @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
+    @credit_card = ActiveMerchant::Billing::CreditCard.new(
                                                              :type => card_type,
                                                              :number => card_number,
                                                              :verification_value => card_verification,
