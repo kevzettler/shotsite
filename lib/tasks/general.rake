@@ -1,8 +1,13 @@
 desc "Load hand-coded ruby-based fixtures"
 task :new_fixtures => :environment do
-  u = User.new(:email => "sean@fakecoolguys.com",
-               :password => "aabbccddee")
-  u.save(false)
+  u = User.new
+  u.email = "sean@fakecoolguys.com"
+  u.password = "aabbccddee"
+  u.save
+
+  u3 = u.clone
+  u3.save(false)
+
   u2 = u.clone
   u2.email = "kev@fakecoolguys.com"
   u2.save(false)

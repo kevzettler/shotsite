@@ -1,4 +1,6 @@
 class ScreenshotsController < ApplicationController
+  before_filter :require_user
+
   # GET /screenshots
   # GET /screenshots.xml
   def index
@@ -6,7 +8,8 @@ class ScreenshotsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @screenshots }
+      format.xml  { render :xml  => @screenshots }
+      format.json { render :json => @screenshots }
     end
   end
 
@@ -78,6 +81,19 @@ class ScreenshotsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(screenshots_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  protected
+
+  def require_user
+    unless current_user
+      flash[:notice] = "You must be logged in to do that"
+      respond_to do |format|
+        format.html { redirect_to login_url }
+        format.xml  { render :xml =>  {:error => "Please authenticate using your REST credentials" }  and return }
+        format.json { render :json => {:error => "Please authenticate using your REST credentials", :params => params }  and return }
+      end
     end
   end
 end
