@@ -44,19 +44,25 @@ class Snapshotter
 
   def get_snapshot_for(url)
     begin
+      $log_file.puts "Opening page [#{url}] and waiting for page load"
       @browser.open(url)
       @browser.wait_for_page_to_load
+      $log_file.puts "Requesting base64 encoded screenshot"
       ss = Base64.decode64(@browser.capture_screenshot_to_string)
-      File.open(filename(url), 'w') { |f| f.write(ss) }
+      File.open(filename(url, true), 'w') { |f| f.write(ss) }
+      $log_file.puts "Creating new screenshot model"
       ss = Screenshot.new
       ss.url = url
       ss.browser_name = @browser_name
       ss.browser_version = @browser_version
-      ss.screenshot_path = "screenshots/#{@folder}/#{Digest::SHA1.hexdigest(url)}_#{@browser_name}-#{@browser_version}.png"
+      $log_file.puts "Creating screenshot.path"
+      ss.screenshot_path = filename(url)
+      $log_file.puts "Saving screenshots to: #{ss.screenshot_path}"
       ss.batch_id = $batch_id
       ss.save
     rescue
-      $log_file.puts "Error snapshotting browser: #{@browser} url: #{url}"
+      $log_file.puts "Error snapshotting browser: #{@browser_name} url: #{url}"
+      $log_file.puts "\tError: #{$ERROR_INFO}"
     end
   end
   
@@ -69,8 +75,11 @@ class Snapshotter
     @browser.stop
   end
 
-  def filename(url)
-    "public/screenshots/#{@folder}/#{Digest::SHA1.hexdigest(url)}_#{@browser_name}-#{@browser_version}.png"
+  def filename(url, filepath = false)
+    path = ""
+    path += "public/" if filepath
+    path += "screenshots/#{@folder}/#{Digest::SHA1.hexdigest(url)}_#{@browser_name}-#{@browser_version}.png".gsub!(/\.\.*/, '.')
+    path
   end
 
   def prep_folder
