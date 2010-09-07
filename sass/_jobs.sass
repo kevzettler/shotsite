@@ -1,0 +1,29 @@
+ul.job_list
+  a.job_link
+    &:hover
+      color: #000 !important
+      background: #CCC !important
+  a.batch_link
+    &:hover
+      color: #000 !important
+      background: #CCC !important
+  ul.batch_list
+    padding-left: 20px
+    ul.shot_list li
+      +clearfix
+      clear: right
+      display: block
+      a
+        background: #FFF
+        padding: 5px 0
+        &:hover
+          color: #000 !important
+          *
+            background: #CCC !important
+      img, span
+        float: left
+      span
+        display: block
+        height: 30px
+        line-height: 30px
+        padding-left: 10px
