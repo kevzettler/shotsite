@@ -1,6 +1,9 @@
 require 'digest/sha1'
 
 class Screenshot < ActiveRecord::Base
+  # Don't include class as root node in json
+  self.include_root_in_json = false
+  
   belongs_to :batch
 
   # Returns ":created_at" in seconds since epoch

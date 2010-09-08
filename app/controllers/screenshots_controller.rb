@@ -4,10 +4,14 @@ class ScreenshotsController < ApplicationController
   # GET /screenshots
   # GET /screenshots.xml
   def index
+    @batches = current_user.batches
     @screenshots = current_user.screenshots
 
+    @screenshots = @screenshots.find_all { |s| s.url == params[:url] } if params[:url]
+
     fields = {
-      :only => [:url,
+      :only => [:batch_id,
+                :url,
                 :browser_name,
                 :browser_version],
       :methods => [:absolute_url,
@@ -49,7 +53,7 @@ class ScreenshotsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to login_url }
         format.xml  { render :xml =>  {:error => "Please authenticate using your REST credentials" }  and return }
-        format.json { render :json => {:error => "Please authenticate using your REST credentials", :params => params }  and return }
+        format.json { render :json => {:error => "Please authenticate using your REST credentials" }  and return }
       end
     end
   end
