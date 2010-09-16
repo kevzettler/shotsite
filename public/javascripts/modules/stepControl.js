@@ -94,7 +94,6 @@
     }
     
     function createJob(callback){
-      
       $.ajax({
         url : '/jobs/create',
         type : 'post',

@@ -84,7 +84,6 @@
       </form>
     </div>
     
-    
     <div id="register" class="cred <%unless current_user.nil? %>gone<% end %>">
       <p class="action_header"><strong>Register</strong></p>
       <form method="post" action="/users">
@@ -107,8 +106,8 @@
     </div>
     
     <div id="payment" class="cred">
-      <p><label for="shotSelect">How many shots?</label></p>
-      <select name="shotSelect" id="shotSelect">
+      <p><label for="order[shots]">How many shots?</label></p>
+      <select name="order[shots]" id="order[shots]">
         <option>250</option>
         <option>500</option>
         <option>750</option>
@@ -122,20 +121,38 @@
       <form>
         <p>
           <label>Credit Card Number</label>
-          <input type="text" />
+          <input type="text" id="order[card_num]" name="order[card_num]" />
         </p>
         <p>
-          <label>Credit Card Type</label>
-          <select name="" id="">
-            <option value="">MasterCard</option>
-            <option value="">Visa</option>
-            <option value="">Amex</option>
-            <option value="">Discover</option>
+          <label for="order[card_type]">Credit Card Type</label>
+          <select name="order[card_type]" id="order[card_type]">
+            <option value="MasterCard">MasterCard</option>
+            <option value="Visa">Visa</option>
+            <option value="Amex">American Express</option>
+            <option value="Discover">Discover</option>
           </select>
         </p>
         <p>
+          <label for="">expiration date</label>
+          <select name="expiration_month" id="">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+            <option value="11"></option>
+            <option value="12"></option>
+         </select>
+         <input type="text" name="expiration_year" maxlength="4" />
+        </p>
+        <p>
           <label for="">CVV2 <a href="">whats this?</a></label>
-          <input type="" />
+          <input type="text" name="order[card_security]" id="order[card_security]" />
         </p>
           <input type="submit" value="checkout">      
       </form>

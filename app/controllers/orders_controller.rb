@@ -15,12 +15,12 @@ class OrdersController < ApplicationController
   end
 	
 	def new
-			print 'lol new'
 			@order = Order.new({:express_token => params[:token]})
 	end
 	
 	def create
-			@order = Order.new
+			@order = Order.new(params[:order])
+			@order.user_id = current_user.id
 			@order.ip_address = request.remote_ip
 			if @order.save
 				if @order.purchase
