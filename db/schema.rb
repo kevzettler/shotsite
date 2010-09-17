@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 60) do
     t.integer  "order_id"
     t.string   "action"
     t.integer  "amount"
-    t.boolean  "sucess"
-    t.string   "authroization"
+    t.boolean  "success"
+    t.string   "authorization"
     t.string   "message"
     t.text     "params"
     t.datetime "created_at"
@@ -44,13 +44,18 @@ ActiveRecord::Schema.define(:version => 60) do
 
   create_table "orders", :force => true do |t|
     t.integer  "user_id"
-    t.float    "price"
+    t.integer  "price"
     t.integer  "shots"
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "card_type"
     t.date     "card_expires_on"
     t.string   "ip_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address1"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zip"
     t.string   "express_token"
     t.string   "express_payer_id"
     t.datetime "created_at"
@@ -69,11 +74,20 @@ ActiveRecord::Schema.define(:version => 60) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.string   "persistence_token"
-    t.integer  "shots",             :default => 10
+    t.string   "email",                               :null => false
+    t.string   "crypted_password",                    :null => false
+    t.string   "password_salt",                       :null => false
+    t.string   "persistence_token",                   :null => false
+    t.string   "single_access_token",                 :null => false
+    t.string   "perishable_token",                    :null => false
+    t.integer  "shots",               :default => 10
+    t.integer  "login_count",         :default => 0,  :null => false
+    t.integer  "failed_login_count",  :default => 0,  :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

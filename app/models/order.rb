@@ -15,7 +15,7 @@ class Order < ActiveRecord::Base
   end
 
   def price_in_cents
-    cents_per_shot * shots
+    self.price * 100
   end
 
   def express_token=(token)
@@ -44,15 +44,15 @@ class Order < ActiveRecord::Base
   
   def standard_purchase_options
     {
-      :ip => ip_address,
-      :billing_address => {
-        :name => "#{self.first_name} #{self.last_name}",
-        :address1 => self.address1,
-        :city => self.city,
-        :state => self.state,
-        :country => self.country,
-        :zip => self.zip
-      }
+      :ip => ip_address#,
+      #:billing_address => {
+        #:name => "#{self.first_name} #{self.last_name}",
+        #:address1 => self.address1,
+        #:city => self.city,
+        #:state => self.state,
+        #:country => self.country,
+        #:zip => self.zip
+      #}
     }
   end
   

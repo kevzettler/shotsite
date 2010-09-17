@@ -108,10 +108,10 @@
     <div id="payment" class="cred">
       <p><label for="order[shots]">How many shots?</label></p>
       <select name="order[shots]" id="order[shots]">
-        <option>250</option>
-        <option>500</option>
-        <option>750</option>
-        <option>1000</option>
+        <option value="250">250</option>
+        <option value="500">500</option>
+        <option value="750">750</option>
+        <option value="1000">1000</option>
       </select>
       <span id="price">$<cite>5.00</cite></span>
       <p>Your selected Job is for <span id="total_price">0</span> shots </p>
@@ -134,21 +134,7 @@
         </p>
         <p>
           <label for="">expiration date</label>
-          <select name="expiration_month" id="">
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-            <option value="11"></option>
-            <option value="12"></option>
-         </select>
-         <input type="text" name="expiration_year" maxlength="4" />
+          <%= select_date Date.today, :prefix => :start_date %>
         </p>
         <p>
           <label for="">CVV2 <a href="">whats this?</a></label>

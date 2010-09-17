@@ -14,20 +14,24 @@
       render : function(){
         var $this = $(this.element);
         $this.find('form').submit($.proxy(function(){
-          var orderData;
-          
+          var orderData,
+          priceText = $("div#payment span#price").text()
+                    
           orderData = {
-            price: $("div#payment span#price").text(),
-            shots: $("select#order[shots]").val(),
-            first_name: "Kev",
-            last_name: "Zettler",
+            price: priceText.substr(1, priceText.length),
+            shots: parseInt($("#payment select").val(), 10),
+            first_name: "Test",
+            last_name: "Guy",
             card_type: "MC",
-            card_expires_on : "date",
-            card_number: "12098239057" 
+            card_expires_on : { 
+              month: 9,
+              year: 2015
+            },
+            card_number: 5205312145674116 
           };
           
           console.log('omg payment details submit');
-          $(document).trigger('createJob.stepControl', function(){ console.log('omg call back');});
+          //$(document).trigger('createJob.stepControl', function(){ console.log('omg call back');});
           
           $.ajax({
             url : '/orders/create',

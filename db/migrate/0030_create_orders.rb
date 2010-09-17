@@ -2,7 +2,7 @@ class CreateOrders < ActiveRecord::Migration
   def self.up
     create_table :orders do |t|
       t.references :user
-      t.integer    :cents_per_shot 
+      t.integer    :price 
       t.integer    :shots
       
       t.string :card_type
