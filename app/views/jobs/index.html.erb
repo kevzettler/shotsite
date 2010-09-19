@@ -9,14 +9,14 @@
         <li>
           <a href="/batch/<%=batch.id%>" class="batch_link">Batch <%= batch.id %> <cite><%= batch.status %></cite> <%=batch.screenshots.count%> Shots</a>
           <ul class="shot_list">
-          <% batch.screenshots.each do |screenshot|%>
-            <li>
-              <a href="<%=h screenshot.screenshot_path %>" target="_blank" class="shot_link">
-                <%= image_tag(screenshot.icon, :alt => screenshot.pretty_name, :size => "30x30")%>
-                <span><%= screenshot.url %></span>
-              </a>
-            </li>
-          <% end %>
+            <li>   
+            <% batch.screenshots.each do |screenshot|%>
+                <a href="<%=h screenshot.screenshot_path %>" target="_blank" class="shot_link">
+                  <%= image_tag(screenshot.icon, :alt => screenshot.pretty_name, :size => "30x30")%>
+                </a>
+            <% end %>
+            <span><%= batch.screenshots.first.url %></span>   
+            </li> 
           </ul>
         </li>
       <% end %>

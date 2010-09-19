@@ -6,6 +6,11 @@ class Batch < ActiveRecord::Base
     super
     self.status = options[:status] || "aroused"
   end
+  
+  #should map reduce the urls or what ever only want unique urls
+	def urls
+		screenshots.each{|s| s.url}
+	end
 
   # TODO: Make sure this stays in sync with the 3shots_client.rb method
   def screenshots_dir
