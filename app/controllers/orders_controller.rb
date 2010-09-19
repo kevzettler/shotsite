@@ -40,7 +40,6 @@ class OrdersController < ApplicationController
 	end
 	
 	def express
-		print "lol express"
 		response = EXPRESS_GATEWAY.setup_purchase(0.99,
 			:ip => request.remote_ip,
 			:return_url => new_order_url,

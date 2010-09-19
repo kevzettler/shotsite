@@ -44,7 +44,8 @@ class Order < ActiveRecord::Base
   
   def standard_purchase_options
     {
-      :ip => ip_address#,
+      :ip => ip_address,
+			:email => user.email
       #:billing_address => {
         #:name => "#{self.first_name} #{self.last_name}",
         #:address1 => self.address1,
