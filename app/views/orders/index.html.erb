@@ -1,17 +1,22 @@
-<h1>Listing orders</h1>
+<div>
+  <h1>Your Recent Orders</h1>
+  <%= link_to 'New order?', new_order_path, :id => "new_order_expand" %>
+</div>
+
+<%= render :partial => "shared/newOrder" %> 
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Browsers</th>
-    <th>Interval</th>
+    <th>Date</th>
+    <th>Price</th>
+    <th>Shots</th>
   </tr>
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%=h order.user_id %></td>
-    <td><%=h order.browsers %></td>
-    <td><%=h order.interval %></td>
+    <td><%=h Date.civil(order.created_at.year, order.created_at.month, order.created_at.day)%></td>
+    <td><%=h order.price %></td>
+    <td><%=h order.shots %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -21,4 +26,3 @@
 
 <br />
 
-<%= link_to 'New order', new_order_path %>

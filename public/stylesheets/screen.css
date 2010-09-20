@@ -2201,6 +2201,266 @@ button.ui-button::-moz-focus-inner {
   height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
 }
 
+/*  ColorBox Core Style
+ *  The following rules are the styles that are consistant between themes.
+ *  Avoid changing this area to maintain compatability with future versions of ColorBox. */
+/* line 6, ../../sass/_colorbox.sass */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 13, ../../sass/_colorbox.sass */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 18, ../../sass/_colorbox.sass */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 21, ../../sass/_colorbox.sass */
+#cboxContent {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 25, ../../sass/_colorbox.sass */
+#cboxLoadedContent {
+  overflow: auto;
+}
+/* line 27, ../../sass/_colorbox.sass */
+#cboxLoadedContent iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* line 33, ../../sass/_colorbox.sass */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 36, ../../sass/_colorbox.sass */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 42, ../../sass/_colorbox.sass */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/*  Example user style
+ *  The following rules are ordered and tabbed in a way that represents the
+ *  order/nesting of the generated HTML, so that the structure easier to understand. */
+/* line 50, ../../sass/_colorbox.sass */
+#cboxOverlay {
+  background: url(/images/colorbox/overlay.png) 0 0 repeat;
+}
+
+/* line 55, ../../sass/_colorbox.sass */
+#cboxTopLeft {
+  width: 21px;
+  height: 21px;
+  background: url(/images/colorbox/controls.png) -100px 0 no-repeat;
+}
+
+/* line 60, ../../sass/_colorbox.sass */
+#cboxTopRight {
+  width: 21px;
+  height: 21px;
+  background: url(/images/colorbox/controls.png) -129px 0 no-repeat;
+}
+
+/* line 65, ../../sass/_colorbox.sass */
+#cboxBottomLeft {
+  width: 21px;
+  height: 21px;
+  background: url(/images/colorbox/controls.png) -100px -29px no-repeat;
+}
+
+/* line 70, ../../sass/_colorbox.sass */
+#cboxBottomRight {
+  width: 21px;
+  height: 21px;
+  background: url(/images/colorbox/controls.png) -129px -29px no-repeat;
+}
+
+/* line 75, ../../sass/_colorbox.sass */
+#cboxMiddleLeft {
+  width: 21px;
+  background: url(/images/colorbox/controls.png) left top repeat-y;
+}
+
+/* line 79, ../../sass/_colorbox.sass */
+#cboxMiddleRight {
+  width: 21px;
+  background: url(/images/colorbox/controls.png) right top repeat-y;
+}
+
+/* line 83, ../../sass/_colorbox.sass */
+#cboxTopCenter {
+  height: 21px;
+  background: url(/images/colorbox/border.png) 0 0 repeat-x;
+}
+
+/* line 87, ../../sass/_colorbox.sass */
+#cboxBottomCenter {
+  height: 21px;
+  background: url(/images/colorbox/border.png) 0 -29px repeat-x;
+}
+
+/* line 91, ../../sass/_colorbox.sass */
+#cboxContent {
+  background: white;
+}
+
+/* line 94, ../../sass/_colorbox.sass */
+#cboxLoadedContent {
+  margin-bottom: 28px;
+}
+
+/* line 97, ../../sass/_colorbox.sass */
+#cboxTitle {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #949494;
+}
+
+/* line 105, ../../sass/_colorbox.sass */
+#cboxCurrent {
+  position: absolute;
+  bottom: 4px;
+  left: 58px;
+  color: #949494;
+}
+
+/* line 111, ../../sass/_colorbox.sass */
+#cboxSlideshow {
+  position: absolute;
+  bottom: 4px;
+  right: 30px;
+  color: #0092ef;
+}
+
+/* line 117, ../../sass/_colorbox.sass */
+#cboxPrevious {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background: url(/images/colorbox/controls.png) -75px 0px no-repeat;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+/* line 125, ../../sass/_colorbox.sass */
+#cboxPrevious.hover {
+  background-position: -75px -25px;
+}
+
+/* line 128, ../../sass/_colorbox.sass */
+#cboxNext {
+  position: absolute;
+  bottom: 0;
+  left: 27px;
+  background: url(/images/colorbox/controls.png) -50px 0px no-repeat;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+/* line 136, ../../sass/_colorbox.sass */
+#cboxNext.hover {
+  background-position: -50px -25px;
+}
+
+/* line 139, ../../sass/_colorbox.sass */
+#cboxLoadingOverlay {
+  background: url(/images/colorbox/loading_background.png) center center no-repeat;
+}
+
+/* line 142, ../../sass/_colorbox.sass */
+#cboxLoadingGraphic {
+  background: url(/images/colorbox/loading.gif) center center no-repeat;
+}
+
+/* line 145, ../../sass/_colorbox.sass */
+#cboxClose {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(/images/colorbox/controls.png) -25px 0px no-repeat;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+/* line 153, ../../sass/_colorbox.sass */
+#cboxClose.hover {
+  background-position: -25px -25px;
+}
+
+/*  The following fixes png-transparency for IE6.  
+ *  It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+ *  
+ *  Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+ *  Colorbox preloads navigation hover classes to account for this.
+ *  
+ *  !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+ *  while regular CSS background images are relative to the CSS document. */
+/* line 167, ../../sass/_colorbox.sass */
+.cboxIE #cboxTopLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopLeft.png, sizingMethod='scale');
+}
+/* line 170, ../../sass/_colorbox.sass */
+.cboxIE #cboxTopCenter {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopCenter.png, sizingMethod='scale');
+}
+/* line 173, ../../sass/_colorbox.sass */
+.cboxIE #cboxTopRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderTopRight.png, sizingMethod='scale');
+}
+/* line 176, ../../sass/_colorbox.sass */
+.cboxIE #cboxBottomLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomLeft.png, sizingMethod='scale');
+}
+/* line 179, ../../sass/_colorbox.sass */
+.cboxIE #cboxBottomCenter {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomCenter.png, sizingMethod='scale');
+}
+/* line 182, ../../sass/_colorbox.sass */
+.cboxIE #cboxBottomRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderBottomRight.png, sizingMethod='scale');
+}
+/* line 185, ../../sass/_colorbox.sass */
+.cboxIE #cboxMiddleLeft {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');
+}
+/* line 188, ../../sass/_colorbox.sass */
+.cboxIE #cboxMiddleRight {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/images/colorbox/internet_explorer/borderMiddleRight.png, sizingMethod='scale');
+}
+
 /* line 3, ../../sass/_jobs.sass */
 ul.job_list a.job_link:hover {
   color: black !important;
@@ -2247,35 +2507,35 @@ ul.job_list ul.batch_list ul.shot_list li span {
   padding-left: 10px;
 }
 
-/* line 17, ../../sass/screen.sass */
+/* line 18, ../../sass/screen.sass */
 a:hover {
   background: transparent !important;
 }
 
-/* line 20, ../../sass/screen.sass */
+/* line 21, ../../sass/screen.sass */
 select, button {
   cursor: pointer !important;
 }
 
-/* line 24, ../../sass/screen.sass */
+/* line 25, ../../sass/screen.sass */
 #facebox div.content {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 27, ../../sass/screen.sass */
+/* line 28, ../../sass/screen.sass */
 body, html {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
 
-/* line 32, ../../sass/screen.sass */
+/* line 33, ../../sass/screen.sass */
 body {
   font-size: 62.5%;
 }
 
-/* line 35, ../../sass/screen.sass */
+/* line 36, ../../sass/screen.sass */
 #wrapper {
   overflow: hidden;
   *zoom: 1;
@@ -2285,14 +2545,14 @@ body {
   margin: 0 auto;
 }
 
-/* line 40, ../../sass/screen.sass */
+/* line 41, ../../sass/screen.sass */
 #footer {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
 
-/* line 43, ../../sass/screen.sass */
+/* line 44, ../../sass/screen.sass */
 #header {
   overflow: hidden;
   *zoom: 1;
@@ -2300,7 +2560,7 @@ body {
   padding: 15px 0;
   border-bottom: 1px solid black;
 }
-/* line 48, ../../sass/screen.sass */
+/* line 49, ../../sass/screen.sass */
 #header div#logo_container {
   margin-left: 0;
   display: inline;
@@ -2309,12 +2569,12 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 51, ../../sass/screen.sass */
+/* line 52, ../../sass/screen.sass */
 #header div#account_links {
   float: right !important;
   margin-right: 10px;
 }
-/* line 54, ../../sass/screen.sass */
+/* line 55, ../../sass/screen.sass */
 #header a#logo {
   font-size: 1.9em;
   text-shadow: 1px 1px 5px black;
@@ -2322,28 +2582,28 @@ body {
   text-decoration: none !important;
 }
 
-/* line 60, ../../sass/screen.sass */
+/* line 61, ../../sass/screen.sass */
 .action_header {
   font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 10px;
 }
-/* line 64, ../../sass/screen.sass */
+/* line 65, ../../sass/screen.sass */
 .action_header strong {
   font-size: 1.1em;
 }
 
-/* line 67, ../../sass/screen.sass */
+/* line 68, ../../sass/screen.sass */
 .error {
   color: red;
 }
 
-/* line 70, ../../sass/screen.sass */
+/* line 71, ../../sass/screen.sass */
 .flash_message {
   display: none;
 }
 
-/* line 73, ../../sass/screen.sass */
+/* line 74, ../../sass/screen.sass */
 #steps, #creds {
   overflow: hidden;
   *zoom: 1;
@@ -2352,30 +2612,35 @@ body {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
-/* line 79, ../../sass/screen.sass */
+/* line 80, ../../sass/screen.sass */
 #steps button#checkout_btn, #creds button#checkout_btn {
   float: right;
   margin-right: 50px;
 }
 
-/* line 83, ../../sass/screen.sass */
+/* line 84, ../../sass/screen.sass */
 #creds {
   background-color: #d8ffc9;
+  display: none;
+}
+/* line 87, ../../sass/screen.sass */
+#creds #checkout_btn {
+  margin: 5px 0;
 }
 
-/* line 86, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 #creds .gone {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 90, ../../sass/screen.sass */
+/* line 94, ../../sass/screen.sass */
 #step_form {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 93, ../../sass/screen.sass */
+/* line 97, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2384,18 +2649,18 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 96, ../../sass/screen.sass */
+/* line 100, ../../sass/screen.sass */
 #step1 input {
   width: 209px;
   margin-bottom: 5px;
 }
-/* line 99, ../../sass/screen.sass */
+/* line 103, ../../sass/screen.sass */
 #step1 a {
   float: right;
   padding-right: 5px;
 }
 
-/* line 103, ../../sass/screen.sass */
+/* line 107, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2403,7 +2668,7 @@ body {
   margin-right: 10px;
   width: 280px;
 }
-/* line 105, ../../sass/screen.sass */
+/* line 109, ../../sass/screen.sass */
 #step2 .ui-buttonset .ui-button {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2411,11 +2676,11 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-/* line 109, ../../sass/screen.sass */
+/* line 113, ../../sass/screen.sass */
 #step2 .ui-button-text-only .ui-button-text {
   padding: 0.5em 0.7em !important;
 }
-/* line 112, ../../sass/screen.sass */
+/* line 116, ../../sass/screen.sass */
 #step2 label span.free_tag {
   color: #0ff756;
   font-size: 1.3em;
@@ -2426,7 +2691,7 @@ body {
   text-shadow: 1px 1px 2px black;
 }
 
-/* line 121, ../../sass/screen.sass */
+/* line 125, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2435,7 +2700,7 @@ body {
   width: 220px;
 }
 
-/* line 124, ../../sass/screen.sass */
+/* line 128, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
@@ -2445,7 +2710,7 @@ body {
   width: 160px;
 }
 
-/* line 128, ../../sass/screen.sass */
+/* line 132, ../../sass/screen.sass */
 #login {
   margin-left: 0;
   display: inline;
@@ -2455,7 +2720,7 @@ body {
   width: 220px;
 }
 
-/* line 132, ../../sass/screen.sass */
+/* line 136, ../../sass/screen.sass */
 #register {
   display: inline;
   float: left;
@@ -2464,7 +2729,7 @@ body {
   width: 220px;
 }
 
-/* line 135, ../../sass/screen.sass */
+/* line 139, ../../sass/screen.sass */
 #payment {
   display: inline;
   float: left;
@@ -2473,7 +2738,7 @@ body {
   width: 220px;
 }
 
-/* line 138, ../../sass/screen.sass */
+/* line 142, ../../sass/screen.sass */
 #details {
   margin-right: 0;
   display: inline;
@@ -2483,22 +2748,22 @@ body {
   width: 160px;
 }
 
-/* line 143, ../../sass/screen.sass */
+/* line 147, ../../sass/screen.sass */
 #login p, #register p {
   padding: 3px 0;
   width: 170px;
 }
-/* line 146, ../../sass/screen.sass */
+/* line 150, ../../sass/screen.sass */
 #login p button, #register p button {
   float: right;
   margin-top: 5px;
   margin-right: -6px;
 }
-/* line 150, ../../sass/screen.sass */
+/* line 154, ../../sass/screen.sass */
 #login p input, #register p input {
   width: 170px;
 }
-/* line 152, ../../sass/screen.sass */
+/* line 156, ../../sass/screen.sass */
 #login label, #register label {
   display: block;
   width: 100px;

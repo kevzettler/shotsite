@@ -28,6 +28,8 @@
           price = parseInt(($options.index($selected.get(0)) + 1), 10) * 5.00;
           $price.text(price.toFixed(2));
         });
+        
+        
       }
     
     });

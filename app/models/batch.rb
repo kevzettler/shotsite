@@ -6,6 +6,13 @@ class Batch < ActiveRecord::Base
     super
     self.status = options[:status] || "aroused"
   end
+  
+	def groups
+		groups = screenshots.collect{|s| {:url => s.url, :screenshots => []}}.uniq
+		groups.each do |g| 
+			g[:screenshots] = screenshots.find_all_by_url(g[:url])
+		end
+	end
 
   # TODO: Make sure this stays in sync with the 3shots_client.rb method
   def screenshots_dir

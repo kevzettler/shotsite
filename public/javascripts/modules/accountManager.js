@@ -41,8 +41,8 @@
     */
     function loggedIn(){
       var $this = $(this.element)
-      , $loginLink = $this.find('a:last')
-      , $regLink = $this.find('a:first')
+      , $loginLink = $this.find(this.options.loginLink)
+      , $regLink = $this.find(this.options.registerLink)
       , objScope = this
       ;
       
@@ -68,8 +68,8 @@
     
     function loggedOut(){
       var $this = $(this.element)
-      , $loginLink = $this.find('a:last')
-      , $regLink = $this.find('a:first')
+      , $loginLink = $this.find(this.options.loginLink)
+      , $regLink = $this.find(this.options.registerLink)
       , objScope = this
       ;
             
@@ -92,11 +92,16 @@
       
     }
     
-    return $.extend(Object.create($.core.module), {            
+    return $.extend(Object.create($.core.module), {
+      options : {
+        loginLink : 'a.login_link',
+        registerLink : 'a.register_link'
+      },
+                  
       render : function(){
         var $this = $(this.element)
-        , $loginLink = $this.find('a:last')
-        , $registerLink = $this.find('a:first')
+        , $loginLink = $this.find(this.options.loginLink)
+        , $registerLink = $this.find(this.options.registerLink)
         ;
         
         //attach the login link depending on user login status using a text check, bad? LOL wot?

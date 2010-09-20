@@ -1,11 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
+	map.account "account", :controller => "users", :action => "index"
 
-  map.resources :jobs
   map.resources :orders, :new => { :express => :get }
-  #map.resources :screenshots 
   map.resources :shots, :controller => "batches"
+	map.resources :jobs
 
   map.resources :users do |users|
     users.resources :screenshots

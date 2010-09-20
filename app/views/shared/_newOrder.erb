@@ -1,0 +1,89 @@
+<div id="creds">
+  
+  <div id="login" class="cred <%unless current_user.nil? %>gone<% end %>">
+    <p class="action_header"><strong>Login</strong></p>
+    <form action="/user_sessions" method="post">
+      <p>
+        <label for="user_session_email">Email</label>
+        <input type="text" size="30" name="user_session[email]" id="user_session_email">
+      </p>
+      <p>
+        <label for="user_session_password">Password</label>
+        <input type="password" size="30" name="user_session[password]" id="user_session_password">
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+  </div>
+  
+  <div id="register" class="cred <%unless current_user.nil? %>gone<% end %>">
+    <p class="action_header"><strong>Register</strong></p>
+    <form method="post" action="/users">
+      <p>
+        <label for="user[email]">Email</label>
+        <input type="text" id="user[email]" name="user[email]" />
+      </p>
+      <p>
+        <label for="user[password]">Password</label>
+        <input type="password" id="user[password]" name="user[password]" />
+      </p>
+      <p>
+        <label for="user[password_confirmation]">Re-type</label>
+        <input type="password" id="user[password_confirmation]" name="user[password_confirmation]" />
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+  </div>
+  
+  <div id="payment" class="cred">
+    <p><label for="shots">How many shots?</label></p>
+    <select name="shots" id="shots">
+      <option value="250">250</option>
+      <option value="500">500</option>
+      <option value="750">750</option>
+      <option value="1000">1000</option>
+    </select>
+    <span id="price">$<cite>5.00</cite></span>
+    <p>Your selected Job is for <span id="total_price">0</span> shots </p>
+  </div>
+  
+  <div id="details" class="cred">
+    <form>
+      <p>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" />
+      </p>
+      <p>
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" />
+      </p>
+      <p>
+        <label for="card_number">Credit Card Number</label>
+        <input type="text" id="card_number" name="card_number" />
+      </p>
+      <p>
+        <label for="card_type">Credit Card Type</label>
+        <select name="card_type" id="card_type">
+          <option value="MasterCard">MasterCard</option>
+          <option value="Visa">Visa</option>
+          <option value="Amex">American Express</option>
+          <option value="Discover">Discover</option>
+        </select>
+      </p>
+      <p>
+        <label for="">expiration date</label>
+        <%= select_month Date.today, :prefix => :card_expires_on%>
+        <%= select_year Date.today, :prefix => :card_expires_on%>
+      </p>
+      <p>
+        <label for="card_verification">CVV2 <a href="">whats this?</a></label>
+        <input type="text" name="card_verification" id="card_verification" />
+      </p>
+        <input type="submit" value="checkout" id="checkout_btn" />
+    </form>
+    <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+  </div>
+</div>

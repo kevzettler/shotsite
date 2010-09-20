@@ -1,12 +1,12 @@
 class BatchesController < ApplicationController
-  def index
-    @batches = current_user.batches
+	def index
+	  @jobs = current_user.jobs
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @batches }
-    end
-  end
+	  respond_to do |format|
+	    format.html # index.html.erb
+	    format.xml  { render :xml => @jobs }
+	  end
+	end
 end
 
  

@@ -26,16 +26,17 @@
 	<script src="/javascripts/modules/accountManager.js"></script>
 	<script src="/javascripts/modules/payment.js"></script>
 	<script src="/javascripts/modules/details.js"></script>
+	<script src="/javascripts/modules/jobList.js"></script>
           
   <script src="/javascripts/vendor/json2.js"></script>
 	<script src="/javascripts/vendor/jquery.disable.js"></script>
-	<script src="/javascripts/vendor/facebox.js"></script>
+	<script src="/javascripts/vendor/jquery.colorbox.js"></script>
 
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details, jobList');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
@@ -49,6 +50,7 @@
 	    $("#creds").credControl();
 	    $("#details").details();
 	    $("#payment").payment();
+	    $(".job_list").jobList();
 	 });
 	</script>
 

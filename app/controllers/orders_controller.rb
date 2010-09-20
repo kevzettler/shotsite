@@ -15,26 +15,31 @@ class OrdersController < ApplicationController
   end
 	
 	def new
-			print 'lol new'
 			@order = Order.new({:express_token => params[:token]})
 	end
 	
 	def create
-			@order = Order.new
+			doodbro = params[:order]
+			puts doodbro[:price].to_i
+			doodbro[:price] = doodbro[:price].to_i
+			doodbro[:card_expires_on] = Date.civil(params[:order][:card_expires_on][:year].to_i, params[:order][:card_expires_on][:month].to_i) 
+			@order = Order.new(doodbro)
+			@order.user_id = current_user.id
 			@order.ip_address = request.remote_ip
-			if @order.save
-				if @order.purchase
-					render :action => "success"
+			respond_to do |format|
+				if @order.save
+					if @order.purchase
+						format.json {render :json => @order, :status => :created}
+					else
+						format.json {render :json=> @order.errors, :status => :unprocessable_entity}
+					end
 				else
-					render :action => "failure"
-				end
-			else
-				render :action => 'new'
+					format.json {render :json=> @order.errors, :status => :unprocessable_entity}
+				end 
 			end
 	end
 	
 	def express
-		print "lol express"
 		response = EXPRESS_GATEWAY.setup_purchase(0.99,
 			:ip => request.remote_ip,
 			:return_url => new_order_url,
