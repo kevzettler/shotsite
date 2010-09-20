@@ -1,22 +1,28 @@
-<h1>Your Batches!</h1>
+<h1>View your Shots</h1>
 
-<table>
-  <tr>
-    <td>Job ID</td>
-    <td>Status</td>
-    <td>Screenshots</td>
-  </tr>
-<% @batches.each do |batch| %>
-  <tr>
-    <td><%= batch.job_id %> - <%= batch.id %></td>
-    <td><%= batch.status %></td>
-    <td>
-      <% batch.screenshots.each do |screenshot|%>
-      <a href="<%=h screenshot.screenshot_path %>" target="_blank"><%=screenshot.browser_name%> <%=screenshot.browser_version%></a>
+<ul class="job_list">
+<% @jobs.each do |job| %>
+  <li>
+    <a href="/job/<%=job.id%>" class="job_link">Job <%=job.id%><%=job.status%><%=job.last_run%>, <%=job.batches.count%> Batches</a>
+    <ul class="batch_list">
+      <% job.batches.each do |batch| %>
+        <li>
+          <a href="/batch/<%=batch.id%>" class="batch_link">Batch <%= batch.id %> <cite><%= batch.status %></cite> <%=batch.screenshots.count%> Shots</a>
+          <ul class="shot_list">
+            <% batch.groups.each do |group|%> 
+            <li>  
+            <% group[:screenshots].each do |screenshot|%>
+                <a href="<%=h screenshot.screenshot_path %>" target="_blank" class="shot_link">
+                  <%= image_tag(screenshot.icon, :alt => screenshot.pretty_name, :size => "30x30")%>
+                </a>
+            <% end %>
+            <span><%= group[:url] %></span>   
+            </li>
+            <% end %> 
+          </ul>
+        </li>
       <% end %>
-    </td>
-  </tr>
+    </ul>
+  </li>
 <% end %>
-</table>
-
-<br />
+</ul>
