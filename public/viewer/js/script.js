@@ -4,7 +4,7 @@
 
 $(document).ready( function () {
     var buildGallery = function (data) {
-        var secondsPerUrl = 2.5;
+        var secondsPerUrl = 5;
         var batches = [];
         var batchSizes = {};
         var urls = [];
@@ -18,7 +18,7 @@ $(document).ready( function () {
         $.each(batchSizes, function (index, count) {
             console.log(index + ": " + count);
         });
-               
+        
         $.each(batches, function (b_index, batch_id) {
             html_output = '<div id="batch_' + batch_id + '" class="batch">';
             console.log("Checking for batch: " + batch_id);
@@ -37,7 +37,7 @@ $(document).ready( function () {
                 if (matching.length > 0) {
                     counter += 1;
                     var count = columns;
-                    var desired_width = 1200;
+                    var desired_width = 1000;
                     var width = desired_width / count ;
                     
                     html_output += '<div class="batch_images">';
@@ -50,7 +50,7 @@ $(document).ready( function () {
                         html_output += '<img src="' + match.absolute_url + '" width=' + width + ' data-x-url="' + url + '"/>';
                     });
                     html_output += '</div></div>'
-         
+                    
                     $("div#gallery").append(html_output + '</div>');
                 }
             });
@@ -84,31 +84,10 @@ $(document).ready( function () {
         rotateImages();
         window.setInterval(rotateImages, secondsPerUrl * 1000);
     };
-              
+    
     $.ajax({
-        url: "/users/1/screenshots.json?api_key=S4mHJ56bhmesU7F9K0NL",
+        url: "/users/1/screenshots.json?api_key=vgJoRbj5O2pCEooyBYuU",
         dataType: 'json',
         success: buildGallery
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
