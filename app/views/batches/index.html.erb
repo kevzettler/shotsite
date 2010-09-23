@@ -12,7 +12,7 @@
             <% batch.groups.each do |group|%> 
             <li>  
             <% group[:screenshots].each do |screenshot|%>
-                <a href="<%=h screenshot.screenshot_path %>" target="_blank" class="shot_link">
+                <a href="<%=h screenshot.screenshot_path %>" target="_blank" rel="shot_link" title="Job - <%= job.id %> Batch - <%= batch.id %>  <%= screenshot.pretty_name %> <%= group[:url] %>">
                   <%= image_tag(screenshot.icon, :alt => screenshot.pretty_name, :size => "30x30")%>
                 </a>
             <% end %>

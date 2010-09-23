@@ -32,7 +32,10 @@
         var $this = $(this.element),
         $links = $this.find('.job_link, .batch_link');
       
-        $this.find('.shot_link').colorbox({height: '100%', width: "100%"});
+        $this.find('a[rel="shot_link"]').colorbox({
+          height: '100%',
+           width: "100%"
+        });
         
         $links.each(function(){
           var $this = $(this);
