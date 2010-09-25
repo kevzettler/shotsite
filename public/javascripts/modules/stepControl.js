@@ -128,14 +128,14 @@
 
           $link.click(function(e){
               e.preventDefault();
-              if ($job_form.visible()) {
+              if ($job_form.is(':visible')) {
                   // Change text and hide form
                   $link.text("Create new job?");
-                  $job_form.hide();
+                  $job_form.slideUp();
               }else{
                   // Change text and show form
                   $link.text("Hide form");
-                  $job_form.show();
+                  $job_form.slideDown();
               }
           });
       }                      
