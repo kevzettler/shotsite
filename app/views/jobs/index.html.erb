@@ -4,7 +4,7 @@
 </div>
 
 <div id="new_job_form" style="display:none;">
-<%= render :partial => "shared/newJob" %>
+  <%= render :partial => "shared/newJob", :locals => { :form_state => "new_job" } %>
 </div>
 
 <table>

@@ -30,7 +30,7 @@
       , $form = $this.find('form')
       , objScope = this
       ;
-      
+
       /*
       *total = $(document).trigger("calculateTotal.step4");
       * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
@@ -57,6 +57,53 @@
         $button.click($.proxy(changeOrder, this));
       }
       
+    }
+
+    /*
+    * Rough draft newJob
+    */
+    function newJob(event){
+      var $this = $(this.element) 
+      ,$button = $this.find("button#create_job")
+      , $form = $this.find('form')
+      , objScope = this
+      ;
+
+      /*
+      *total = $(document).trigger("calculateTotal.step4");
+      * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
+      * here we want a simple value from the calculateTotal method on step4
+      * may have to add it to the jquery object $.calculateTotal
+      * fugly
+      * calling step4s dom elements directly, not lossely coupled but getting the job done
+      */
+      var total = $this.find("#total_price").text();
+      
+      //update job data
+      jobData = {
+          job: {
+              urls: JSON.stringify(getUrls.call(objScope)),
+              browsers: JSON.stringify(getBrowsers.call(objScope)),
+              interval: getInterval.call(objScope)
+          }
+      };
+
+        // Create job
+        $.ajax({
+            url : $form.attr('action'),
+            type : 'POST',
+            data : jobData,
+            dataType : "json",
+            success : function(json){
+                console.log("Job created!");
+                //objScope.clearErrors();
+            },
+            error :function(xhr, txt, er){
+                console.log("failed to create job");
+
+            }
+        });
+        return false;
     }
     
     function getUrls(){
@@ -114,10 +161,23 @@
     return $.extend(Object.create($.core.module), {
       render : function(){
         var $this = $(this.element);
-        
+
+          // TODO:
+          // Ugh. Don't hardcode urls like this. Make it nicer.
+          var func;
+
+          console.log(window.location.pathname);
+          if ("/" == window.location.pathname) {
+              console.log("We're at the root url, using checkout");
+              func = checkout;
+          }else{
+              console.log("We're *not* at the root url, using newJob");
+              func = newJob;
+          }
+
         $this.find('button')
           .button() //make the button a button
-          .click($.proxy(checkout, this)); 
+          .click($.proxy(func, this)); 
           
         $(document).bind('createJob.stepControl', $.proxy(createJob, this));
 
