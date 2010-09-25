@@ -15,11 +15,12 @@
 *** Don't redirect on orders page [DONE]
 *** Toggle new order form [DONE]
 ** Jobs
-*** Proper formatting browsers [small, high] 
-*** Save button per job [large, high]
-*** Interval -> drop down box [medium, normal]
+*** Proper formatting browsers [small, high]
+*** Save button per job [large, high] [DONE]
+*** Interval -> drop down box [medium, normal] [DONE]
 *** Drop dates [small, low] [DONE]
-*** Toggel new jobs form [medium, high] [DONE]
+*** Toggle new jobs form [medium, high] [DONE]
+*** Proper job update for each job entry [large, high]
 ** Job
 *** Change status for running jobs [small, very high] [DONE]
 ** Misc.

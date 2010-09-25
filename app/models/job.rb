@@ -12,7 +12,6 @@ class Job < ActiveRecord::Base
 
   def initialize(attributes = nil)
     super
-    self.interval = 60
     self.next_run ||= (Time.now + self.interval.minutes)
   end
 

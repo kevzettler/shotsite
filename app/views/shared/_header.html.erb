@@ -9,6 +9,9 @@
       <%= link_to "Shots", shots_path %>
       <%= link_to "Jobs", jobs_path %>
       <%= link_to "Orders", orders_path %>
+      <% if current_user %>
+      <a href="/viewer/index.html?api_key=<%= current_user.single_access_token %>">Viewer</a>
+      <% end %>
     </div>
     
     <div id="account_links">
