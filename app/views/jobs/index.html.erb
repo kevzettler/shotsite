@@ -1,9 +1,9 @@
 <div>
   <h1>Your Active Jobs</h1>
-  <%= link_to 'New job?', new_job_path, :id => "new_job_expand" %>
+  <%= link_to 'Create new job?', new_job_path, :id => "new_job_expand" %>
 </div>
 
-<div style="display:none;">
+<div id="new_job_form" style="display:none;">
 <%= render :partial => "shared/newJob" %>
 </div>
 
@@ -35,12 +35,6 @@
     </td>
     <td>
       <%= job.interval%>
-    </td>
-    <td>
-      <%= job.last_run %>
-    </td>
-    <td>
-      <%= job.next_run %>
     </td>
   </tr>
   <% end %>
