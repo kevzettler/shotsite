@@ -46,7 +46,7 @@ module JobsHelper
 		   html_string += "checked=\"true\""
 		end
 		 
-		html_string += "/><label for=\"#{job.id}_#{pretty_name browser}_check\">" + image_tag(icon(browser), :alt => pretty_name(browser), :size => "60x60") + "</label>"
+		html_string += "/><label for=\"#{job.id}_#{pretty_name browser}_check\" class=\"#{pretty_name browser}_check\">" + image_tag(icon(browser), :alt => pretty_name(browser), :size => "30x30") + "</label>"
 	end
 	
 	def browser_block(job, job_browsers)
@@ -80,7 +80,7 @@ module JobsHelper
 	]	  
 	 
 	 
-	 output = '<div id="browser_buttons">'
+	 output = '<div class="browser_buttons">'
 
 	 browsers.each do |browser|
 		 output += browser_tag job, job_browsers, browser

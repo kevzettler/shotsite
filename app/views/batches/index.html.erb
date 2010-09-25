@@ -1,6 +1,8 @@
+<div class="section_header">
 <h1>View your Shots</h1>
+</div>
 
-<ul class="job_list">
+<ul class="shot_list">
 <% @jobs.each do |job| %>
   <li>
     <a href="/job/<%=job.id%>" class="job_link">Job <%=job.id%><%=job.status%><%=job.last_run%>, <%=job.batches.count%> Batches</a>

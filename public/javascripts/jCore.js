@@ -23,6 +23,7 @@
       }
     } // End log()
     
+    
     // createInstance()
     // The instantation function for modules.
     function createInstance(moduleName){
