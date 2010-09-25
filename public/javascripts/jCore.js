@@ -1,3 +1,5 @@
+//= require <vendor/json2>
+
 (function($){
 
   $.core = (function(){ 

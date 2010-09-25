@@ -41,7 +41,9 @@
                 success : function(data, text, xhr){
                     $(document).trigger('createJob.stepControl', function(){ console.log('omg call back');});
                     $button.removeAttr("disabled");
-                    //window.location = "http://" + window.location.hostname + "/orders";
+                    if(window.location != "/orders"){
+                      window.location = "/orders";
+                    }
                 },
                 error : function(data, text, xhr){
                     $button.removeAttr("disabled");
