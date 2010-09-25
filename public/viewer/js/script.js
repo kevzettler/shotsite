@@ -1,4 +1,4 @@
-/* Author: 
+/* Author: Vekz, biatches
 
 */
 
@@ -9,6 +9,7 @@ $(document).ready( function () {
         var batchSizes = {};
         var urls = [];
         var counter = 0;
+
         $.each(data, function (index, item) { if (-1 == $.inArray(item.url, urls)) { urls.push(item.url); };
                                               if (-1 == $.inArray(item.batch_id, batches)) { batches.push(item.batch_id); };
                                               if (undefined != batchSizes[item.batch_id]) { batchSizes[item.batch_id] += 1; }
@@ -84,10 +85,20 @@ $(document).ready( function () {
         rotateImages();
         window.setInterval(rotateImages, secondsPerUrl * 1000);
     };
+
+    api_key = getUrlVars()["api_key"];
     
     $.ajax({
-        url: "/users/1/screenshots.json?api_key=vgJoRbj5O2pCEooyBYuU",
+        url: "/users/1/screenshots.json?api_key=" + api_key,
         dataType: 'json',
         success: buildGallery
     });
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
 });
