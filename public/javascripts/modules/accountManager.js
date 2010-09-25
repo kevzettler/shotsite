@@ -53,9 +53,14 @@
         $loginLink.text('Logout')
           .attr('href', "/logout")
           .unbind('click')
-          .bind('click', $.proxy(logoutClick, objScope));
+          .bind('click', $.proxy(logoutClick, objScope))
+          .removeClass('login_link')
+          .addClass('logout_link');
         
-        $regLink.text('Manage Account').unbind('click');
+        $regLink.text('Manage Account')
+          .unbind('click')
+          .removeClass('register_link')
+          .addClass('manage_account_link');
         
         //fade it in
         $this.fadeIn('fast');
@@ -80,9 +85,14 @@
         $loginLink.text('Login')
           .attr('href', '/login')
           .unbind('click')
-          .bind('click', $.proxy(loginClick, objScope));
+          .bind('click', $.proxy(loginClick, objScope))
+          .removeClass('logout_link')
+          .addClass('login_link');
         
-        $regLink.text('Register').bind('click', $.proxy(registerClick, objScope));
+        $regLink.text('Register')
+          .bind('click', $.proxy(registerClick, objScope))
+          .removeClass('manage_account_link')
+          .addClass('register_link');
                 
         //fade it in
         $this.fadeIn('fast');

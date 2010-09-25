@@ -30,7 +30,7 @@ task :new_fixtures => :environment do
   j2.save(false)
 
   o = Order.new(:user => u,
-                :cents_per_shot => 2,
+                :price => 2,
                 :shots => 500,
 
                 :first_name => "Sean",
@@ -47,7 +47,7 @@ task :new_fixtures => :environment do
   o.save(false)
   
   o = Order.new(:user => u2,
-                :cents_per_shot => 2,
+                :price => 2,
                 :shots => 500,
 
                 :card_type => "master",

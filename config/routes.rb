@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.account "account", :controller => "users", :action => "index"
 
-  map.resources :orders, :new => { :express => :get }
+  map.resources :orders
   map.resources :shots, :controller => "batches"
   map.resources :jobs
 

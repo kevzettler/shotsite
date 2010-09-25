@@ -37,7 +37,7 @@
       </p>
     </form>
   </div>
-  
+
   <div id="payment" class="cred">
     <p><label for="shots">How many shots?</label></p>
     <select name="shots" id="shots">
@@ -50,11 +50,13 @@
     <p>Your selected Job is for <span id="total_price">0</span> shots </p>
   </div>
   
+  <% order = current_user ? current_user.orders.last : nil %>
+  <% order ||= Order.new %>
   <div id="details" class="cred">
     <form id="order_form">
       <p>
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" />
+        <input type="text" id="first_name" name="first_name" value="<% order.first_name %>" />
       </p>
       <p>
         <label for="last_name">Last Name</label>
@@ -84,6 +86,6 @@
       </p>
         <input type="submit" value="checkout" id="checkout_btn" />
     </form>
-    <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+    <%#= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
   </div>
 </div>

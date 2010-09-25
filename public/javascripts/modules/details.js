@@ -4,11 +4,15 @@
 *
 */
 (function($){
-    $.core.modules.details = function(){        
+    $.core.modules.details = function(){
+        var $this,
+            $form,
+            $button;
+
         function isLoggedIn() {
-            return $('#login p:first').is(':visible');
+            return $('.logout_link').is(':visible');
         };
-        
+
         function createOrder(){
             var orderData,
                 priceText = $("div#payment span#price").text();
@@ -27,17 +31,21 @@
                 card_verification: $form.find("#card_verification").val()
             };
 
+            var objectScope = this;
+
             $.ajax({
-                url : '/orders/create.json',
-                type : 'post',
+                url : '/orders',
+                type : 'POST',
                 dataType: 'json',
                 data : {order : orderData},
                 success : function(data, text, xhr){
                     $(document).trigger('createJob.stepControl', function(){ console.log('omg call back');});
-                    window.location = "http://" + window.location.hostname + "/orders";
+                    $button.removeAttr("disabled");
+                    //window.location = "http://" + window.location.hostname + "/orders";
                 },
                 error : function(data, text, xhr){
-                    $button.remove_attr("disabled");
+                    $button.removeAttr("disabled");
+                    objectScope.displayError("Sorry, couldn't process your order. Please check the order information again.");
                 }
             });
         };
@@ -49,33 +57,35 @@
 
         return $.extend(Object.create($.core.modules.broForm()), {
             render : function(){
-
-                var $this = $(this.element),
-                    $form = $this.find('#order_form'),
-                    $button = $form.find("#checkout_btn");
-
+                $this = $(this.element);
+                $form = $this.find('#order_form');
+                $button = $form.find("#checkout_btn");
+            
                 var $this = $(this.element);
-
+                
                 var out_this = this;
                 
                 $button.button();
 
                 console.log("form:", $form, "button:", $button);
-                
-                $form.submit($.proxy(function(){
+
+                console.log("render 'this':", this);
+                $form.submit($.proxy(function(e){
+                    e.preventDefault();
 
                     this.clearErrors();
                     
-                    if (false == isLoggedIn()){
-                        this.displayError('Please login or register to checkout');
-                        alert('omg submit');
-                        return false;
-                    }else{
+                    if (isLoggedIn()){
+                        alert('Logged in!');
                         $button.attr("disabled", "disabled");
-                        createOrder.call(out_this);
+                        createOrder.call(this);
+                    }else{
+                        alert('Not logged in!');
+                        this.displayError('Please login or register to checkout');
+                        return false;
                     }
-                    alert('omg submit');
-                    return false;
+
+                    alert("Shouldn't be here!");
 
                 }, this));
             }
