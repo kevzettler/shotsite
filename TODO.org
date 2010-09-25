@@ -1,0 +1,30 @@
+* UI
+** Homepage
+*** Update navigation pane on login [small, normal] [DONE]
+*** Proper tabbing on new job form [medium, low]
+*** Styling on browsers on new job form [small, high] [DONE]
+*** Validation and error messages on new job form [medium, high]
+*** Login/Register forms not being hidden on ajax register [medium, high] [DONE]
+*** Remove auto-complete on credit-card field [small, high] [DONE]
+*** Credit card for validation [medium, high]
+*** Proper forwarding after complete first order [DONE]
+** Orders
+*** Remove show/destroy [small, medium]
+*** Format Date [small, small]
+*** Format currency [small, small]
+*** Don't redirect on orders page [DONE]
+** Jobs
+*** Proper formatting browsers [small, high]
+*** Save button per job [large, high]
+*** Interval -> drop down box [medium, normal]
+*** Drop dates [small, low] [DONE]
+*** New job link should expand form [medium, high]
+** Job
+*** Change status for running jobs [small, very high] [DONE]
+** Misc.
+*** Move Javascript to new bundle setup [large, low]
+*** Move flash[:notice] messages
+* Backend
+** 3shots client
+*** Close job when finished (closeCurrentBrowserSession) [medium, low]
+*** Make run in parallel 

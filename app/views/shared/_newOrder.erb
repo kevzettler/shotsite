@@ -64,7 +64,7 @@
       </p>
       <p>
         <label for="card_number">Credit Card Number</label>
-        <input type="text" id="card_number" name="card_number" autocomplete="off"/>
+        <input type="text" id="card_number" name="card_number"/>
       </p>
       <p>
         <label for="card_type">Credit Card Type</label>
@@ -81,8 +81,8 @@
         <%= select_year Date.today, :prefix => :card_expires_on%>
       </p>
       <p>
-        <label for="card_verification">CVV2 <a href="">whats this?</a></label>
-        <input type="text" name="card_verification" id="card_verification" />
+        <label for="card_verification">CVV2</label>
+        <input type="text" name="card_verification" id="card_verification"/>
       </p>
         <input type="submit" value="checkout" id="checkout_btn" />
     </form>

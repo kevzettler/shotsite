@@ -120,7 +120,7 @@ job = Job.find batch.job_id
 urls = JSON.parse job.urls
 time = job.last_run
 
-batch.status = "foreplay"
+batch.status = "Loading"
 batch.save
 
 $log_file.puts("#{username}  |  #{access_key}  |  #{job.browsers}  |  #{urls} ")
@@ -128,7 +128,7 @@ $log_file.puts("#{username}  |  #{access_key}  |  #{job.browsers}  |  #{urls} ")
 $log_file.puts "Prepping workers"
 workers = setup_workers(username, access_key, job, batch)
 
-batch.status = "intercourse"
+batch.status = "Snapshotting"
 batch.save
 $log_file.puts "Snapshotting"
 urls.each do |url|
@@ -138,10 +138,10 @@ urls.each do |url|
   end
 end
 
-batch.status = "cleanup"
+batch.status = "Cleanup"
 batch.save
 workers.each { |worker| worker.close }
 
-batch.status = "spent"
+batch.status = "Finished"
 batch.save
 $log_file.close
