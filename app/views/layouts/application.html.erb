@@ -5,6 +5,16 @@
 	<title>3Shots <%= controller.action_name %></title>
 	<%= stylesheet_link_tag("screen") %>
 	<%= stylesheet_link_tag('scaffold') %>
+	<!--
+	<script src="/bundle/<%=params[:controller]%>/<%=params[:action]%>"></script>
+	<script src="/cache/">
+	-->
+	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
 	        
@@ -15,7 +25,7 @@
 	<script src="/javascripts/jCore.js"></script>
 	        
 	<script src="/javascripts/modules/login.js"></script>
-    <script src="/javascripts/modules/register.js"></script>
+  <script src="/javascripts/modules/register.js"></script>
 	<script src="/javascripts/modules/broForm.js"></script>
 	<script src="/javascripts/modules/step1.js"></script>
 	<script src="/javascripts/modules/step2.js"></script>
@@ -26,18 +36,14 @@
 	<script src="/javascripts/modules/accountManager.js"></script>
 	<script src="/javascripts/modules/payment.js"></script>
 	<script src="/javascripts/modules/details.js"></script>
-	<script src="/javascripts/modules/jobList.js"></script>
+	<script src="/javascripts/modules/shotList.js"></script>
           
   <script src="/javascripts/vendor/json2.js"></script>
 	<script src="/javascripts/vendor/jquery.disable.js"></script>
 	<script src="/javascripts/vendor/jquery.colorbox.js"></script>
 	<script src="/javascripts/vendor/facebox.js"></script>
-
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details, jobList');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details, shotList');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
@@ -51,9 +57,10 @@
 	    $("#creds").credControl();
 	    $("#details").details();
 	    $("#payment").payment();
-	    $(".job_list").jobList();
+	    $(".job_list").shotList();
 	 });
 	</script>
+	
 
 </head>
 <body>

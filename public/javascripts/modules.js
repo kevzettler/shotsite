@@ -1,4 +1,4 @@
-//= require "core"
+//= require <jCore>
 
 //modules is actually the sandbox object where the modules play.
 //modules controlls the modules in an observer role
