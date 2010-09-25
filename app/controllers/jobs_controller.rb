@@ -43,6 +43,7 @@ class JobsController < ApplicationController
     job_info = params[:job]
     user_id = current_user.id
     job_info[:user_id] = user_id
+
     @job = Job.new(job_info)
 
     respond_to do |format|

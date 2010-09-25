@@ -13,8 +13,7 @@
     <th>Pages</th>
     <th>Browsers</th>
     <th>Interval</th>
-    <th>Last</th>
-    <th>Next</th>
+    <th>Save</th>
   </tr>
   <% @jobs.each do |job| %>
   <tr>
@@ -34,7 +33,22 @@
       <%= browser_block job, job.browsers_hash %>
     </td>
     <td>
-      <%= job.interval%>
+      <select name="short_time" id="short_time">
+        <!--
+           <option value="1">Every day</option>
+        <option value="24">Every hour</option>
+        <option value="1440">Every minute</option>
+        -->
+      <% [{:value => 1400, :rel => 1,    :message => "Every day"},
+          {:value => 60,   :rel => 24,   :message => "Every hour"},
+          {:value => 1,    :rel => 1440, :message => "Every minute"}].each do |option| %>
+        <option value="<%= option[:value] %>" rel="<%= option[:rel] %>" <% if option[:value] == job.interval %>selected="selected"<% end %>><%= option[:message] %></option>
+      <% end %>
+      </select>
+
+    </td>
+    <td>
+      <button class="update_job_button">Update Job</button>
     </td>
   </tr>
   <% end %>

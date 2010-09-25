@@ -175,6 +175,11 @@
               func = newJob;
           }
 
+          $(".update_job_button").each(function(){
+              var $this = $(this);
+              $this.button();
+          });
+
         $this.find('button')
           .button() //make the button a button
           .click($.proxy(func, this)); 
