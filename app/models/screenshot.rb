@@ -33,7 +33,13 @@ class Screenshot < ActiveRecord::Base
     
     return "#{names[browser_name]} #{browser_version}" if browser_name == 'iexplore'
 
-    return names[browser_name]
+    name = names[browser_name]
+    
+    if name.nil?
+      self.browser_name
+    else
+      return names[browser_name]
+    end
   end
 
   # TODO: This should be moved into view layer
@@ -44,14 +50,18 @@ class Screenshot < ActiveRecord::Base
       "googlechrome" => "img-chrome.png",
       "iexplore8" => "img-ie8.png",
       "iexplore7" => "img-ie7.png", 
-      "iexplore6" => "img-ie6.png"
+      "iexplore6" => "img-ie6.png",
+      "iehta" => "img-ie8.png",
+      "firefox" => "img-firefox.png"
     }
-    
-    if(self.browser_name == 'iexplore')
-      ret = icons[self.browser_name + self.browser_version]
-    else	
+
+    if self.browser_name == 'iexplore' or self.browser_name == 'iehta'
+      ret = icons["iexplore" + self.browser_version.delete(".")]
+    else
       ret = icons[self.browser_name]
     end
-    
+
+    return "unknown_#{self.browser_name}" if ret.nil?
+    ret
   end
 end

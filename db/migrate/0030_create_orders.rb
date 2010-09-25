@@ -21,6 +21,10 @@ class CreateOrders < ActiveRecord::Migration
       t.string :express_token
       t.string :express_payer_id
 
+      # Debug info
+      t.string :status, :default => "new"
+      t.text :message
+
       t.timestamps
     end
   end

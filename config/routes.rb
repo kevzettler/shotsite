@@ -1,13 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
-	map.account "account", :controller => "users", :action => "index"
+  map.account "account", :controller => "users", :action => "index"
 
   map.resources :orders, :new => { :express => :get }
   map.resources :shots, :controller => "batches"
-	map.resources :jobs
-	
-	map.bundle "/bundle/:route_controller/:route_action", :controller => "bundle", :action => "build"
+  map.resources :jobs
+
+  # TODO: Take out of production environment
+  map.bundle "/bundle/:js_controller/:js_action.:format", :controller => "bundle", :action => "build"
 
   map.resources :users do |users|
     users.resources :screenshots

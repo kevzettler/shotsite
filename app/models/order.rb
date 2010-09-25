@@ -11,6 +11,18 @@ class Order < ActiveRecord::Base
   def purchase
     response = process_purchase
     transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
+    if response.success?
+      price_per_shot = 5
+      user = self.user
+      user.shots += (price_in_cents.to_f / price_per_shot).ceil
+      user.save
+      self.status = "success"
+    else
+      self.status = "failed"
+      #self.message
+    end
+
+    self.save
     response.success?
   end
 
@@ -45,7 +57,7 @@ class Order < ActiveRecord::Base
   def standard_purchase_options
     {
       :ip => ip_address,
-			:email => user.email
+      :email => user.email
       #:billing_address => {
         #:name => "#{self.first_name} #{self.last_name}",
         #:address1 => self.address1,

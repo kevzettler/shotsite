@@ -44,6 +44,8 @@ class Snapshotter
 
   def get_snapshot_for(url)
     begin
+      url = "http://" + url if "http" != url[0..3]
+
       $log_file.puts "Opening page [#{url}] and waiting for page load"
       @browser.open(url)
       @browser.wait_for_page_to_load

@@ -37,7 +37,7 @@ $(document).ready( function () {
                 if (matching.length > 0) {
                     counter += 1;
                     var count = columns;
-                    var desired_width = 1000;
+                    var desired_width = $(window).width() * 0.95;
                     var width = desired_width / count ;
                     
                     html_output += '<div class="batch_images">';

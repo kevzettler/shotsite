@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(:version => 60) do
     t.string   "zip"
     t.string   "express_token"
     t.string   "express_payer_id"
+    t.string   "status",           :default => "new"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
