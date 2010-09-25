@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_filter :require_user
+
   # GET /jobs
   # GET /jobs.xml
   def index
@@ -6,7 +8,20 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @jobs }
+      format.xml   { render :xml => @jobs }
+      format.json  { render :json => @jobs.to_json(:include => { :batches => {
+                                                       :include => { :screenshots => {
+                                                                       :only => [:batch_id,
+                                                                                 :url,
+                                                                                 :browser_name,
+                                                                                 :browser_version],
+                                                           :methods => [:absolute_url,
+                                                                        :taken_at]
+                                                         }}}},
+                                                   :only => [
+                                                             :urls,
+                                                             :browsers
+                                                            ]) }
     end
   end
 
@@ -84,6 +99,19 @@ class JobsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(jobs_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  protected
+
+  def require_user
+    unless current_user
+      flash[:notice] = "You must be logged in to do that"
+      respond_to do |format|
+        format.html { redirect_to login_url }
+        format.xml  { render :xml =>  {:error => "Please authenticate using your REST credentials" }  and return }
+        format.json { render :json => {:error => "Please authenticate using your REST credentials" }  and return }
+      end
     end
   end
 end

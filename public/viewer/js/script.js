@@ -89,7 +89,7 @@ $(document).ready( function () {
     api_key = getUrlVars()["api_key"];
     
     $.ajax({
-        url: "/users/1/screenshots.json?api_key=" + api_key,
+        url: "/users/single/screenshots.json?api_key=" + api_key,
         dataType: 'json',
         success: buildGallery
     });

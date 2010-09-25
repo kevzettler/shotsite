@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users do |users|
     users.resources :screenshots
+    users.resources :jobs
   end
   
   map.resources :user_sessions
