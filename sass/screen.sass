@@ -73,9 +73,13 @@ body
     font-size: 1.1em 
     
 .section_header
-  +clearfix 
+  +clearfix()
+  padding: 10px 0 
   h1
     font-size: 1.8em
+  a
+    &:hover
+      color: blue
   *
     float: left
     padding-right: 10px
