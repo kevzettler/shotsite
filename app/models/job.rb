@@ -24,6 +24,14 @@ class Job < ActiveRecord::Base
     user.shots > self.shots_per_run
   end
 
+	def browsers_hash
+		JSON.parse self.browsers
+	end
+  
+	def urls_hash
+	  JSON.parse self.urls
+	end
+	
   def run
     puts "running job##{self.id}"
     return false unless enough_credit?
