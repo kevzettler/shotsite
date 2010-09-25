@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = current_user.jobs
+    @jobs = Job.find(:all, :conditions => {:user_id => current_user.id}, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -40,19 +40,20 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.xml
   def create
-		doodbro = params[:job]
-		doodbro[:user_id] = current_user.id
-    @job = Job.new(doodbro)
+    job_info = params[:job]
+    user_id = current_user.id
+    job_info[:user_id] = user_id
+    @job = Job.new(job_info)
 
     respond_to do |format|
       if @job.save
         format.html { redirect_to(@job, :notice => 'Job was successfully created.') }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
-				format.json { render :json => @job, :status => :created, :location => @job}
+        format.json { render :json => @job, :status => :created, :location => @job}
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @job.errors, :status => :unprocessable_entity }
-				format.json {render :json => @job.errors, :status => :unprocessable_entity}
+        format.json {render :json => @job.errors, :status => :unprocessable_entity}
       end
     end
   end

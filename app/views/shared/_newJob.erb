@@ -59,5 +59,10 @@
         <ul>
       </div>
     </form>
+
+    <% if form_state == "new_job" %>
+    <button id="create_job">Create Job</button>
+    <% elsif form_state == "new_order" %>
     <button id="checkout_btn">Check Out</button>
+    <% end %>
 </div>
