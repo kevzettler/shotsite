@@ -46,6 +46,8 @@
       , objScope = this
       ;
       
+        var $navLinks = $(this.options.navLinks);
+      
       $(document).trigger('close.facebox');
       //fade it out
       $this.fadeOut('fast', function(){
@@ -65,6 +67,10 @@
         //fade it in
         $this.fadeIn('fast');
       });
+
+
+        console.log("navLinks: ", $navLinks);
+        $navLinks.show();
       
       //fade out the login form
       $(document).trigger('fadeOut.login');
@@ -73,11 +79,12 @@
     
     function loggedOut(){
       var $this = $(this.element)
-      , $loginLink = $this.find(this.options.loginLink)
-      , $regLink = $this.find(this.options.registerLink)
+      , $loginLink = $this.find(this.options.logoutLink)
+      , $regLink = $this.find(this.options.manageAccountLink)
       , objScope = this
       ;
             
+        var $navLinks = $(this.options.navLinks);
       //fade it out
       $this.fadeOut('fast', function(){
         
@@ -93,19 +100,26 @@
           .bind('click', $.proxy(registerClick, objScope))
           .removeClass('manage_account_link')
           .addClass('register_link');
+
+        $navLinks.hide();
+
+        
                 
         //fade it in
         $this.fadeIn('fast');
       });
+
       $(document).trigger('fadeIn.login');
       $(document).trigger('fadeIn.register');
-      
     }
     
     return $.extend(Object.create($.core.module), {
       options : {
-        loginLink : 'a.login_link',
-        registerLink : 'a.register_link'
+          loginLink : 'a.login_link',
+          registerLink : 'a.register_link',
+          logoutLink : 'a.logout_link',
+          manageAccountLink : 'a.manage_account_link',
+          navLinks: 'div#nav_links'
       },
                   
       render : function(){

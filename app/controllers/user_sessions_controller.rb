@@ -20,7 +20,7 @@ class UserSessionsController < ApplicationController
 	def destroy
 		@user_session = UserSession.find(params[:id])
 		respond_to do |format|
-			if @user_session.destroy
+			if @user_session.nil? or @user_session.destroy
 				flash[:notice] = "Successfully logged out."
 				format.html{ redirect_to root_url}
 				format.json {render :json => @user_session}

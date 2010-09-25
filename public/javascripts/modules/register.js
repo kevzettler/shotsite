@@ -29,6 +29,11 @@
           success : function(json){
               $(document).trigger("close.facebox");
               $(document).trigger('loggedIn.accountManager');
+
+              //fade out the login form
+              $(document).trigger('fadeOut.login');
+              $(document).trigger('fadeOut.register');
+
               objScope.clearErrors();
           },
           error :function(xhr, txt, er){
