@@ -9,31 +9,43 @@
     
     function show(){
       $(this.element).slideDown();
+      $(this.options.newOrderLinkEle).text(this.options.newOrderLinkCloseText);
     }
     
     function hide(){
       $(this.element).slideUp();
+      $(this.options.newOrderLinkEle).text(this.options.newOrderLinkTextDefault); 
     }
+    
         
     return $.extend(Object.create($.core.module), {
+      
+      options : {
+        newOrderLinkEle : "#new_order_expand",
+        closeBtnHtml : '<a class="close" title="close">X</a>',
+        newOrderLinkTextDefault : "New Order?",
+        newOrderLinkCloseText : "Close Order Form",
+        newOrderLinkNewText : this.newOrderLinkTextDefault
+      },
+      
       render : function(){
+        var objScope = this; 
         
         if(window.location.pathname == "/orders"){
-          var $closeBtn = $('<a class="close" title="close">X</a>');
+          var $closeBtn = $(this.options.closeBtnHtml);
           $closeBtn.click($.proxy(hide, this));
           $(this.element).prepend($closeBtn);
         }
         
         $(document).bind('show.credControl', $.proxy(show, this));
         $(document).bind('hide.credControl', $.proxy(hide, this));
-        
-        $("#new_order_expand").click(function(){
+         
+                 
+        $(this.options.newOrderLinkEle).click(function(){
            var $this = $(this);
-           if($this.text() != 'Close Order Form'){
-             $this.text("Close Order Form");
+           if($this.text() != objScope.options.newOrderLinkCloseText){
              $(document).trigger('show.credControl');
            }else{
-             $this.text("New Order?");
              $(document).trigger('hide.credControl');
            }
            return false;

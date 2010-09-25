@@ -2606,33 +2606,38 @@ body {
 .section_header {
   overflow: hidden;
   *zoom: 1;
+  padding: 10px 0;
 }
-/* line 77, ../../sass/screen.sass */
+/* line 78, ../../sass/screen.sass */
 .section_header h1 {
   font-size: 1.8em;
 }
-/* line 79, ../../sass/screen.sass */
+/* line 81, ../../sass/screen.sass */
+.section_header a:hover {
+  color: blue;
+}
+/* line 83, ../../sass/screen.sass */
 .section_header * {
   float: left;
   padding-right: 10px;
 }
 
-/* line 83, ../../sass/screen.sass */
+/* line 87, ../../sass/screen.sass */
 .error {
   color: red;
 }
 
-/* line 86, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 .flash_message {
   display: none;
 }
 
-/* line 90, ../../sass/screen.sass */
+/* line 94, ../../sass/screen.sass */
 #browser_buttons label.ui-state-active {
   background: #d8ffc9;
 }
 
-/* line 93, ../../sass/screen.sass */
+/* line 97, ../../sass/screen.sass */
 #steps, #creds {
   overflow: hidden;
   *zoom: 1;
@@ -2641,22 +2646,22 @@ body {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
-/* line 99, ../../sass/screen.sass */
+/* line 103, ../../sass/screen.sass */
 #steps button#checkout_btn, #creds button#checkout_btn {
   float: right;
   margin-right: 50px;
 }
 
-/* line 103, ../../sass/screen.sass */
+/* line 107, ../../sass/screen.sass */
 #creds {
   background-color: #d8ffc9;
   display: none;
 }
-/* line 106, ../../sass/screen.sass */
+/* line 110, ../../sass/screen.sass */
 #creds #checkout_btn {
   margin: 5px 0;
 }
-/* line 108, ../../sass/screen.sass */
+/* line 112, ../../sass/screen.sass */
 #creds a.close {
   display: block;
   width: 10px;
@@ -2668,25 +2673,25 @@ body {
   float: right;
   margin-right: 10px;
 }
-/* line 118, ../../sass/screen.sass */
+/* line 122, ../../sass/screen.sass */
 #creds a.close:hover {
   color: red;
   border-color: red;
 }
 
-/* line 122, ../../sass/screen.sass */
+/* line 126, ../../sass/screen.sass */
 #creds .gone {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 126, ../../sass/screen.sass */
+/* line 130, ../../sass/screen.sass */
 #step_form {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 129, ../../sass/screen.sass */
+/* line 133, ../../sass/screen.sass */
 #step1 {
   margin-left: 0;
   display: inline;
@@ -2695,18 +2700,18 @@ body {
   margin-right: 10px;
   width: 220px;
 }
-/* line 132, ../../sass/screen.sass */
+/* line 136, ../../sass/screen.sass */
 #step1 input {
   width: 209px;
   margin-bottom: 5px;
 }
-/* line 135, ../../sass/screen.sass */
+/* line 139, ../../sass/screen.sass */
 #step1 a {
   float: right;
   padding-right: 5px;
 }
 
-/* line 139, ../../sass/screen.sass */
+/* line 143, ../../sass/screen.sass */
 #step2 {
   display: inline;
   float: left;
@@ -2714,7 +2719,7 @@ body {
   margin-right: 10px;
   width: 280px;
 }
-/* line 141, ../../sass/screen.sass */
+/* line 145, ../../sass/screen.sass */
 #step2 .ui-buttonset .ui-button {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2722,11 +2727,11 @@ body {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-/* line 145, ../../sass/screen.sass */
+/* line 149, ../../sass/screen.sass */
 #step2 .ui-button-text-only .ui-button-text {
   padding: 0.5em 0.7em !important;
 }
-/* line 148, ../../sass/screen.sass */
+/* line 152, ../../sass/screen.sass */
 #step2 label span.free_tag {
   color: #0ff756;
   font-size: 1.3em;
@@ -2737,7 +2742,7 @@ body {
   text-shadow: 1px 1px 2px black;
 }
 
-/* line 157, ../../sass/screen.sass */
+/* line 161, ../../sass/screen.sass */
 #step3 {
   display: inline;
   float: left;
@@ -2746,7 +2751,7 @@ body {
   width: 220px;
 }
 
-/* line 160, ../../sass/screen.sass */
+/* line 164, ../../sass/screen.sass */
 #step4 {
   margin-right: 0;
   display: inline;
@@ -2756,7 +2761,7 @@ body {
   width: 160px;
 }
 
-/* line 164, ../../sass/screen.sass */
+/* line 168, ../../sass/screen.sass */
 #login {
   margin-left: 0;
   display: inline;
@@ -2766,7 +2771,7 @@ body {
   width: 220px;
 }
 
-/* line 168, ../../sass/screen.sass */
+/* line 172, ../../sass/screen.sass */
 #register {
   display: inline;
   float: left;
@@ -2775,7 +2780,7 @@ body {
   width: 220px;
 }
 
-/* line 171, ../../sass/screen.sass */
+/* line 175, ../../sass/screen.sass */
 #payment {
   display: inline;
   float: left;
@@ -2784,7 +2789,7 @@ body {
   width: 220px;
 }
 
-/* line 174, ../../sass/screen.sass */
+/* line 178, ../../sass/screen.sass */
 #details {
   margin-right: 0;
   display: inline;
@@ -2794,22 +2799,22 @@ body {
   width: 160px;
 }
 
-/* line 179, ../../sass/screen.sass */
+/* line 183, ../../sass/screen.sass */
 #login p, #register p {
   padding: 3px 0;
   width: 170px;
 }
-/* line 182, ../../sass/screen.sass */
+/* line 186, ../../sass/screen.sass */
 #login p button, #register p button {
   float: right;
   margin-top: 5px;
   margin-right: -6px;
 }
-/* line 186, ../../sass/screen.sass */
+/* line 190, ../../sass/screen.sass */
 #login p input, #register p input {
   width: 170px;
 }
-/* line 188, ../../sass/screen.sass */
+/* line 192, ../../sass/screen.sass */
 #login label, #register label {
   display: block;
   width: 100px;
