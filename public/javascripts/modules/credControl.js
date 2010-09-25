@@ -7,14 +7,16 @@
 (function($){
   $.core.modules.credControl = function(){
     
-    function show(){
-      $(this.element).slideDown();
+    function show(event, callBack){ 
+      if(typeof callBack !== 'function'){ callBack = function(){};}
       $(this.options.newOrderLinkEle).text(this.options.newOrderLinkCloseText);
+      $(this.element).slideDown('normal', callBack); 
     }
     
-    function hide(){
-      $(this.element).slideUp();
-      $(this.options.newOrderLinkEle).text(this.options.newOrderLinkTextDefault); 
+    function hide(event, callBack){
+      if(typeof callBack !== 'function'){ callBack = function(){};}
+      $(this.options.newOrderLinkEle).text(this.options.newOrderLinkTextDefault);
+      $(this.element).slideUp('normal', callBack); 
     }
     
         
@@ -37,8 +39,9 @@
           $(this.element).prepend($closeBtn);
         }
         
-        $(document).bind('show.credControl', $.proxy(show, this));
-        $(document).bind('hide.credControl', $.proxy(hide, this));
+        $(document).bind('show.credControl', $.proxy(show, objScope));
+        $(document).bind('hide.credControl', $.proxy(hide, objScope));
+        
          
                  
         $(this.options.newOrderLinkEle).click(function(){

@@ -12,6 +12,28 @@
         function isLoggedIn() {
             return $('.logout_link').is(':visible');
         };
+        
+        function formSubmit(){
+          this.clearErrors();
+          
+          if (isLoggedIn()){
+              $button.attr("disabled", "disabled");
+              createOrder.call(this);
+          }else{
+              alert('Not logged in!');
+              this.displayError('Please login or register to checkout');
+          }
+            
+          return false;
+        }
+         
+
+        function addOrderEntry(orderData){
+          var $table = $(this.options.tableEle),
+          $jobEntry = $('<tr style="display:none;"><td>'+orderData.created_at.substring(0, 10)+'</td><td>'+orderData.price+'</td><td>'+orderData.shots+'</td</tr>');
+          $table.find('tr:first').after($jobEntry);
+          $jobEntry.fadeIn('slow');
+        }
 
         function createOrder(){
             var orderData,
@@ -39,11 +61,14 @@
                 dataType: 'json',
                 data : {order : orderData},
                 success : function(data, text, xhr){
-                    $(document).trigger('createJob.stepControl', function(){ console.log('omg call back');});
+                    $(document).trigger('createJob.stepControl');
                     $button.removeAttr("disabled");
-                    if(window.location != "/orders"){
+                    if(window.location.pathname != "/orders"){
                       window.location = "/orders";
+                    }else{
+                      $(document).trigger("hide.credControl", [function(){addOrderEntry.call(objectScope, data)}]);
                     }
+                    
                 },
                 error : function(data, text, xhr){
                     $button.removeAttr("disabled");
@@ -52,44 +77,27 @@
             });
         };
 
-        function createJob(){
-            
-        };
-
 
         return $.extend(Object.create($.core.modules.broForm()), {
+            options : {
+              tableEle : "table"
+            },
+            
             render : function(){
                 $this = $(this.element);
                 $form = $this.find('#order_form');
                 $button = $form.find("#checkout_btn");
             
-                var $this = $(this.element);
                 
-                var out_this = this;
+                var objScope = this;
                 
                 $button.button();
 
-                console.log("form:", $form, "button:", $button);
+                $form.validationEngine({
+                  success: $.proxy(formSubmit, objScope),
+                  unbindEngine: false
+                });
 
-                console.log("render 'this':", this);
-                $form.submit($.proxy(function(e){
-                    e.preventDefault();
-
-                    this.clearErrors();
-                    
-                    if (isLoggedIn()){
-                        alert('Logged in!');
-                        $button.attr("disabled", "disabled");
-                        createOrder.call(this);
-                    }else{
-                        alert('Not logged in!');
-                        this.displayError('Please login or register to checkout');
-                        return false;
-                    }
-
-                    alert("Shouldn't be here!");
-
-                }, this));
             }
             
         });

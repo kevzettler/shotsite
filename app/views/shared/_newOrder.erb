@@ -56,15 +56,15 @@
     <form id="order_form">
       <p>
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" value="<% order.first_name %>" />
+        <input type="text" id="first_name" name="first_name" value="<% order.first_name %>" class="validate[required,custom[onlyLetter]]" />
       </p>
       <p>
         <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" />
+        <input type="text" id="last_name" name="last_name" class="validate[required,custom[onlyLetter]]" />
       </p>
       <p>
         <label for="card_number">Credit Card Number</label>
-        <input type="text" id="card_number" name="card_number"/>
+        <input type="text" id="card_number" name="card_number" class="validate[required,custom[onlyNumber],length[16]]"/>
       </p>
       <p>
         <label for="card_type">Credit Card Type</label>
@@ -82,7 +82,7 @@
       </p>
       <p>
         <label for="card_verification">CVV2</label>
-        <input type="text" name="card_verification" id="card_verification"/>
+        <input type="text" name="card_verification" id="card_verification" class="validate[required,custom[onlyNumber]]"/>
       </p>
         <input type="submit" value="checkout" id="checkout_btn" />
     </form>
