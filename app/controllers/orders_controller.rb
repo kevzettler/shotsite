@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         if @order.purchase
-          format.json { render :json => ["Cool stuff!"].to_json }
+          format.json { render :json => @order, :status => 200 }
         else
           format.json { render :json => @order, :status => :unprocessable_entity }          
         end
