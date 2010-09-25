@@ -104,6 +104,7 @@
         , $registerLink = $this.find(this.options.registerLink)
         ;
         
+        
         //attach the login link depending on user login status using a text check, bad? LOL wot?
         if($loginLink.text() == "Login"){
          $loginLink.click($.proxy(loginClick, this)); 

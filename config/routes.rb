@@ -6,6 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :orders, :new => { :express => :get }
   map.resources :shots, :controller => "batches"
 	map.resources :jobs
+	
+	map.bundle "/bundle/:route_controller/:route_action", :controller => "bundle", :action => "build"
 
   map.resources :users do |users|
     users.resources :screenshots

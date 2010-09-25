@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "json"
   config.gem "authlogic"
   config.gem "activemerchant", :lib => "active_merchant"
+	config.gem "sprockets"
   #config.gem "selenium-client"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

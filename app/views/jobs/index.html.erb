@@ -1,0 +1,43 @@
+<div>
+  <h1>Your Active Jobs</h1>
+  <%= link_to 'New job?', new_job_path, :id => "new_job_expand" %>
+</div>
+
+<div style="display:none;">
+<%= render :partial => "shared/newJob" %>
+</div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Pages</th>
+    <th>Browsers</th>
+    <th>Interval</th>
+    <th>Last</th>
+    <th>Next</th>
+  </tr>
+  <% jobs.each do |job| %>
+  <tr>
+    <td><%= job.id %></td>
+    <td>
+      <textarea>
+        <%= job.pages %>
+      </textarea>
+    </td>
+    <td>
+      <%= job.browsers %>
+    </td>
+    <td>
+      <%= job.interval%>
+    </td>
+    <td>
+      <%= job.last_run %>
+    </td>
+    <td>
+      <%= job.next_run %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+
