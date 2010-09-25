@@ -19,7 +19,14 @@ a
     background: transparent !important
 
 select, button
-  cursor: pointer !important
+  cursor: pointer !important 
+  
+  
+table
+  th
+    font-weight: bold
+  th, td
+    padding: 5px 20px 5px 0
 
 #facebox
   div.content
@@ -63,7 +70,15 @@ body
   font-weight: bold
   padding-bottom: 10px
   strong
-    font-size: 1.1em
+    font-size: 1.1em 
+    
+.section_header
+  +clearfix 
+  h1
+    font-size: 1.8em
+  *
+    float: left
+    padding-right: 10px
 
 .error
   color: red
@@ -90,6 +105,19 @@ body
   display: none
   #checkout_btn
     margin: 5px 0
+  a.close
+    display: block
+    width: 10px
+    line-height: 10px
+    text-align: center
+    height: 10px
+    padding: 5px
+    border: 1px solid black
+    float: right
+    margin-right: 10px
+    &:hover
+      color: red
+      border-color: red
   
 #creds .gone
   opacity: 0
