@@ -120,7 +120,25 @@
           .click($.proxy(checkout, this)); 
           
         $(document).bind('createJob.stepControl', $.proxy(createJob, this));
-      }      
+
+          var $job_form = $("#new_job_form"),
+              $link = $("#new_job_expand");
+
+          console.log("New job link: ", $link);
+
+          $link.click(function(e){
+              e.preventDefault();
+              if ($job_form.visible()) {
+                  // Change text and hide form
+                  $link.text("Create new job?");
+                  $job_form.hide();
+              }else{
+                  // Change text and show form
+                  $link.text("Hide form");
+                  $job_form.show();
+              }
+          });
+      }                      
     });
   };
 })(jQuery);
