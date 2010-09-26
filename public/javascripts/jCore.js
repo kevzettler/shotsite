@@ -23,6 +23,9 @@
       }
     } // End log()
     
+    if(!window.console){
+      window.console = {log : function(){}};
+    }
     
     // createInstance()
     // The instantation function for modules.
