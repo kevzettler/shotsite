@@ -11,17 +11,17 @@ class JobsController < ApplicationController
       format.xml   { render :xml => @jobs }
       format.json  { render :json => @jobs.to_json(:include => { :batches => {
                                                        :include => { :screenshots => {
-                                                                       :only => [:batch_id,
-                                                                                 :url,
-                                                                                 :browser_name,
-                                                                                 :browser_version],
-                                                           :methods => [:absolute_url,
-                                                                        :taken_at]
-                                                         }}}},
-                                                   :only => [
-                                                             :urls,
-                                                             :browsers
-                                                            ]) }
+                                                           :only => [
+                                                                     :batch_id,
+                                                                     :url,
+                                                                     :browser_name,
+                                                                     :browser_version
+                                                                    ],
+                                                           :methods => [
+                                                                        :absolute_url,
+                                                                        :taken_at
+                                                                       ]
+                                                         }}}})}
     end
   end
 
