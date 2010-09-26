@@ -48,8 +48,25 @@
         interval: getInterval.call(objScope)
       };
       
-      //Random conditional for now not sure on error handling for empty or free orders yet
-      if(total > 0){
+      //Random conditional for now not sure on error handling for empty or free orders yet 
+      var errors = {};
+      $form.find('input[type="text"]').each(function(){
+        var $this = $(this);
+        if($this.val() == '' || !$this.val()){
+          errors['#step1'] = "Please enter a URL";
+        }
+      });
+      
+      if($form.find('input:checked').length <= 0){
+        errors['#step2'] = "Please pick a browser";
+      }                                       
+      
+      if(errors['#step2'] || errors['#step1']){
+        console.log('errors omg');
+        for(error in errors){
+          $.validationEngine.buildPrompt(error,errors[error],'error');
+        }
+      }else{
         $form.disable();
         $button.find("span.ui-button-text").text('Edit Job?');
         $(document).trigger('show.credControl');
@@ -90,16 +107,18 @@
 
         // Create job
         $.ajax({
-            url : $form.attr('action'),
+            url : '/jobs/create',
             type : 'POST',
             data : jobData,
             dataType : "json",
             success : function(json){
-                console.log("Job created!");
-                //objScope.clearErrors();
+                //console.log("Job created!");
+                //
+                $(objScope.element).slideUp();
+                window.location = window.location;
             },
             error :function(xhr, txt, er){
-                console.log("failed to create job");
+                //console.log("failed to create job");
 
             }
         });
@@ -115,7 +134,7 @@
         if(url.substr(0,7) != 'http://'){
           url = 'http://' + url;
         }
-        urls.push(url);
+        urls.push(url.trim());
       });
       return urls;
     }
@@ -152,7 +171,7 @@
           }
         },
         error : function(xhr, text, er){
-          console.log(xhr, text, er);
+          //console.log(xhr, text, er);
         }
       });
     }
@@ -166,12 +185,9 @@
           // Ugh. Don't hardcode urls like this. Make it nicer.
           var func;
 
-          console.log(window.location.pathname);
           if ("/" == window.location.pathname) {
-              console.log("We're at the root url, using checkout");
               func = checkout;
           }else{
-              console.log("We're *not* at the root url, using newJob");
               func = newJob;
           }
 
@@ -188,8 +204,6 @@
 
           var $job_form = $("#new_job_form"),
               $link = $("#new_job_expand");
-
-          console.log("New job link: ", $link);
 
           $link.click(function(e){
               e.preventDefault();

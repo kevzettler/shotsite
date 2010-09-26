@@ -40,13 +40,14 @@
 	<script src="/javascripts/modules/payment.js"></script>
 	<script src="/javascripts/modules/details.js"></script>
 	<script src="/javascripts/modules/shotList.js"></script>
+	<script src="/javascripts/modules/jobList.js"></script>   
           
   <script src="/javascripts/vendor/json2.js"></script>
 	<script src="/javascripts/vendor/jquery.disable.js"></script>
 	<script src="/javascripts/vendor/jquery.colorbox.js"></script>
 	<script src="/javascripts/vendor/facebox.js"></script>
 	<script type="text/javascript">
-	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details, shotList');
+	$.core.registerModules('step1, step2, step3, step4, stepControl, credControl, accountManager, login, register, payment, details, shotList, jobList');
 	 $(document).ready(function(){
 	    $.core.init();
 	    $("#account_links").accountManager();
@@ -60,7 +61,8 @@
 	    $("#creds").credControl();
 	    $("#details").details();
 	    $("#payment").payment();
-	    $(".job_list").shotList();
+	    $(".shot_list").shotList();
+	    $(".job_list").jobList();
 	 });
 	</script>
 	

@@ -83,9 +83,11 @@ class JobsController < ApplicationController
       if @job.update_attributes(params[:job])
         format.html { redirect_to(@job, :notice => 'Job was successfully updated.') }
         format.xml  { head :ok }
+				format.json {render :json => @job, :status => 200}
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @job.errors, :status => :unprocessable_entity }
+				format.json {render :json => @job.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -99,6 +101,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(jobs_url) }
       format.xml  { head :ok }
+			format.json { render :json => @job, :status => 200 }
     end
   end
 

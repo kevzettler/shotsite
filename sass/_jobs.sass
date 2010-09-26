@@ -1,29 +1,24 @@
-ul.job_list
-  a.job_link
-    &:hover
-      color: #000 !important
-      background: #CCC !important
-  a.batch_link
-    &:hover
-      color: #000 !important
-      background: #CCC !important
-  ul.batch_list
-    padding-left: 20px
-    ul.shot_list li
-      +clearfix
-      clear: right
-      display: block
-      a
-        background: #FFF
-        padding: 5px 0
-        &:hover
-          color: #000 !important
-          *
-            background: #CCC !important
-      img, span
-        float: left
-      span
-        display: block
-        height: 30px
-        line-height: 30px
-        padding-left: 10px
+#create_job
+  float: right
+  margin-right: 65px
+.job_list
+  td
+    vertical-align: top
+  .browser_buttons
+    width: 225px
+    label
+      float: left
+    .ui-button   
+      +border-radius(10px)
+      margin-right: 5px
+      margin-bottom: 5px  
+    label.ui-state-active
+      background: #d8ffc9
+  textarea
+    padding: 5px
+    height: 90px
+    font-family: sans-serif !important
+  .delete_block
+    a
+      &:hover
+        color: red

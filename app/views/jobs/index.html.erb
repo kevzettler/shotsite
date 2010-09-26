@@ -7,8 +7,8 @@
   <%= render :partial => "shared/newJob", :locals => { :form_state => "new_job" } %>
 </div>
 
-<table>
-  <tr>
+<table class="job_list">
+  <tr class="header_row">
     <th>ID</th>
     <th>Pages</th>
     <th>Browsers</th>
@@ -17,12 +17,12 @@
   </tr>
   <% @jobs.each do |job| %>
   <tr>
-    <td><%= job.id %></td>
-    <td><%= urls_block job, job.urls_hash %></td>
-    <td>
+    <td class="id_block"><%= job.id %></td>
+    <td class="urls_block"><%= urls_block job, job.urls_hash %></td>
+    <td class="browsers_block">
       <%= browser_block job, job.browsers_hash %>
     </td>
-    <td>
+    <td class="interval_block">
       <select name="short_time" id="short_time">
         <!--
            <option value="1">Every day</option>
@@ -37,8 +37,11 @@
       </select>
 
     </td>
-    <td>
+    <td class="button_block">
       <button class="update_job_button">Update Job</button>
+    </td>
+    <td class="delete_block">
+      <a href="#">Delete X</a>
     </td>
   </tr>
   <% end %>

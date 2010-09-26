@@ -40,13 +40,13 @@ module JobsHelper
   end
 	
 	def browser_tag(job, job_browsers, browser)
-		html_string = "<input type=\"checkbox\" name=\"#{pretty_name browser}_check\" value=\"chrome:3\" id=\"#{job.id}_#{pretty_name browser}_check\"";
+		html_string = "<input type=\"checkbox\" name=\"#{pretty_name browser}_check\" value=\"#{browser["name"]}:#{browser["version"]}\" id=\"#{job.id}_#{pretty_name browser}_check\"";
 		
 		if job_browsers.include? browser
 		   html_string += "checked=\"true\""
 		end
 		 
-		html_string += "/><label for=\"#{job.id}_#{pretty_name browser}_check\">" + image_tag(icon(browser), :alt => pretty_name(browser), :size => "60x60") + "</label>"
+		html_string += "/><label for=\"#{job.id}_#{pretty_name browser}_check\" class=\"#{pretty_name browser}_check\">" + image_tag(icon(browser), :alt => pretty_name(browser), :size => "30x30") + "</label>"
 	end
 	
 	def browser_block(job, job_browsers)
@@ -80,7 +80,7 @@ module JobsHelper
 	]	  
 	 
 	 
-	 output = '<div id="browser_buttons">'
+	 output = '<div class="browser_buttons">'
 
 	 browsers.each do |browser|
 		 output += browser_tag job, job_browsers, browser
