@@ -101,7 +101,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(jobs_url) }
       format.xml  { head :ok }
-			format.json { head :ok }
+			format.json { render :json => @job, :status => 200 }
     end
   end
 

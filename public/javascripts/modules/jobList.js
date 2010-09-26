@@ -25,12 +25,10 @@
         type: "DELETE",
         dataType : 'json',
         success : function(data){
-          $this.slideUp('slow');
-          console.log('succes');
+          $this.fadeOut('slow');
         },
         error : function(){
           $this.enable();
-          console.log('error');
         }
       });
       return false;

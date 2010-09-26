@@ -40,7 +40,7 @@ module JobsHelper
   end
 	
 	def browser_tag(job, job_browsers, browser)
-		html_string = "<input type=\"checkbox\" name=\"#{pretty_name browser}_check\" value=\"chrome:3\" id=\"#{job.id}_#{pretty_name browser}_check\"";
+		html_string = "<input type=\"checkbox\" name=\"#{pretty_name browser}_check\" value=\"#{browser["name"]}:#{browser["version"]}\" id=\"#{job.id}_#{pretty_name browser}_check\"";
 		
 		if job_browsers.include? browser
 		   html_string += "checked=\"true\""

@@ -90,16 +90,18 @@
 
         // Create job
         $.ajax({
-            url : $form.attr('action'),
+            url : '/jobs/create',
             type : 'POST',
             data : jobData,
             dataType : "json",
             success : function(json){
-                console.log("Job created!");
-                //objScope.clearErrors();
+                //console.log("Job created!");
+                //
+                $(objScope.element).slideUp();
+                window.location = window.location;
             },
             error :function(xhr, txt, er){
-                console.log("failed to create job");
+                //console.log("failed to create job");
 
             }
         });
@@ -110,12 +112,13 @@
       var $this = $(this.element),
       urls = [],
       $url_inputs = $this.find('#input_steps input');
+      console.log("omg url inputs", $url_inputs);
       $url_inputs.each(function(){
         var url = $(this).val();
         if(url.substr(0,7) != 'http://'){
           url = 'http://' + url;
         }
-        urls.push(url);
+        urls.push(url.trim());
       });
       return urls;
     }
@@ -152,7 +155,7 @@
           }
         },
         error : function(xhr, text, er){
-          console.log(xhr, text, er);
+          //console.log(xhr, text, er);
         }
       });
     }
@@ -166,12 +169,9 @@
           // Ugh. Don't hardcode urls like this. Make it nicer.
           var func;
 
-          console.log(window.location.pathname);
           if ("/" == window.location.pathname) {
-              console.log("We're at the root url, using checkout");
               func = checkout;
           }else{
-              console.log("We're *not* at the root url, using newJob");
               func = newJob;
           }
 
@@ -188,8 +188,6 @@
 
           var $job_form = $("#new_job_form"),
               $link = $("#new_job_expand");
-
-          console.log("New job link: ", $link);
 
           $link.click(function(e){
               e.preventDefault();
