@@ -36,9 +36,10 @@ ARGV.each_with_index do |v, c|
   $log.puts "#{c}. #{v}"
 end
 
-account_info = YAML.load_file('ondemand.yml')
+account_info = YAML.load_file("#{RAILS_ROOT}/lib/ondemand.yml")
 username = account_info[:username]
 access_key = account_info[:api_key]
+
 batch = Batch.find $batch_id
 job = Job.find batch.job_id
 urls = JSON.parse job.urls
