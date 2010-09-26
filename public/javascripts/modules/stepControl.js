@@ -48,8 +48,25 @@
         interval: getInterval.call(objScope)
       };
       
-      //Random conditional for now not sure on error handling for empty or free orders yet
-      if(total > 0){
+      //Random conditional for now not sure on error handling for empty or free orders yet 
+      var errors = {};
+      $form.find('input[type="text"]').each(function(){
+        var $this = $(this);
+        if($this.val() == '' || !$this.val()){
+          errors['#step1'] = "Please enter a URL";
+        }
+      });
+      
+      if($form.find('input:checked').length <= 0){
+        errors['#step2'] = "Please pick a browser";
+      }                                       
+      
+      if(errors['#step2'] || errors['#step1']){
+        console.log('errors omg');
+        for(error in errors){
+          $.validationEngine.buildPrompt(error,errors[error],'error');
+        }
+      }else{
         $form.disable();
         $button.find("span.ui-button-text").text('Edit Job?');
         $(document).trigger('show.credControl');
@@ -112,7 +129,6 @@
       var $this = $(this.element),
       urls = [],
       $url_inputs = $this.find('#input_steps input');
-      console.log("omg url inputs", $url_inputs);
       $url_inputs.each(function(){
         var url = $(this).val();
         if(url.substr(0,7) != 'http://'){

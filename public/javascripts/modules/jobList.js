@@ -36,6 +36,7 @@
     
     function updateJob(){
      var $this = $(this),
+     $button = $this.find('button span'),
      id = parseInt($this.find('.id_block').text(),10),
      rowScope = this,
      jobData = {
@@ -46,6 +47,7 @@
          }
      };
      
+     $button.text('Saving...');
      $this.disable();
      $.ajax({
        url :'/jobs/'+ id,
@@ -53,7 +55,8 @@
        data : jobData,
        dataType : 'json',
        success : function(data){
-        $this.enable(); 
+        $this.enable();
+        $button.text('Update Job'); 
        }
      }); 
     }
