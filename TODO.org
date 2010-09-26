@@ -3,29 +3,42 @@
 *** Update navigation pane on login [small, normal] [DONE]
 *** Proper tabbing on new job form [medium, low]
 *** Styling on browsers on new job form [small, high] [DONE]
-*** Validation and error messages on new job form [medium, high]
+*** Validation and error messages on new job form [medium, high] [DONE]
 *** Login/Register forms not being hidden on ajax register [medium, high] [DONE]
 *** Remove auto-complete on credit-card field [small, high] [DONE]
-*** Credit card for validation [medium, high]
+*** Credit card for validation [medium, high] [DONE]
 *** Proper forwarding after complete first order [DONE]
+*** Unify client-side validation for login/register form
 ** Orders
 *** Remove show/destroy [small, medium] [DONE]
-*** Format Date [small, small]
-*** Format currency [small, small]
+*** Format Date [small, small] [DONE]
+*** Format currency [small, small] [DONE]
 *** Don't redirect on orders page [DONE]
 *** Toggle new order form [DONE]
+*** Order form needs an ajax progress form [small, low]
 ** Jobs
-*** Proper formatting browsers [small, high]
+*** Proper formatting browsers [small, high] [DONE]
 *** Save button per job [large, high] [DONE]
 *** Interval -> drop down box [medium, normal] [DONE]
 *** Drop dates [small, low] [DONE]
 *** Toggle new jobs form [medium, high] [DONE]
-*** Proper job update for each job entry [large, high]
+*** Proper job update for each job entry [large, high] [DONE]
 ** Job
 *** Change status for running jobs [small, very high] [DONE]
 ** Misc.
-*** Move Javascript to new bundle setup [large, low]
-*** Move flash[:notice] messages
+*** Remove flash[:notice] messages [DONE]
+** Viewer
+*** Freaks out when there's only one batch
+** Paypal
+*** Incorrect name shouldn't be accepted [large, high]
+* Presentation
+** Punch up copy on homepage [small, medium]
+** Demo video [large, high]
+** Link to blog [small, low]
+** Drop shadows, polish design [large, medium]
+* Deployment
+** Capistrano recipe [medium, high]
+** Move Javascript to new bundle setup [large, low]
 * Backend
 ** 3shots client
 *** Close job when finished (closeCurrentBrowserSession) [medium, low] [DONE]
