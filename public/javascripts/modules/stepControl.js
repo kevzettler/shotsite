@@ -67,62 +67,19 @@
           $.validationEngine.buildPrompt(error,errors[error],'error');
         }
       }else{
-        $form.disable();
-        $button.find("span.ui-button-text").text('Edit Job?');
-        $(document).trigger('show.credControl');
-        $button.unbind('click');
-        $button.click($.proxy(changeOrder, this));
-      }
+        $.validationEngine.closePrompt("#step1");
+        $.validationEngine.closePrompt("#step2");
+        if("/" == window.location.pathname){
+          $form.disable();
+          $button.find("span.ui-button-text").text('Edit Job?');
+          $(document).trigger('show.credControl');
+          $button.unbind('click');
+          $button.click($.proxy(changeOrder, this));
+        }else{
+          createJob.call(objScope);
+        }
+     }   
       
-    }
-
-    /*
-    * Rough draft newJob
-    */
-    function newJob(event){
-      var $this = $(this.element) 
-      ,$button = $this.find("button#create_job")
-      , $form = $this.find('form')
-      , objScope = this
-      ;
-
-      /*
-      *total = $(document).trigger("calculateTotal.step4");
-      * whoops, event pooling with jquery directly is a mistake. it only returns the jquery obj
-      * here we want a simple value from the calculateTotal method on step4
-      * may have to add it to the jquery object $.calculateTotal
-      * fugly
-      * calling step4s dom elements directly, not lossely coupled but getting the job done
-      */
-      var total = $this.find("#total_price").text();
-      
-      //update job data
-      jobData = {
-          job: {
-              urls: JSON.stringify(getUrls.call(objScope)),
-              browsers: JSON.stringify(getBrowsers.call(objScope)),
-              interval: getInterval.call(objScope)
-          }
-      };
-
-        // Create job
-        $.ajax({
-            url : '/jobs/create',
-            type : 'POST',
-            data : jobData,
-            dataType : "json",
-            success : function(json){
-                //console.log("Job created!");
-                //
-                $(objScope.element).slideUp();
-                window.location = window.location;
-            },
-            error :function(xhr, txt, er){
-                //console.log("failed to create job");
-
-            }
-        });
-        return false;
     }
     
     function getUrls(){
@@ -181,16 +138,6 @@
       render : function(){
         var $this = $(this.element);
 
-          // TODO:
-          // Ugh. Don't hardcode urls like this. Make it nicer.
-          var func;
-
-          if ("/" == window.location.pathname) {
-              func = checkout;
-          }else{
-              func = newJob;
-          }
-
           $(".update_job_button").each(function(){
               var $this = $(this);
               $this.button();
@@ -198,7 +145,7 @@
 
         $this.find('button')
           .button() //make the button a button
-          .click($.proxy(func, this)); 
+          .click($.proxy(checkout, this)); 
           
         $(document).bind('createJob.stepControl', $.proxy(createJob, this));
 
