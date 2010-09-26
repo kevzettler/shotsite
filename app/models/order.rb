@@ -9,6 +9,8 @@ class Order < ActiveRecord::Base
   validate_on_create :validate_card
   
   def purchase
+    return false unless credit_card.valid?
+
     response = process_purchase
     transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
     if response.success?

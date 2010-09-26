@@ -46,7 +46,7 @@ Rails::Initializer.run do |config|
 end
 
 ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(
-                                                                      :default  => "%m/%d/%Y %I:%M%p",
+                                                                      :default  => "%b. %d, %Y at %I:%M%p (%Z)",
                                                                       :simple => '%m/%d/%Y',
                                                                       :date_time24  => "%m/%d/%Y %H:%M"
                                                                       )

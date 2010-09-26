@@ -14,8 +14,8 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%=h Date.civil(order.created_at.year, order.created_at.month, order.created_at.day)%></td>
-    <td><%=h order.price %></td>
+    <td><%=h order.created_at %></td>
+    <td><%=h number_to_currency(order.price) %></td>
     <td><%=h order.shots %></td>
   </tr>
 <% end %>
